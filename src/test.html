@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: 12fr;
+        }
+        header{
+            grid-row: 1;
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            color: aliceblue;
+            padding: 10px;
+            align-items: center;
+            top: 0px;
+            position: sticky;
+
+        }
+        header span{
+            padding-right: 15px;
+        }
+        .title{
+            font-size: 30px;
+            font-family: arial;
+            font-weight: bold;
+        }
+        .img{
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          padding-top: 150px;
+           
+        }
+        #q1{
+            width:400px;
+            height: 400px;
+            border-radius: 400px;
+            transition: 2s;
+        }
+            #q1:hover{
+              box-shadow: 5px 5px 5px 5px lightgrey;
+              transition: 2s;
+
+            }
+            
+        
+        .details{
+            width: 400px;
+        }
+        .details span{
+            display: inline-block;
+            padding: 10px;
+            font-family: gill sans;
+            
+        }
+        .hi{
+            font-size: 35px;
+            font-weight: bold;
+            font-family: lucida sans;
+        }
+        body{
+            background-color: gainsboro;
+        }
+        .link{
+            display: flex;
+            justify-content: space-evenly;
+            width: 600px;
+            margin-top: 10px;
+            margin-left: -70px;
+        }
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+            transition: 1s;
+            
+        }
+        a:hover{
+            color:purple;
+            transition: 1s;
+            transform: scale(1.3);
+        }
+        .resume:hover{
+            transform: rotateX(360deg);
+            background-color: azure;
+            transition: 2s;
+        }
+        .resume{
+            transition: 2s;
+            width:150px;
+            height: 150px;
+            border-radius: 150px;
+            background-color: brown;
+            padding: 49px;
+                    
+        }
+        .project{
+            width:150px;
+            height: 150px;
+            border-radius: 150px;
+            background-color:lightsalmon; 
+           padding: 49px;
+           transition: 2s;
+        }
+        .project:hover{
+          transform:skew(20deg);
+          background-color: springgreen;
+          transition: 2s;
+        }
+        .contact{
+            width:150px;
+            height: 150px;
+            border-radius: 150px;
+            background-color:yellowgreen;
+            padding: 49px;
+            transition: 2s;
+        }
+        .contact:hover{
+            background-color: cornflowerblue;
+            transform: scale(1.2);
+            transition: 2s;
+            transform: rotateY(360deg);
+        }
+        .tile{
+            margin-top: 50px;
+            padding: 30px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        @keyframes move{
+            from{
+                  margin-top:250px;
+                  transition: 2s;
+            }
+            to{
+               margin-top: 0px;
+               transition: 2s;
+               
+               
+            }
+        }
+    
+        @keyframes up{
+            from{
+                  margin-top:60px;
+                  transition: 2s;
+            }
+            to{
+               margin-top: 0px;
+               transition: 2s;
+            }
+        }
+        main{
+            animation-name: move;
+            animation-duration: 2s;
+             animation-iteration-count: 1;
+             background-color:lightcyan;
+              
+             height: 100vh;
+             grid-row: 2;
+             
+        }
+        footer{
+            grid-row: 3;
+        }
+
+        @media screen and (max-width:600px) {
+            header{
+                display: flex;
+                flex-direction: column;
+                background-color:black;
+                color:aliceblue;
+            }
+            header span{
+                display: block;
+            }
+        body{
+            display: grid;
+            grid-template-columns: 12fr;
+        }
+        header{
+            grid-row: 1;
+        }
+        main{
+            grid-row: 2;
+            width: 100vw;
+            height: 100vh;
+        }
+        footer{
+            grid-row: 3;
+        }
+        .tile{
+            display: flex;
+            flex-direction:column ;
+            margin-top: 20px;
+        }
+        .tile div{
+            margin-top: 10px;
+        }
+        
+    
+        .img{
+            display: flex;
+            flex-direction: column;
+              padding-top: 15px;  
+            }
+            #q1{
+                width:100%;
+                height: 100%;
+                border-radius: 100%;
+                display: block;
+                padding: 10px;
+                justify-content: center;
+            }
+            .details{
+                width:90%;
+            }
+            .hi{
+                margin-top: 15px;
+                text-align: center;
+                display: inline-block;
+            }
+            .details span{
+                display: block;
+                text-align: center;
+                align-items: center;
+                
+            }
+    
+            body{
+                background-color:antiquewhite;
+            }
+            .link{
+                display: grid;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                width: 90%;
+                grid-template-columns: 6fr 6fr;
+                margin-left: 0px;
+            }
+            .link div{
+                display: flex;
+                margin: 10px;
+                text-align: center;
+                
+            }
+            main{
+                animation-name: up;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+                padding-top: 0px;
+                height: 150vh;
+                border-bottom: 1px solid goldenrod;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <div class="title">Chandra Prakash</div>
+            <div>
+                <span><a href="#" style="text-decoration: none;color: white;">Resume</a></span>
+                <span><a href="../src/projects1.html" style="text-decoration: none;color: white;">Projects</a></span>
+                <span><a href="#contact" style="text-decoration: none;color: white;">Contact</a></span>
+            </div>
+        </header>
+        <main>
+            <div class="img">
+             <div><img src="../public/my pics/me/mu-3.jpg" alt="" id="q1"></div>        
+              <div class="details">
+                <span class="hi">Hello.. </span>
+                <span class="fw-semibold fs-4">I am a<u class="text-success"> UI Full Stack Developer</u>. I like to create Quality desgin and cool interfaces.</span>
+                <span class="fw-semibold fs-4">If you are looking for a developer to add to your Team,I would love to hear form you</span>
+                <div class="link">
+                    <div class="resume"><a href="#">Resume</a></div>
+                    <div class="project"><a href="../src/projects1.html">Project</a></div>
+                    <div class="contact"><a href="#contact">Contact</a></div>
+                 </div>
+                </div>
+         </div>
+        </main>
+
+    <footer>
+        <div class="tile" id="contact">
+        <div><div class="fw-bold"><span class="bi-telephone"></span> Phone:</div>
+        <div> 7017699520</div>
+    </div>
+        <div>
+            <div class="fw-bold bi-envelope"> Email:</div>
+        <div><a href="mailto:Chandra52prakash.in@gmail.com" style="text-decoration: none;color: black;">Chandra52prakash.in@gmail.com</a></div>
+        </div>
+        <div>
+            <div class="fw-bold">Follow Me:</div>
+            <div><span class="bi-linkedin"></span>
+            <span class="bi-facebook ms-2" style="font-size: 20px;"></span>
+            <span class="bi-instagram ms-2" style="font-size: 20px;"></span> 
+            <span class="bi-github ms-2" style="font-size: 20px;"></span>    </div>
+        </div>
+        <div></div>
+
+        </div>
+    </footer>
+</body>
+</html>

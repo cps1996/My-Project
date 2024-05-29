@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media query</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+       nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+       }
+       nav div {
+         border: 1px solid;
+         padding: 5px;
+         width: 100px;
+         text-align: center;
+         background-color: antiquewhite;
+       }
+       @media screen and(min-width:600px) ,(orientation:landscape)
+       {
+        nav div {
+         border: 1px solid;
+         padding: 5px;
+         width: 100px;
+         text-align: center;
+         background-color: antiquewhite;
+       }
+       body{
+        background-image: url(../public/images/bag3.jpg);
+        background-size: cover;
+       }
+       nav{
+        display: flex;
+        justify-content: space-between;
+       }
+       }
+       @media screen and(orientation:portrait) 
+       {
+        nav div{
+            background-color: aqua;
+            color: white;
+            font-weight: bold;
+            margin: 10px;
+        }
+        nav{
+            display: flex;
+            flex-direction: column;
+        }
+        body{
+            background-image: url(../public/images/abann-4.jpg);
+            background-size: cover;
+        }
+        .word{
+            display: none;
+        }
+       }
+    </style>
+</head>
+<body>
+    <nav>
+        <div><span class="word">Home</span><span class="bi-house-door-fill"></span></div>
+        <div><span class="word">About</span><span class="bi-globe"></span></div>
+        <div><span class="word">Blog</span><span class="bi-newspaper"></span></div>
+        <div><span class="word">Contact</span><span class="bi-telephone-fill"></span></div>
+        <div><span class="word">Help</span><span class="bi-person-fill"></span></div>
+    </nav>
+    
+</body>
+</html>

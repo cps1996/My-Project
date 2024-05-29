@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my journey</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../font/css/all.css">
+    <style>
+        @keyframes art {
+            from{
+                border-top: 2px solid yellow;
+            }
+            15%{
+                border-top-style: ridge;
+            }
+            20%{
+                border-top-style: ridge;
+            }
+
+            25%{
+                border-top-style:ridge;
+            }
+            35%{
+                border-right-style: ridge;
+            }
+            45%{
+                border-right-style: ridge;
+                
+            }
+            55%{
+                border-bottom-style: ridge;
+                transform:skew(10deg) ;
+                
+            }
+            65%{
+                border-bottom-style: ridge;
+                transition: 1ms;
+            }
+            75%{
+                border-top-left-radius: 2px solid orangered;
+            }
+            85%{
+                border-top-left-radius: 2px solid orangered;   
+            }
+            to{
+                border-left: 3px solid yellow;
+                transform: skewX(30deg);
+            }
+            
+        }
+        header{
+            background-color:black;
+            padding-top: 15px;
+            top: 0px;
+            position: sticky;
+        }
+        header span{
+           margin: 15px;
+        }
+        #explore{
+            transition: 2s;
+        }
+        #navbar:hover{
+            transition: 2s;
+            margin-left: 5px;
+            background-color: black;
+            color: aqua;
+            
+        }
+        .shade{
+            background-color:rgba(0, 0, 0, 0.7);
+            height: 100vh;
+        }
+        li{
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        #canva1:hover{
+            font-size:25px ;
+            font-weight: bold;
+            transition: 3s;
+            padding: 5px;
+            font-family: arial;
+            animation-name: art;
+            animation-duration: 3s;
+            animation-iteration-count:1;
+            animation-timing-function: linear;
+        }
+        #canva2:hover{
+            font-size:25px ;
+            font-weight: bold;
+            transition: 2s;
+            padding: 5px;
+            animation-name: art;
+            animation-duration: 3s;
+            animation-iteration-count:1;
+            animation-timing-function: linear;
+        }
+        #canva3:hover{
+            font-size:25px ;
+            font-weight: bold;
+            transition: 2s;
+            animation-name: art;
+            animation-duration: 3s;
+            animation-iteration-count:1;
+            animation-timing-function: linear;
+        }
+        #canva4:hover{
+            font-size:25px ;
+            font-weight: bold;
+            transition: 2s;
+            animation-name: art;
+            animation-duration: 3s;
+            animation-iteration-count:1;
+            animation-timing-function: linear;
+            padding-right: 5px;
+        }
+        #canva5:hover{
+            transform: scale(1.2);
+        border: 3px double aqua;
+        transition: 1s;
+        padding: 5px;
+        border-radius: 5px;
+        }
+        #canva5{
+            transition: 1s;
+        }
+        #welcome{
+            text-align: center;
+            margin-top: 15px;
+            font-family: josefin sans;
+            color: aqua;
+            width: fit-content;
+             margin-left: 500px;
+             transition: 2s;
+        }
+        #welcome:hover{
+            margin-left: 490px;
+            transition: 2s;
+    
+        }
+        article{
+             margin-top: -15px;
+            height: 50vh;
+        }
+        #navbar{
+            position:absolute;
+            height:100vh;
+        }
+        marquee{
+            font-weight: bold;
+            font-size: 20px;
+        position: relative;
+            color:aliceblue;
+            opacity: 0.8;
+        }
+        #q2:hover{
+            padding: 10px;
+            transition: 2s;
+            
+        }
+        #explore:hover{
+            transform: scale(1.2);
+        border: 3px double aqua;
+        transition: 1s;
+        }
+        #c:hover{
+            margin-left: 10px;
+            transition: 3s;
+            opacity: 1;
+        }
+        body{
+            background-size: cover;
+        }
+        #q1:hover{
+        margin-left: 100px;
+        margin-bottom: 150px;
+        transition: 2s;
+        transform: scale(2);
+        transition-delay: s;
+        background-color: black;
+        color: aqua;
+        }
+        #d1:hover{
+            opacity: 1;
+            color: white;
+        }
+    </style>
+</head>
+<body background="./images/web.jpg">
+    <div class="shade">
+        <header class="container-fluid row">
+            <div class="btn-toolbar text-white col-4">
+                <button class="btn btn-lg bi-justify text-white " data-bs-toggle="offcanvas" data-bs-target="#navbar" id="explore">
+                    <span class="fw-bold ps-1">ABOUT Me.</span></button>
+            </div>
+            <div class="offcanvas offcanvas-start" id="navbar">
+                <div class="offcanvas-header">
+                    <h2 class=" fw-bold">MY Journey</h2>
+                    <button class="btn btn-open" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="list-unstyled fw-bold">
+                        <li style="text-decoration: underline;">Childhood</li>
+                        <li style="text-decoration: underline;">SCHOOLING</li>
+                        <li style="text-decoration: underline;">COLLEGE</li>
+                        <li style="text-decoration: underline;">JOB</li>
+                        <li style="text-decoration: underline;">EXTRAS</li>
+                        <li style="text-decoration: underline;">CONTACT</li>
+                    </ul>
+    
+                </div>
+    
+            </div>
+            <div class="col-5" >
+              <span id="canva1" class="fw-semibold"><a style="text-decoration: none; color:aqua;" href="#c">Childhood</a></span>
+              <span id="canva2" class="fw-semibold"><a style="text-decoration: none; color: aqua;" href="#s">SCHOOLING</a></span>
+              <span id="canva3" class="fw-semibold"><a style="text-decoration: none; color:aqua;" href="#">College</a></span>
+              <span id="canva4" class="fw-semibold"><a style="text-decoration: none; color:aqua;" href="#">Contact</a></span>
+              <span id="canva5"><a class="fw-semibold" style="text-decoration: none;color: aqua;">Works</a></span>
+            </div>
+            <div class="col-3">
+            <div><a href="mailto:chandra52prakash.in@gmail.com" style="text-decoration: none;color: antiquewhite;">Email: Chandra52prakash.in@gmail.com</a></span>
+                <div><a href="tel:7017699520" style="text-decoration: none;color: bisque;">Mobile:+91 7017699520</a></div>
+            </div>
+        
+        </header>
+        <article>
+            <div class="fw-bold fs-1" id="welcome" style="opacity: 0.7;" >Hii...<br>I am CHANDRA PRAKASH</div>
+            <div class="fs-1 fw-bold ms-5 mt-1"id="d1" style="color: gainsboro;opacity: 0.5;text-align: center;">UI FULL STACK DEVELOPER</div>
+            <marquee behavior="alternate">"MAKING THE WORRLD BETTER THROUGH DESIGN"</marquee>
+            <div></div>
+        </article>
+        <section>
+        <div class="btn  fw-bold "><a  style="text-decoration: none;color: orangered;" href="./shopper.html" id="q1">shopper</a></div>
+        </section>
+    </div>
+   
+</body>
+</htML>

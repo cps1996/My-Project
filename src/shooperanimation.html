@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .handbags{
+            width: 400px;
+            height: 500px;
+            background-image: url(../public/images/bag2.jpg);
+            background-size: cover;
+            margin: 50px;
+            position: relative;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .handbags:hover{
+            background-image: url(../public/images/bag.jpg);
+
+        }
+        .handbags:hover .icons{
+            transform: translateY(-20px);
+            transition: 500ms;
+        }
+        .icons span:hover{
+            background-color: red;
+            color: white;
+        }
+        .offer{
+            width: 70px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            right: 0px;
+            top: 20px;
+        }
+        .icons span{
+            display: inline-flex;
+            justify-content:center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background-color: white;
+            margin: 10px;    
+        }
+        .handbags .icons {
+            transform: translateY(50px);
+            transition: 500ms;
+        }
+    
+    </style>
+</head>
+<body>
+
+          <div class="offer">15% off</div>
+          <div class="icons">
+            <span class="bi-eye"></span>
+            <span class="bi-cart"></span>
+            <span class="bi-heart"></span>
+          </div>
+    </div>
+    <div class="option  row ms-1" style="width: 290px;">
+        <div class="bi-truck col-2 text-danger"></div>
+        <div class="col-10">
+        <div class="fw-bold">FREE SHIPPING</div>
+         <div class="text-secondary">From all orders over $100</div>
+        </div>  
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

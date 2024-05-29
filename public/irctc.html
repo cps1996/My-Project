@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en-in">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../font/css/all.css">
+    <style>
+          a{
+            text-decoration: none;
+            color: black;
+          }
+          body{
+            background-repeat: no-repeat;
+             background-size: contain;
+             background-position: 1px -120px;
+          }
+        
+          input::placeholder{
+            color: blueviolet;
+          }
+          .circle{
+            height: 100px;
+            width: 100px;
+            border-radius: 100px;
+            border: 1px solid;
+            
+          }
+          .facilities{
+            display:grid ;
+            grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+            padding: 25px;
+            margin-left: 270px;
+            margin-right: 120px;
+            margin-top: 50px;
+          grid-gap: 100px;
+          }
+          .package{
+             display: grid;
+             grid-template-columns: 4fr 4fr 4fr;
+             grid-gap: px;
+             padding: 10px;
+             margin-left: 180px;
+             margin-right: 150px;
+          }
+          .holiday{
+            border: 1px solid aliceblue;
+            height: 600px;
+            width: 350px;
+            box-shadow: 2px 2px 2px aliceblue;
+          }
+        .plane:hover{
+          background-color: navy;
+          color: white;
+        }
+        .social{
+          height: 80px;
+      
+        }
+        header{
+          top: 0px;
+          position: sticky;
+        }
+        .card{
+          position: inherit;
+        }
+        .card-body{
+          position: inherit;
+        }
+        .dropdown{
+          position: inherit;
+        }
+      
+    </style>
+</head>
+<body class="container-fluid" background="./images/vande train.jpg">
+    <header class="row bg-white">
+      <div class="col-2 ps-3 mt-3" >
+        <img src="./images/i-1.png" alt="">
+      </div>
+      <div class="col-9">
+        <nav>
+            <menu>
+                <span><button class="fw-bold text-white " style="background-color: navy;">Login</button></span>
+                <span class="p-2" ><a href="#">REGISTER</a></span>
+                <span class="p-2" ><a href="#">AGENT LOGIN</a></span>
+                <span  class="p-2"><a href="#">CONTACT US</a></span>
+                <span  class="p-2 fw-bold"><a href="#"  style="color: orangered;">DAILY DEALS</a></span>
+                <span  class="p-2 fw-bold bg-body-secondary"><a href="#">ALERTS</a></span>
+                <span  class="p-2 fw-bold">13-May-2024[18:00:06]</span>
+                <span  class="p-2 fw-bold"><a href="#">A-</a></span>
+                <span  class="p-2 fw-bold"><a href="#">A+</a></span>
+                <span  class="p-2 fw-bold"><a href="#">हिंदी</a></span>
+                <div class="mt-3 ps-4">
+                    <span class="p-2"><a href="#"><span class="bi-house-fill text-secondary"></span></a></span>
+                    <span class="dropdown "> 
+                        <button data-bs-toggle="dropdown" class="text-white fw-bold" style="background-color: navy;">IRCTC EXCLUSIVE</button>
+                          <ul class="dropdown-menu" data-bs-theme="white">
+                            <li class="dropdown-item"><span class="dropdown-item-text ps-2 fw-bold"><img src="./images/i-2.png" alt="" width="15%"> IRCTC eWallet <span class="bi-chevron-right fw-bold"></span></span></li>
+                            <li class="dropdown-item"><span class="dropdown-item-text ps-2 fw-bold"><img src="./images/i-2.png" alt="" width="15%"> IRCTC-iPAY <span class="bi-chevron-right fw-bold"></span></span></li>
+                            <li class="dropdown-item"><span class="dropdown-item-text ps-2 fw-bold"><img src="./images/i-gyfty.png" alt="" width="25%">Hot Deals</span></li>
+                            <li class="dropdown-item"><span class="dropdown-item-text ps-2 fw-bold"><img src="./images/i-ott.png" alt="" width="25%"> OTT Vouchers </span></li>
+                            <li class="dropdown-item"><span class="dropdown-item-text ps-2 fw-bold"><img src="./images/i-ShoppingCartOption3.jpeg" alt="" width="25%">SHOPPING</span></li>
+                          </ul>         
+                    </span>
+                    <span class="p-2 fw-bold"><a href="#"><u style="color: orange;">TRAINS</u></a></span>
+                    <span class="p-2"><a href="#bus">BUSES</a></span>
+                    <span class="p-2"><a href="#flight">FLIGHTS</a></span>
+                    <span class="p-2"><a href="#hotel">HOTELS</a></span>
+                    <span class="p-2"><a href="#holiday">HOLIDAY</a></span>
+                    <span class="p-2"><a href="#">LOYALITY</a></span>
+                    <span class="p-2"><a href="#meal">MEALS</a></span>
+                    <span class="p-2"><a href="#">PROMOTIONS</a></span>
+                    <span class="p-2"><a href="#gallery">MORE</a></span>
+                </div>
+          
+            </menu>
+        </nav>
+      </div>
+      <div class="col-1 mt-3">
+        <img src="./images/i-2.png" alt="">
+      </div>
+      
+    </header>
+    <section>
+        <div class="m-4">
+          <div class="card  ms-5  " style="width: 690px; height: 590px;">
+            <div class="card-title" style="display: grid; grid-template-columns: 6fr 6fr;grid-gap: 5px;">
+                <div class="col text-white fw-bold p-1 ps-3 " style="background-color: navy; ">
+                  <span class="bi-check2-square align-items-center">PNR STATUS</span>
+                </div>
+                <div class="col text-white fw-bold ps-3 p-1 " style="background-color: navy;"">
+                   <span class="bi-list-columns"> CHARTS/VACANCY</span>
+                </div>
+    
+            </div>
+            <div class="card header my-2 border-0 pt-3 ">
+            <h2 align="center" style="color: navy;" class="fw-bold" >BOOK TICKET </h2>
+            </div>
+            <div class="card-body row my-4">
+               <div class="col-7">
+                <input type="text" placeholder="From" class="form-control">
+                <div>
+                    <input type="text" placeholder="To" class="form-control mt-5">
+                    <div class="dropdown mt-5"> 
+                        <button data-bs-toggle="dropdown" class=" btn  w-100" style="border: 1px solid lightgray;color: slateblue;"><span class="bi-microsoft pe-2"></span>GENERAL</button>
+                          <ul class="dropdown-menu" data-bs-theme="white">
+                            <li class="dropdown-item"><span class="dropdown-item-text ps-2"> GENERAL</span></li>
+                            <li class="dropdown-item"><span class="dropdown-item-text ps-2">LADIES</span></li>
+                            <li class="dropdown-item"><span class="dropdown-item-text ps-2 ">LOWER BERTH/SR.CITIZEN</span></li>
+                            <li class="dropdown-item"><span class="dropdown-item-text ps-2 ">PERSON WITH DISABLITY </span></li>
+                            <li class="dropdown-item"><span class="dropdown-item-text ps-2">DUTY PASS</span></li>
+                          </ul>         
+                        </div>
+                </div>
+            </div> 
+               <div class="col-5"> 
+                 <input type="date" class="form-control">
+                 <div class="dropdown mt-5"> 
+                    <button data-bs-toggle="dropdown" class=" btn  w-100" style="border: 1px solid lightgray;color:rgb(55, 55, 213);"><span class="bi-briefcase-fill  pe-2"></span>ALL Classes</button>
+                      <ul class="dropdown-menu" data-bs-theme="white">
+                        <li class="dropdown-item"><span class="dropdown-item-text ps-2 ">All Classes</span></li>
+                        <li class="dropdown-item"><span class="dropdown-item-text ps-2 ">Anubhuti Class (EA)</span></li>
+                        <li class="dropdown-item"><span class="dropdown-item-text ps-2 ">AC First Class (1A)</span></li>
+                        <li class="dropdown-item"><span class="dropdown-item-text ps-2 ">Vistadome AC (EV) </span></li>
+                        <li class="dropdown-item"><span class="dropdown-item-text ps-2">Exec. Chair Car (EC)</span></li>
+                      </ul>         
+                    </div>
+               </div>
+               <div >
+               </div>
+            </div>
+            
+        
+        <div class="card-footer  bg-white border-0">
+         <input type="checkbox" class="form-check-input"> <span class="fw-bold ms-1" style="color: slateblue;">Person With Disablity Concession</span>
+         <input type="checkbox" class="form-check-input ms-3"><span class="fw-bold ms-1" style="color: slateblue;">Flexible With Date</span>
+        </div>
+        <div class="ps-3">
+            <input type="checkbox" class="form-check-input"><span class="fw-bold ms-1" style="color: slateblue;">Train with Available Berth</span>
+            <input type="checkbox" class="form-check-input ms-4"><span class="fw-bold ms-1" style="color:slateblue;">Railway Pass Concession</span>
+        </div>
+        <div>
+        <button class="btn  fw-bold text-white my-4 ms-4 w-25" style="background-color:orange;" value="submit">Search</button>
+        <button class="btn  text-white" style="margin-left: 230px;background-color: rgb(13, 164, 13);">Try booking in Ask DISHA 2.0</button>
+        </div>
+        </div>        
+          <div class="my-2 ps-3 ms-5" style="width: 690px;background-color: white;height:100px;" >
+             <p class="p-2 fw-semibold" style="text-align: center;color: blue;"><a href="#" class="text-primary">Please click here for Empanelment for PAD items for Catering.</a></p>
+          </div>
+        </div>
+        <div class="ad " style="text-align: center;background-color: gainsboro;">
+          <img src="./images/ad-2.gif" alt="">
+        </div>
+         <div class="ad mb-4" style="text-align: center;">
+           <img src="./images/i-ad.jpeg" alt="">
+         </div>
+         <div class="fw-bold fs-1 " style="text-align: center;line-height: 45px;margin-top: 50px;">
+          <p>Have you not found the right one?<br>
+            Find a service suitable for you here.
+          </p>
+         </div>
+         <div class="facilities">
+            <div class="circle col-2 ">
+              <div class="bi-airplane circle fs-1 p-3 plane " style="text-align: center;" id="flight"></div>
+              <div style="text-align: center;font-weight: bold;padding-top: 5px;" >FLIGHTS</div>
+            </div>
+         <div class="circle col-2 ">
+          <div class="fa fa-bed circle fs-1 p-4 plane " style="text-align: center;"></div>
+          <div style="text-align: center;font-weight: bold;padding-top: 5px;" id="hotel">HOTELS</div>
+        </div>
+       <div class="circle col-2">
+        <div class="fa fa-chart-line fw-bold circle fs-1 p-4 plane " style="text-align: center;"></div>
+        <div style="text-align: center;font-weight: bold;padding-top: 5px;">RAIL DRISHTI</div>
+      </div>
+    <div class="circle col-2 ">
+      <div class="fa fa-person-skiing circle fs-1 p-4 plane" style="text-align: center;"></div>
+      <div style="text-align: center;font-weight: bold;padding-top: 5px;">HOLIDAY</div>
+    </div>
+    <div class="circle ">
+      <div class="bi-bus-front-fill circle fs-1 p-3 plane " style="text-align: center;" id="bus"></div>
+      <div style="text-align: center;font-weight: bold;padding-top: 5px;">  BUS</div>
+    </div>
+         </div>
+         <div class="facilities mb-3" style="margin-top: 70px;">
+          <div class="circle col-2">
+            <div class="fa fa-bowl-rice circle fs-1 p-4 plane" style="text-align: center;" id="meal"></div>
+            <div style="text-align: center;font-weight: bold;padding-top: 5px;">E-CATERING</div>
+          </div>
+       <div class="circle col-2 ">
+        <div class="bi-train-front circle fs-1 p-3 plane" style="text-align: center;"></div>
+        <div style="text-align: center;font-weight: bold;padding-top: 5px;">TOURIST TRAIN</div>
+      </div>
+     <div class="circle col-2">
+      <div class="fa fa-mountain-sun circle fs-1 p-4 plane " style="text-align: center;"></div>
+      <div style="text-align: center;font-weight: bold;padding-top: 5px;">MOUNTAIN RAILWAY</div>
+    </div>
+  <div class="circle col-2 ">
+    <div class="fa fa-train circle fs-1 p-4 plane " style="text-align: center;"></div>
+    <div style="text-align: center;font-weight: bold;padding-top: 5px;">CHARTER TRAIN</div>
+  </div>
+  <div class="circle ">
+    <div class="bi-cloud-sun circle fs-1 p-3 plane " style="text-align: center;" id="gallery" ></div>
+    <div style="text-align: center;font-weight: bold;padding-top: 5px;">GALLERY</div>
+  </div>
+       </div>
+       <div class="help-line" style="text-align: center;margin-top: 55px;margin-bottom: 20px;" >
+            <img src="./images/I-help.jpeg.crdownload" alt="">
+       </div>
+       <div class="my-5 fs-1 fw-semibold" style="text-align: center;">
+        HOLIDAY
+       </div>
+       <div class="package">
+         <div class="holiday" id="holiday">
+           <div class="h-image" style="height: 10px;">
+            <img src="./images/kashmir.jpg" alt="" width="100%">
+            <p class="fw-bold  p-4" style="font-size: 25px;font-family: arial;line-height: 5px;">Domestic Air Packages</p>
+            <p class="p-2" style="font-family: arial;">Be it the spiritual devotee seeking blessings of Tirupati, Shirdi or Mata Vaishno Devi or the leisure traveller wanting to relish the Blue mountains of North East, Sand-dunes of Rajasthan, Hamlets of Ladakh,
+               Wonders of Himalayas, Serene lakes or Picturesque Islands, IRCTC has it all. Discover India through IRCTC!</p>
+           </div>
+         </div>
+         <div class="holiday">
+            <div class="h-image" style="height: 10px;">
+               <img src="./images/budha.jpg" alt="" width="100%">
+               <p class="fw-bold  p-4" style="font-size: 25px;font-family: arial;line-height: 5px;">International Packages</p>
+               <p class="p-2" style="font-family: arial;">Best deals in International Holiday packages, handpicked by IRCTC, for Thailand, Dubai, Sri Lanka, Hong Kong, China
+                , Macau, Bhutan, Nepal, U.K., Europe, USA, Australia etc. The packages are inclusive of sightseeing, meals, visa charges and overseas medical insurance to give you a hassle-free and memorable experience.</p>
+            </div>
+         </div>
+         <div class="holiday">
+          <div class="h-image" style="height: 10px;">
+            <img src="./images/maharaja.jpg" alt="" width="100%">
+            <p class="fw-bold  p-4" style="font-size: 25px;font-family: arial;line-height: 5px;">Maharajas' Express</p>
+            <p class="p-2" style="font-family: arial;">Redefining Royalty, Luxury and Comfort, Maharajas' express takes you on a sojourn to the era of bygone stately splendour of princely states. Sylvan furnishings, elegant ambience and modern amenities are amalgamated for an “Experience Unsurpassed”. It has been a winner of “World’s Leading Luxury train” by World Travel Awards consecutively for last six year </p>
+         </div>
+         </div>
+         <div class="holiday my-3">
+          <div class="h-image" style="height: 10px;">
+           <img src="./images/Bharat_Gaurav.jpg" alt="" width="100%">
+           <p class="fw-bold  p-4" style="font-size: 25px;font-family: arial;line-height:25px;">Bharat Gaurav Tourist Train</p>
+           <p class="p-2" style="font-family: arial;">IRCTC operates Bharat Gaurav Tourist Train having AC III-Tier accommodation on train specially designed to promote domestic tourism in India. This train runs on various theme based circuits covering pilgrimage and heritage destinations in i
+            ts itinerary on a 5 days to 20 days trip and showcase India’s rich cultural heritage.</p>
+          </div>
+         </div>
+          <div class="holiday my-3">
+            <div class="h-image" style="height: 10px;">
+             <img src="./images/Manali.jpg" alt="" width="100%">
+             <p class="fw-bold  p-4" style="font-size: 25px;font-family: arial;line-height: 5px;">Rail Tour Packages</p>
+             <p class="p-2" style="font-family: arial;">IRCTC offers Exclusive Rail tour packages with confirmed train tickets, sight-seeing and meals for enchanting Nilgiri Mountains, Darjeeling, Kullu Manali, Kashmir, Gangtok or divine tours of Mata Vaishno Devi, Rameswaram, Madurai, Shirdi, Tirupati etc. 
+              Holiday packages/ Land packages to these destinations are also available.</p>
+            </div>
+         </div>
+       </div>
+          <div class="social container">
+
+          </div>
+    </section>
+    <footer style="height: 300px;background-color:rgb(56, 1, 108);color: white;display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;padding:15px;">
+           <div class="row ms-5 mt-5" style="">
+            <span class="fw-bold">IRCTC Trains</span>
+            <span>General information</span>
+            <span>Important information</span>
+            <span>Agents</span>
+            <span>Enquiries</span>
+           </div>
+           <div class="row mt-5">
+            <span class="fw-bold">How to</span>
+            <span>IRCTC Official App</span>
+            <span>Advertise with us</span>
+            <span>Refund Rules</span>
+            <span>Person With Disablity Facilities</span>
+           </div>
+           <div class="row fw-bold mt-5">
+            <span class="fw-bold">IRCTC eWallet</span>
+            <span>IRCTC Loyality Program</span>
+            <span>IRCTC-iPAY Payment Gateway</span>
+            <span>IRCTC Zone</span>
+           </div>
+           <div class="row fw-bold mt-5">
+           <span>For Newly Migrated Agents</span>
+           <span>Mobike Zone</span>
+           <span>Policies</span>
+           <span>Ask Disha ChatBot</span>
+           <span>About Us</span>
+           </div>
+    </footer>
+    <div class="payment" style="text-align: center;">
+     <span><img src="./images/security.png" alt=""></span>
+     <span class="ms-5">copyright A 2024-www.irctc.co.in. All Rights Reserved</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+          body {
+            display: grid;
+            grid-template-columns: 12fr;
+        }
+           header {
+                grid-row: 1;
+                grid-column: 1/5;
+            }
+            article{
+                grid-row: 2;
+                grid-column: 1/5;
+            }
+            main{
+                 display: grid;
+                 grid-template-columns: 4fr 4fr 4fr;
+            }
+            section {
+                grid-row: 4;
+                grid-column:1/4 ;
+            }
+            footer{
+                grid-row: 5;
+                grid-column: 1/4;
+            }
+        
+
+        header{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+            align-items: center;
+    
+        }
+        header span{
+            padding: 10px;
+
+            
+        }
+        /* body{
+
+        } */
+        .bi-cart{
+            position: relative;
+        }
+        .badge{
+            position: absolute;
+            top: 0px;
+            right: -10px;
+            width: 25px;
+            height: 20px;
+            background-color: red;
+        }
+        .icon span{
+            font-weight: bold;
+        }
+        article{
+            background-color: black;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+        article span{
+            padding: 5px;      
+        }
+        .fashion{
+            height: 630px;
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            margin-top: 10px;
+        }
+        .women-fashion{
+         background-image: url(../public/images/woman\ fashion.jpg);
+         background-size: 510px 590px;
+         display: flex;
+         background-repeat: no-repeat;
+         flex-direction: column;
+         justify-content: space-evenly;
+         align-items: center;
+        }
+        .men-fashion{
+            background-image: url(../public/images/men\ fashion.jpg);
+            background-size: 510px 590px;
+            display: flex;
+            background-repeat: no-repeat;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+        .kids-fashion{
+            background-image: url(../public/images/kid\ fashion.jpg);
+            background-size: 510px 590px;
+            display: flex;
+            background-repeat: no-repeat;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+            
+          .shop{
+            width: 150px;
+            background-color: aliceblue;
+            height: 50px;
+            border: 1px;
+            padding: 10px;
+          }
+          .shop:hover .bi-arrow-right{
+            padding-left: 5px;
+            transition: 500ms;
+          }
+          .option{
+            display: flex;
+            justify-content: space-evenly;
+          }
+    </style>
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="brand-title fw-bold fs-1 ">
+         Shopper.
+        </div>
+        <div class="fw-semibold">
+          <span>Home</span>
+          <span>Catalog</span>
+          <span>Shop</span>
+          <span>Pages</span>
+          <span>Blog</span>
+          <span>Docs</span>
+        </div>
+        <div class="icon">
+        <span class="bi-search"></span>
+        <span class="bi-person"></span>
+        <span class="bi-heart"></span>
+        <span class="bi-cart">
+            <span class="badge text-white">2</span>
+        </span>
+        </div>
+    </header>
+    <article>
+         <div class="offer mt-2">
+           <span class="bi-lightning-fill text-warning"></span>
+           <div>HAPPY HOLIDAY DEALS ON EVERYTHING</div>
+           <span class="bi-lightning-fill text-warning"></span>
+         </div>
+    </article>
+    <main>    < div class="fashion">     
+        <div class="women-fashion">
+          <span class="fs-1 fw-bold text-white">Women</span>
+div class="fashion">
+       <span class="shop fw-semibold">Shop Women <span class="bi-arrow-right"></span></span>
+       </div>
+       <div class="men-fashion">
+        <span class="fs-1 fw-bold text-white">Men</span>
+        <span class="shop fw-semibold">Shop Men <span class="bi-arrow-right"></span></span>
+       </div>
+       <div class="kids-fashion">
+        <span class="fs-1 fw-bold text-white">Kids</span>
+        <span class="shop fw-semibold">Shop Kids <span class="bi-arrow-right"></span></span>
+       </div>
+        </div>
+        <div >
+        <div class="option">
+
+            <div class=" shipping row ms-1" style="width: 290px;">
+                <div class="bi-truck col-2 text-danger"></div>
+                <div class="col-10">
+                <div class="fw-bold">FREE SHIPPING</div>
+                 <div class="text-secondary">From all orders over $100</div>
+                </div>  
+            </div>
+    
+            <div class=" return row ms-1" style="width: 290px;">
+                <div class="bi-truck col-2 text-danger"></div>
+                <div class="col-10">
+                <div class="fw-bold">FREE RETURNS</div>
+                 <div class="text-secondary">Returns money within 30 days</div>
+                </div>
+            </div>  
+                <div class="secure row ms-1" style="width: 290px;">
+                    <div class="bi-lock col-2 text-danger"></div>
+                    <div class="col-10">
+                    <div class="fw-bold">SECURE SHOPPING</div>
+                     <div class="text-secondary">You're in safe hands </div>
+                    </div>  
+                </div>
+    
+                <div class=" over row ms-1" style="width: 290px;">
+                    <div class="bi-tag col-2 text-danger"></div>
+                    <div class="col-10">
+                    <div class="fw-bold">OVER 10,000 STYLES</div>
+                     <div class="text-secondary">We have every thing you need</div>
+                    </div>  
+                </div>
+               </div>
+             </div>
+            </div>
+    </main>
+    <section>
+
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>

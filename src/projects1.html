@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        main{
+            animation-name: up;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            
+        }
+        main{
+            transition: 2s;
+            height: 100vh;
+            padding: 10px;
+        }
+        body{
+            display: grid;
+            grid-template-columns: 12fr;
+        }
+        header{
+            grid-row: 1;
+        }
+        ul li{
+            list-style: none;
+            padding-left: 50px;
+        }
+        .shopper{
+            display: flex;
+             justify-content: space-evenly;
+             padding: 20px;
+             align-items: center;
+
+        }
+        .shopper img:hover{
+            transform: scale(1.1);
+            transition: 2s;
+
+        }
+       .shopper img{
+        transition: 2s;
+            display: inline-block;
+                margin-left: 10px;
+                width:400px;
+                height: 400px;
+                border-radius: 400px;
+                box-shadow: 6px 5px 8px 5px purple; 
+                
+        }
+        .shopper .shop-details{
+            display: inline-block;
+            width: 500px;
+            margin-right: 150px;
+        }
+        .irctc{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 40px;
+            align-items: center;
+        }
+        .irctc img:hover{
+            transition: 2s;
+            transform: scale(1.1);
+
+        }
+          .irctc img{
+            transition: 2s;
+            height:400px ;
+            width:400px ;
+            border-radius: 400px;
+            display: inline-block;
+            box-shadow: 5px 5px 8px 5px purple;
+        }
+        .irctc-details{
+          width: 700px;        
+            
+        }
+        body{
+            background-color:rgb(216, 245, 235);
+        }
+        .netflix{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+          .net-img img{
+            display: inline-block;
+            height: 400px;
+            width: 400px;
+            border-radius: 400px;
+            box-shadow: 5px 5px 5px purple;
+            transition: 2s;
+        }
+        .net-details{
+            width: 700px;
+        }
+       .net-img img:hover{
+        transform: scale(1.1);
+        transition: 2s;
+       }
+       .navbar-brand{
+        margin-left:50px ;
+       }
+        
+        @media screen and (max-width:600px)
+        {
+            ul li{
+                padding: 0px;
+            }
+            main{
+                height: 100vh;
+                width: 100vw;
+            }
+            .shopper{
+                display: flex;
+                flex-direction: column;
+            }
+            .shopper .shop-details{
+                text-align: center;
+                margin-top: 40px;
+                display: inline-block;
+                align-items: center;
+                margin-right: 0px;
+                width: fit-content;
+               
+            }
+            .shop-img img{
+                display: inline-block;
+                width: 350px;
+                height: 350px;
+                border-radius: 350px;
+                text-align: center;
+                align-items: center;
+            }
+            .irctc{
+                display: flex;
+                flex-direction: column;
+            }
+            .irctc-details{
+                text-align: center;
+                margin-top: 40px;
+                display: inline-block;
+                align-items: center;
+                margin-right: 0px;
+                width: fit-content;
+
+            }
+            .irctc-img img{
+                width: 350px;
+                height: 350px;
+               border-radius: 350px;
+               align-items: center;
+               text-align: center;                
+            }
+            .netflix{
+                display: flex;
+                flex-direction: column;
+                margin-top: 150px;
+            }
+            .net-details{
+                margin-top: 50px;
+                width: fit-content;
+                text-align: center;
+                justify-content: justify;
+            }
+            .net-img img{
+                width: 350px;
+                height: 350px;
+                border-radius: 350px;
+                box-shadow: 5px 5px  5px purple ;
+            }
+               }  
+               @keyframes  up{
+                form{
+                   margin-top: 350px;
+                }
+                to{
+                 margin-top: 10px;
+                }
+                
+               }   
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button data-bs-toggle="collapse" data-bs-target="#menu" class="navbar-toggler"><span class="navbar-toggler-icon">
+            </span></button>
+            <div class="navbar-brand fw-bold fs-3">Projects</div>
+            <div class="navbar-collapse collapse" id="menu">
+                <ul class="navbar-nav ms-2" id="q2">
+                    <li class="nav-item"><a class="nav-link" href="../public/shopper.html">Shopper.</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../public/irctc.html">IRCTC</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../public/netflix.html">Netflix</a></li>
+                <li class="nav-item">
+                    <form class="input-group">
+                        <input type="text" placeholder="Search" class="form-control ">
+                        <button class="bi-search btn btn-success"></button>
+
+                    </form>
+                </li>
+                </ul>
+            
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="shopper">
+        <div class="shop-img"><a href="../public/shopper.html"><img src="../public/images/shopper.jpg" alt="" width="60%"></a></div>
+        <div class="shop-details"><p class="fw-bold fs-3">This is a Shopping Site.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, voluptates? Nihil deleniti magnam unde deserunt delectus sequi. Et sunt cumque,
+             incidunt provident modi cupiditate rem, nobis iusto, illum debitis vitae.</p></div>
+        </div>
+        <div class="irctc">
+            <div class="irctc-details "><p class="fw-bold fs-3">IRCTC Ticketing Website</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, fuga! Repellat perferendis dicta tempora. In rem face
+                re dolores quaerat, numquam fuga adipisci, architecto quos illo quas ullam iste amet distinctio!</p></div>
+            <div class="irctc-img"><a href="../public/irctc.html"><img src="../public/images/_irctc.jpg" alt="" width="80%"></a></div>
+
+        </div>
+        <div class="netflix">
+            <div class="net-img"><a href="../public/netflix.html"><img src="../public/images/net-logo.jpg" alt="" width="100%"></a></div>
+            <div class="net-details"><p class="fw-bold fs-3">Netflix</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt dolorum at id suscipit numquam
+         obcaecati error, earum voluptate maxime quis debitis quas laboriosam cupiditate deleniti eos ipsa voluptatum! Pariatur, totam.</p></div>
+
+        </div>
+    </main>
+    
+</body>
+</html>

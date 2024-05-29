@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshcart</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        header{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .shortcuts{
+            font-size: 20px;
+           margin-top: 20px;        
+        }
+
+        .department{
+            width: 180px;
+            border: 1px solid;
+            padding: 11px;
+            border-radius: 10px;
+            color:white;
+            background-color: rgb(19, 175, 19);
+            display: inline-block;
+             text-align: center;
+        
+        }
+        .details{
+            margin-top: 45px;
+        }
+        .feature{
+            font-weight: bold;
+            display:
+             flex;
+            justify-content: space-between;
+            margin-right: 50px;
+        }
+        .items{
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+            height: 200px;
+            grid-gap:15px;
+            margin-top: 20px;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 50px;
+        }
+        .item-card{
+            border: 1px solid lightgrey;
+            border-radius: 10px;
+            padding-left: 40px;
+            width: 160px; 
+            padding-top: 10px;     
+        }
+    p{
+
+        padding-left: 10px;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;  
+        margin-left: 50px; 
+        grid-gap:10px;
+        margin-left: 50px; 
+    }
+    .p-card{
+        border: 1px solid lightgray;
+        height: 370px;
+        width: 260px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .p-head{
+        height: 30px;
+    }
+    .p-body{
+        height: 200px;
+    }
+    .p-foot{
+        height: 100px;
+        text-align: left;
+        margin-left: 15px;
+        display: grid;
+    }
+    .bi-star-fill{
+        color: gold;
+    }
+    .bi-star-half{
+        color: gold;
+    }
+    .bi-star{
+        color: yellow;
+    }
+    .p-d{
+        color:gray;
+    }
+    .p-n{
+        font-weight: bold;
+        font-family: Arial;
+        font-size: 14px;
+    }
+    .add{
+        font-weight:bold;
+        border: 1px solid;
+        padding: 5px;
+        color: white;
+        background-color: green;
+        border-radius: 5px;
+        font-size: 14px;
+
+    }
+    .strike{
+        color: rgb(142, 135, 135);
+
+    }
+    .amount{
+        display: flex;
+        justify-content:space-between ;
+        margin-right: 30px;
+        margin-top: 20px;
+        font-family: arial;
+    }
+    .mrp{
+        font-weight: bold;
+        font-family: arial;
+        margin-left: 10px;
+    }
+    .service{
+        margin-top: 50px;
+        display: grid;
+         grid-template-columns: 3fr 3fr 3fr 3fr;
+         margin-left: 50px;
+         margin-right: 50px;
+         grid-gap:20px;
+         margin-bottom: 50px;
+    } 
+    .service-c{
+        height: 200px;
+        margin-top: 55px;
+    }
+    .s-h{
+        font-size: 40px;
+        color: green;
+        margin-bottom: 20px;
+        margin-left: 10px;
+
+    }
+    .s-b{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: arial;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        
+
+
+    }
+    .s-f{
+         color:rgb(92, 86, 86);
+         font-family: arial;
+         line-height: 25px;
+    } 
+    footer{
+        height:500px;
+        background-color: rgb(224, 218, 218);
+    }  
+    .footer-details{
+        display: grid;
+        grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+          margin-left: 40px;
+        margin-top: 25PX;
+    }
+    .footer-topic{
+        font-weight: bold;
+        padding-top: 50px;
+        display: inline-block;
+        font-family: arial;
+    }
+
+
+    </style>
+</head>
+<body>
+    <header>
+    <div><span style="margin-left: 50px;"><img src="./images/fresh.jpg" alt="" width="70%"  ></span></div>
+    <div class="d-flex mt-3">
+        <span><input class="form-control h-75" style="margin-right: 50px;" size="70" type="text" placeholder="Search for products"></span>
+        <span style="margin-right: 90px;"><button class="btn ms-3 mt-1 " style="color: grey;border: 1px solid rgb(162, 157, 157);"><span class="bi-geo-alt"> Location</span></button>
+</div>
+
+    <div class="shortcuts">
+       <button class="btn btn-outline-none"><span class="bi bi-heart" style="font-size: 25px;color: lightgray;"></span></button>
+       <button class="btn btn-outline-none"><span class="bi-person" style="font-size: 25px;color:lightgray;"></span></button>
+       <button class="btn btn-outline-none"><span class="bi-cart" style="font-size: 25px;color:lightgray;"></span></button>
+    </div>
+    </header>
+    <nav class="d-flex">
+        <div class="dropdown" style="margin-left: 50px;">
+            <button data-bs-toggle="dropdown" class="btn  dropdown-toggle" style="background-color: rgb(18, 194, 18);"><span class="bi-grid text-white fw-semibold">All Department</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><span class="dropdown-item-text">Dairy,Breads & Eggs</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Snacks & Munchies</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Fruits & Vetegables</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Cold drink & Juices</span></li>
+            </ul>
+        </div>
+        <div class="dropdown" style="margin-left: 10px;">
+            <button data-bs-toggle="dropdown" class="btn btn-outline-none dropdown-toggle" style="border: none;"><span class="fw-semibold">Menu</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><span class="dropdown-item-text">Home 1</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Home 2</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Home 3</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Home 4</span></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button data-bs-toggle="dropdown" class="btn btn-outline-none dropdown-toggle" style="border: none;"><span class="fw-semibold">Shop</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><span class="dropdown-item-text">Shop Grid-Filter</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Shop Grid-3 column</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Shop list-Filter</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Shop-filter</span></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button data-bs-toggle="dropdown" class="btn btn-outline-none dropdown-toggle " style="border: none;"><span class=" fw-semibold text-gray">Stores</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><span class="dropdown-item-text">Stores list</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Store grid</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Store Single</span></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button data-bs-toggle="dropdown" class="btn btn-outline-none dropdown-toggle " style="border: none;"><span class=" fw-semibold text-gray">Mega menu</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><span class="dropdown-item-text">menu</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Store grid</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Store Single</span></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button data-bs-toggle="dropdown" class="btn btn-outline-none dropdown-toggle " style="border: none;">
+                <span class=" fw-semibold text-gray">Pages</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><span class="dropdown-item-text">Blog</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Blog grid</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Blog Single</span></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button data-bs-toggle="dropdown" class="btn btn-outline-none dropdown-toggle " style="border: none;">
+                <span class=" fw-semibold text-gray">Account</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><span class="dropdown-item-text">Signin</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Signup</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Forgot Password</span></li>
+            </ul>
+        </div>
+        <div class="fw-semibold ms-3 mt-1">Dashboard</div>
+        <div class="dropdown">
+            <button data-bs-toggle="dropdown" class="btn btn-outline-none dropdown-toggle mt-1" style="border: none;">
+                <span class=" fw-semibold text-gray">Docs</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><span class="dropdown-item-text bi-card-list" style="color: lightgreen;"></span><span >Documentation</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Store grid</span></li>
+                <li class="dropdown-item"><span class="dropdown-item-text">Store Single</span></li>
+            </ul>
+        </div>
+    </nav>
+    <article>
+        <div class="carousel slide" id="banner" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/grocery.jpg" alt="" width="100%">
+                </div>
+             <div class="carousel-item">
+               <img src="./images/fresh.card.png" alt="" width="100%">
+             </div>
+            </div>
+        </div>
+    </article>
+    <section>
+        <div class="feature">
+            <div style="font-size: 29px;margin-left: 50px;">Featured Categories</div>
+            <div>
+                <span style="border: 1px ;border-radius: 10px;padding: 5px;background-color: rgb(197, 243, 197);" class="bi bi-chevron-left"></span>
+                <span style="border: 1px ;border-radius: 10px;padding: 5px;background-color: rgb(197, 243, 197);" class="bi bi-chevron-right"></span>
+            </div></div>
+            <div class="items">
+                <div class="item-card"><img src="./images/bakery-biscuits.jpg" alt="" width="75%"  >
+                <p>Bakery & biscuits</p></div>
+                <div class="item-card"><img src="./images/pet-care.jpg" alt="">
+                <p style="padding-left: 20px;">Pet Care</p></div>
+                <div class="item-card"><img src="./images/chicken-meat-fish.jpg" alt="">
+                 <p>Chicken Meat & Fish</p></div>
+                <div class="item-card"><img src="./images/snack-munchies.jpg" alt="">
+                <p> Snack & muunchies</p></div>
+                <div class="item-card"><img src="./images/tea-coffee-drinks.jpg" alt="">
+                <p> tea-coffee-drinks</p></div>
+                <div class="item-card"><img src="./images/cleaning-essentials.jpg" alt="">
+                <p>cleaning-essentials</p></div>
+
+            </div>
+        <div style="font-size: 25px;font-weight: bold;margin-left: 50px;font-family: arial;margin-bottom: 25px;">
+            Popular Products
+        </div>
+        <div class="products">
+            <div class="p-card">
+                <div class="p-head">
+                    <span style="padding-right: 5px;padding-left: 5px;margin-top: 10px;display: inline-block;color: white;background-color: green;margin-left: 20px;border-radius: 5px;">14%</span>
+                </div>
+                <div class="p-body">
+                    <img src="./images/h2.jpg" alt="">
+                </div>
+                <div class="p-foot" style="margin-top: 10px;">
+                    <div class="p-d">Bakery & Biscuits</div>
+                    <div class="p-n">NutriChoice Digestive</div>
+                    <div>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-fill"></span>
+                        <span class="bi bi-star-half"></span>
+                        <span style="color: rgb(155, 144, 144);">4.5</span>
+                        <span style="color: rgb(156, 140, 140);">(25)</span>
+                    </div>
+                    <div class="amount">
+                        <div class="mrp">$24 </div>
+                        <div class="add">+ Add</div>
+
+                    </div>
+                    <div></div>
+
+                </div>
+            </div>
+                <div class="p-card">
+                    <div class="p-head">
+                      <span style="margin-left: 20px;margin-top: 15px;display: inline-block;color: white;background-color: rgb(228, 65, 65);padding-left: 5px;padding-right: 5px;border-radius: 5px;text-align: center;padding-bottom: 6px;font-size: 13px;">Sale</span>
+                    </div>
+                    <div class="p-body">
+                 <img src="./images/h-1.jpg" alt="">
+                    </div>
+                    <div class="p-foot">
+                        <div class="p-d">Snacks & Munchies</div>
+                        <div class="p-n">Haldiram's Sev Bhujia</div>
+                        <div>
+                            <span class="bi bi-star-fill"></span>
+                            <span class="bi bi-star-fill"></span>
+                            <span class="bi bi-star-fill"></span>
+                            <span class="bi bi-star-fill"></span>
+                            <span class="bi bi-star-half"></span>
+                            <span style="color: rgb(154, 138, 138);">4.5</span>
+                            <span style="color: rgb(143, 132, 132);">(149)</span>
+                    </div>
+                    <div class="amount" style="margin-top: 35px;">
+                        <div class="mrp">$18 <span class="strike"><strike>$24</strike></div>
+                        <div class="add">+ Add</div>
+
+                    </div>
+            </div></div>
+
+            <div class="p-card">
+
+                <div class="p-body">
+                 <img src="./images/h3.jpg" alt="">
+                </div>
+                <div class="p-foot" style="margin-top: 35px;">
+                    <div class="p-d" style="margin-top: 15px;">Bakery & Biscuits</div>
+                        <div class="p-n">Cadboury 5 Star Chocolate</div>
+                        <div>
+                            <span class="bi bi-star-fill"></span>
+                            <span class="bi bi-star-fill"></span>
+                            <span class="bi bi-star-fill"></span>
+                            <span class="bi bi-star-fill"></span>
+                            <span class="bi bi-star-fill"></span>
+                            <span style="color: rgb(155, 139, 139);">5</span>
+                            <span style="color: rgb(152, 141, 141);">(469)</span>
+                        </div>
+                        <div class="amount">
+                            <div class="mrp">$32 <span class="strike"><strike>$35</strike></div>
+                            <div class="add">+ Add</div>
+
+                        </div>
+                    
+                </div></div>
+                <div class="p-card">
+                    <div class="p-head">
+                        <span style="margin-left: 20px;margin-top: 15px;display: inline-block;color: white;background-color: rgb(228, 65, 65);padding-left: 5px;padding-right: 5px;border-radius: 5px;text-align: center;padding-bottom: 6px;font-size: 13px;">Hot</span>
+                    </div>
+                    <div class="p-body">
+                      <img src="./images/h4.jpg" alt="">
+                    </div>
+                    <div class="p-foot" >
+                        <div class="p-d">Snack & Munchies</div>
+                        <div class="p-n">Onion Flavour Potato</div>
+                        <div>
+                            <span class="bi bi-star-fill"></span>
+                            <span class="bi bi-star-fill"></span>
+                            <span class="bi bi-star-fill"></span>
+                            <span class="bi bi-star-half"></span>
+                            <span class="bi bi-star"></span>
+                            <span style="color: rgb(151, 137, 137);">3.5</span>
+                            <span style="color: rgb(153, 139, 139);">(456)</span></div>
+                    </div>
+                    <div class="amount" style="margin-bottom: 10px;">
+                        <div class="mrp">$3 <span class="strike"><strike>$5</strike></div>
+                        <div class="add">+ Add</div>
+
+                    </div>
+                </div>
+                    <div class="p-card">
+                        <div class="p-body">
+                         <img src="./images/h5.jpg" alt="">        
+                        </div>
+                        <div class="p-foot">
+                            <div class="p-d">Instant Food</div>
+                            <div class="p-n">Salted Instant Popcorn</div>
+                            <div>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-half"></span>
+                                <span style="color: rgb(159, 150, 150);">4.5</span>
+                                <span style="color: rgb(145, 138, 138);">(39)</span></div>
+                        </div>
+                        <div class="amount">
+                            <div class="mrp">$13 <span class="strike"><strike>$18</strike></div>
+                            <div class="add">+ Add</div>
+
+                        </div>
+                    </div>
+                    <div class="p-card">
+                        <div class="p-head">
+                            <span style="margin-left: 20px;margin-top: 15px;display: inline-block;color: white;background-color: rgb(228, 65, 65);padding-left: 5px;padding-right: 5px;border-radius: 5px;text-align: center;padding-bottom: 6px;font-size: 13px;">Sale</span>
+                        </div>
+                        <div class="p-body">
+                            <img src="./images/h6.jpg" alt="">
+        
+                        </div>
+                        <div class="p-foot" >
+                            <div class="p-d">Dairy,Bread & Eggs</div>
+                            <div class="p-n">Blueberry Greek Yougurt</div>
+                            <div>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-half"></span>
+                                <span style="color: rgb(135, 125, 125);">4.5</span>
+                                <span style="color: rgb(144, 131, 131);">(189)</span></div>
+                        </div>
+                        <div class="amount" >
+                            <div class="mrp">$18 <span class="strike"><strike>$24</strike></div>
+                            <div class="add">+ Add</div>
+                        </div>
+                    </div>
+                    <div class="p-card">
+                        
+                        <div class="p-body">
+                       <img src="./images/h7.jpg" alt="">
+                        </div>
+                        <div class="p-foot">
+                            <div class="p-d">Dairy,Bread & Eggs</div>
+                            <div class="p-n">Britannia Cheese Slices</div>
+                            <div>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span style="color: rgb(146, 133, 133);">5</span>
+                                <span style="color: rgb(149, 122, 122);">(345)</span></div>
+                        </div>
+                        <div class="amount">
+                            <div class="mrp">$24 <span class="strike"><strike>$18</strike></div>
+                            <div class="add">+ Add</div>
+
+                        </div>
+                    </div>
+                    <div class="p-card">
+                        <div class="p-body">
+                       <img src="./images/h8.jpg" alt="">
+                        </div>
+                        <div class="p-foot">
+                            <div class="p-d">Instant Food</div>
+                            <div class="p-n">Kellogg's Original Cereals </div>
+                            <div>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-half"></span>
+                                <span style="color: rgb(147, 138, 138);">4</span>
+                                <span style="color: rgb(147, 132, 132);">(90)</span></div>
+                        </div>
+                        <div class="amount">
+                            <div class="mrp">$32 <span class="strike"><strike>$35</strike></div>
+                            <div class="add">+ Add</div>
+
+                        </div>
+                    </div>
+                    <div class="p-card">
+                        <div class="p-body">
+                     <img src="./images/h9.jpg" alt="">
+                        </div>
+                        <div class="p-foot">
+                            <div class="p-d">Snack & Munchies</div>
+                            <div class="p-n">Slurrp Millet Chocolate</div>
+                            <div>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-half"></span>
+                                <span style="color: rgb(115, 99, 99);">4.5</span>
+                                <span style="color: rgb(100, 87, 87);">(67)</span></div>
+                        </div>
+                        <div class="amount">
+                            <div class="mrp">$3 <span class="strike"><strike>$5</strike></div>
+                            <div class="add">+ Add</div>
+
+                        </div>
+                    </div>
+                    <div class="p-card">
+                        <div class="p-head">
+        
+                        </div>
+                        <div class="p-body">
+                     <img src="./images/h10.jpg" alt="">
+                        </div>
+                        <div class="p-foot">
+                            <div class="p-d">Dairy,Bread & Eggs</div>
+                            <div class="p-n">Amul Butter - 500 g</div>
+                            <div>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-half"></span>
+                                <span class="bi bi-star"></span>
+                                <span style="color: rgb(108, 97, 97);">3.5</span>
+                                <span style="color: rgb(106, 93, 93);">(89)</span>
+                            </div>
+                            <div class="amount">
+                                <div class="mrp">$13 <span class="strike"><strike>$18</strike></div>
+                                <div class="add">+ Add</div>
+
+                            </div>
+                        </div>
+
+                    </div>                                    
+        </div>
+        <div class="service">
+            <div class="service-c">
+                <div class="s-h" >
+                    <span class="bi bi-clock-history"></span>
+                </div>
+                <div class="s-b">
+               <span>10 minute grocery now</span>
+                </div>
+                <div class="s-f">
+                    <p>Get your order delivered to your doorstep at the earliest from FreshCart pickup stores near you.</p>
+
+                </div>
+            </div>
+            <div class="service-c">
+                <div class="s-h" >
+                    <span class="bi bi-gift"></span>
+                </div>
+                <div class="s-b">
+                    <span>Best Prices & Offers</span>
+                </div>
+                <div class="s-f">
+                    <p>Cheaper prices than your local supermarket, great cashback offers to top it off. Get best pricess & offers.</p>
+                </div>
+            </div>
+            <div class="service-c">
+                <div class="s-h" >
+                    <span class="bi bi-box-seam"></span>
+                </div>
+                <div class="s-b">
+                    <span>Wide Assortment</span>
+                </div>
+                <div class="s-f">
+                  <p>Choose from 5000+ products across food, personal care, household, bakery, veg and non-veg & other categories.</p>
+                </div>
+            </div>
+            <div class="service-c">
+                <div class="s-h" >
+                    <span class="bi bi-arrow-repeat"></span>
+                </div>
+                <div class="s-b">
+                  <span>Easy Returns</span>
+                </div>
+                <div class="s-f">
+                    <p>Not satisfied with a product? Return it at the doorstep & get a refund within hours. No questions asked policy .</p>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <footer>
+        <div class="footer-details">
+            <div>
+                <span class="footer-topic">
+                    Categories
+                </span>
+                <p>Vegetables & Fruits</p>
+                <p>Breakfast & instant food</p>
+                <p>Bakery & Biscuits</p>
+                <p>Atta, rice & dal</p>
+                <p>Sauces & spreads</p>
+                <p>Organic & gourmet</p>
+                <p>Baby care</p>
+                <p>Cleaning essentials</p>
+                <p>Personal care</p>
+            </div>
+            <div>
+                <span class="footer-topic">
+                    Get to know us
+                </span>
+                <p>Company</p>
+                <p>About</p>
+                <p>Blog</p>
+                <p>Help Center</p>
+                <p>Our Value</p>
+            </div>
+            <div>
+                <span class="footer-topic">
+                    For Consumers
+                </span>
+                <p>Payments</p>
+                <p>Shipping</p>
+                <p>Product Returns</p>
+                <p>FAQ</p>
+                <p>Shop Checkout</p>
+            </div>
+            <div>
+                <span class="footer-topic">
+                    Become a Shopper
+                </span>
+                <p>Shopper Opportunities</p>
+                <p>Become a Shopper</p>
+                <p>Earnings</p>
+                <p>Ideas & Guides</p>
+                <p>New Retailers</p>
+            </div>
+
+        <div>
+            <span class="footer-topic">
+                Freshcart programs
+            </span>
+            <p>Freshcart programs</p>
+            <p>Gift Cards</p>
+            <p>Promos & Coupons</p>
+            <p>Freshcart Ads</p>
+            <p>Careers</p>
+        </div>
+    </div>
+
+    </footer>
+    
+</body>
+</html>

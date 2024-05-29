@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 300px;
+        }
+        .bi-heart-fill{
+            color: red;
+            font-size: 50px;
+            animation-name: blink;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            padding: 20px;
+            position: fixed;
+        }
+        @keyframes blink{
+            from{
+                opacity: 1;
+                font-size: 50px;
+                transition: 2s;
+                
+            }
+            10%{
+                color: yellow;
+                transition-timing-function: 2s;
+            }
+            50%{
+                color: aqua;
+            }
+            to{
+               opacity: 1;
+               font-size: 100px;
+               transition: 2s;
+               color:blue; 
+            }
+        }
+        @keyframes spin{
+            from{
+                border: 5px solid black;
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            border-top: 6px solid red;
+            border-right: 6px solid greenyellow;
+            border-left: 6px;
+            }
+            to{
+                 transform: rotate(360deg);
+                 border-right: 5px solid goldenrod;
+            }
+
+        }
+         .ball{
+            border: 5px solid black;
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+            border-top: 6px solid red;
+            border-right: 6px solid greenyellow;
+            border-left: 6px;
+            animation-name: spin;
+            animation-duration: 2s ;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: relative;
+         }
+         .outer-circle{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            margin-left: 200px;
+            border-top: 2px solid orange;
+            border-right:2px solid orange;
+            border-left: 2px solid blue;
+            border-bottom: 2px solid blue;
+            animation-name: shadow;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+         }
+         @keyframes shadow{
+            from{
+             box-shadow: orange;
+             transition: 1s;
+             margin-left: 10px;
+            }
+            to{
+            transform: rotate(180deg);
+            box-shadow: 4px 1px orange;
+            transition: 1s;
+            transform: translate(500px);
+            transform: rotate(360deg);
+
+            }
+         }
+         .inner-circle{
+            width: 150px;
+            height: 150px;
+            border-radius: 150px;
+            border: 5px solid;
+            border-left: 5px;
+            border-right: 5px;
+            border-top:5px solid red;
+            border-bottom: 5px solid blue;
+            display: inline-block;
+            margin-top: 15px;
+            animation-name: box;
+            animation-duration: 1sec;
+            animation-iteration-count: infinite;
+         }  
+         @keyframes box{
+            from{
+                  transform: rotate(-30deg);
+            }
+            to{
+             transform: rotate(-360deg);
+              
+               
+            }
+         }
+    </style>
+</head>
+<body>
+<div class="ball">
+    <div class="bi-heart-fill"></div> 
+</div>
+<div class="outer-circle">
+ <div class="inner-circle"></div>
+</div>
+</body>
+</html>

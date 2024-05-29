@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/"
+    <title>Document</title>
+    <style>
+        nav{
+            font-size: 25px;
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+        main{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 100px;
+        }
+        img:target{
+            border-radius: 500px;
+            box-shadow: 2px 2px 2px orangered;
+            transition: 4s;
+            width: 500px;
+            height: 500px;
+            rotate: 360deg;
+        }
+        .hathi:hover{
+            background-image: url(./images/a10.jpg);
+
+        }
+        fieldset{
+            background-color: aquamarine;
+        }
+        legend{
+            background-color: purple;
+            color: white;
+            font-weight: bold;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 2px 2px 2px orangered;
+        }
+        .list{
+            width: 83px;
+            height: 50px;
+            overflow: auto;
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+            
+        }
+        input:valid{
+            border: 1px solid green;
+            outline: none;
+            box-shadow: 2px 2px 2px green;
+        }
+        input:invalid{
+             border: 1px solid red;
+             outline: none;
+             box-shadow: 2px 2px 2px red;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+    <span><a href="#haathi">haathi</a></span>
+    <span><a href="#moti">moti</a></span>
+    <span><a href="#jumbo">jumbo</a></span>
+    </nav>
+    <main>
+        <img class="hathi" id="haathi" src="./images/jh-1.jpg" alt="" width="200px" height="200px">
+        <img id="moti" src="./images/jh-4.jpg" alt="" width="200px" height="200px">
+        <img id="jumbo" src="./images/jh-3.jpg" alt="" width="200px" height="200px">
+    </main>
+    <div>
+        <fieldset>
+            <legend>haathi
+            </legend>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, optio. In sequi quas corrupti at, nostrum consectetur sint ipsum eaque sed perspiciatis veniam tempora unde quo impedit. Veritatis, accusantium enim.
+        </fieldset>
+    </div>
+<div>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" required><span>*</span>
+        <div>
+            username required
+        </div>
+    </dd>
+    <dt>Age</dt>
+    <dd>
+        <input type="number" min="15" max="30" required>
+        <div>Age 15 to 30 only</div>
+    </dd>
+    <dt>Password</dt>
+    <dd><input type="password" pattern="(?=.*[A-Z])\w{4,15}" required><span>*</span></dd>
+    <div>Passw0rd 4 to 15 one uppercase letter required</div>
+    <dt>MOBILE</dt>
+    <dd><input type="text" pattern="\+91\d{10}" required> </dd>
+    </dl>
+</div>
+            <div>
+                <select>
+                    <option> Text </option>
+                    <optgroup label="GroupName">
+                    <option> Text </option>
+                    <option> Text </option>
+                   </optgroup>
+                </select>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

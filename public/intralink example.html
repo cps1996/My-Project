@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display: flex;
+            justify-content: space-evenly;
+            
+            
+        }
+        .card{
+            border: 1px solid;
+            margin-top: 20px;
+            color: white;
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px orangered;
+        }
+        .card:target{
+            background-color: blueviolet;
+            width: 400px ;
+            height: 400px;
+            border-radius: 400px;
+             transition: 4s;
+             rotate: 360deg;
+             text-align: center;
+             transform-style: preserve-3d;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <span><a href="#html">HTML</a> </span>
+        <span><a href="#css">CSS</a> </span>
+        <sapn><a href="#js">Javascript</a> </sapn>
+    </nav>
+    <main>
+        <div class="card" id="html">
+            <h1>HTML</h1>
+            <p>it is a markup language</p>
+        </div>
+        <div class="card" id="css">
+            <h1>CSS</h1>
+            <p>it defines styles for HTML</p>
+        </div>
+        <div class="card" id="js">
+            <h1>Javascript</h1>
+            <p>it manipulates DOM</p>
+        </div>
+    </main>
+    
+</body>
+</html>

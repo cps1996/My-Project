@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bewakoof shooping</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="../public/images/favicon.ico/bewakoof.ico">
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-evenly;
+            border-bottom: 1px solid;
+            margin-left: 10px;
+            padding-bottom: 10px;
+        }
+        header{
+            position: sticky;
+            top:0px;
+            background-color: white;
+        }
+        
+        nav span{
+            display: inline-block;
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+        .searchbox{
+            background-color: rgb(224, 220, 220);
+            width: 300px;
+            border-radius: 5px;
+            margin-left: 30px;
+        }
+        .searchbox span{
+            margin-left: 10px;
+        }
+        .searchbox input {
+           margin: 12px 0 0 30px;
+           border: none;
+           outline: none;
+           background: transparent;
+        }
+        .cart{
+            border-left: 1px solid;
+            margin-right: 50px;
+        }
+        article span{
+            margin-left:40px;
+            font-size: 20px;
+        }
+        article{
+            margin-left: 130px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .big-images{
+            display: flex;
+            margin-left: 10px;
+            justify-content: space-between;
+    
+
+        }
+       .new{
+        display: grid;
+        grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr ;
+        margin-top: 30px;
+        margin-left: 100PX;
+        margin-right: 100px;
+       }     
+       .flash{
+        margin-top: 10px;
+       }
+       .names{
+        font-size: 15px;
+        font-weight: bold;
+       }
+       .mens{
+         display: grid;
+         grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+       }
+       .celebrate{
+        margin-top: 10px;
+        margin-bottom: 10px;
+       }
+       .latest{
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+       }
+       .hot-deals{
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+       }
+       .bags{
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+       }
+       .slides{
+        display: grid;
+        grid-template-columns: 4fr 4fr 4fr;
+       }
+       .accessories{
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+        margin-left: 200px;
+        margin-right: 200px;
+       }
+       .bestsellers{
+        display: grid;
+        grid-template-columns: 2.5fr 2.5fr 2.5fr 2.5fr 2.5fr;
+       }
+       .bestsellers:hover{
+        opacity:0.7
+       }
+       .picks{
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+       }
+       footer{
+        height:200vh;
+        background-color: black;
+       }
+       .footer-title{
+        font-size: 30px;
+        color:rgb(255, 221, 2);
+        font-weight: bold;
+        font-family: arial;
+        padding-top: 100px;
+        padding-left: 200px;
+       }
+       .bi-r-circle{
+        font-size: 10px;
+
+       }
+       .sub-title{
+        display:grid;
+        grid-template-columns: 4fr 4fr 4fr 4fr;
+        color: white;
+        margin-left: 200px;
+        margin-top: 20px;
+        margin-right: 95px;
+       }
+       .footer-topic{
+        color:rgb(255, 217, 2);
+        font-weight: bold;
+    
+       }
+       .sub-title span{
+        display: grid;
+        row-gap: px;
+        margin-top: px;
+       }
+       .footer-span{
+        margin-top: 20px;
+        font-family: arial;
+        font-size: 15px;
+       }
+       .subscribe{
+        display: flex;
+        margin-top: 20px;
+       }
+       .email{
+        border-bottom:1px solid;
+        padding: 10px;
+        color: gray;
+        width: 100px;
+       }
+       .btn-subscribe{
+        background-color: yellow;
+        color: black;
+        width: 150px;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+       }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div><img src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo-bday-y24.svg" alt=""></div>
+            <div>
+                <span>MEN</span>
+                <span>WOMEN</span>
+                <span>MOBILE COVERS</span>
+            </div>
+            <div class="searchbox">
+                <span class="bi bi-search"></span>
+                <input type="text" placeholder="search by product,category or collection">
+            </div>
+            
+            <div class="cart">
+                <span>Login</span>
+                <span class="bi bi-heart"></span>
+                <span class="bi bi-bag"></span>
+            </div>
+        </nav>
+    </header>
+    <article>
+        <span>MEN</span>
+        <span>WOMEN</span>
+        <span>ACCESSORIES</span>
+        <span>SHOP NOW</span>
+        <span>HEAVY DUTY</span>
+        <span>BEWAKOOF AIR</span>
+        <span>OFFICIAL MERCH</span>
+        <span>PLUS SIZE</span>
+    </article>
+    <section>
+         <main>
+            <div>
+            <div class="big-images">
+            <div><img height="500" width="460"  src="https://images.bewakoof.com/uploads/grid/app/12Birthday-extend-1x1-common-1712938923.jpg" alt=""></div>
+            <div><img height="500" width="490" src="https://images.bewakoof.com/uploads/grid/app/HC---1X1---B2-899---common-1713185882.png" alt=""></div>
+            <div><img height="500"width="500" src="https://images.bewakoof.com/uploads/grid/app/HC---1X1-common-1713107327.png" alt="">
+            </div></div>
+            <div class="new">
+            <div><img width="150"  src="https://images.bewakoof.com/uploads/grid/app/category-icon-Desktop-common--1--1706616684.gif" alt=""><span class="names">bestsellers</span></div>
+            <div><img width="150"src="https://images.bewakoof.com/uploads/grid/app/category-icon-Desktop-New-Arrivals-1706616683.jpg" alt=""><span class="names">NewArrivals</span></div>
+            <div><img width="150"src="https://images.bewakoof.com/uploads/grid/app/category-icon-for-Desktop---1--1697613231.jpg" alt=""><span class="names">Officialcollaboration</span></div>
+            <div><img width="155" src="https://images.bewakoof.com/uploads/grid/app/category-icon-Desktop--1706616685.jpg" alt=""><span class="names">PlusSize</span></div>
+            <div><img width="150"src="https://images.bewakoof.com/uploads/grid/app/thumbnails-Revamp-Customization--1--1693212866.jpg" alt=""><span class="names">Customisation</span></div>
+            <div><img width="150" src="https://images.bewakoof.com/uploads/grid/app/thumbnails-Revamp-Combos-1693212865.gif" alt=""><span class="names">Combos</span></div>
+            <div><img width="155"  src="https://images.bewakoof.com/uploads/grid/app/thumbnails-Revamp-Vote-1693212866.jpg" alt=""><span class="names">VoteForDesgins</span></div>
+            <div><img width="150"src="https://images.bewakoof.com/uploads/grid/app/last-size-new-thumbnaik-1668508337.jpg" alt=""><span class="names">LastSizesLeft</span></div>
+            </div>
+            <div class="flash" style="margin-top: 30px;"><img  width="1500"src="https://images.bewakoof.com/uploads/grid/app/Bwkf-x-IK-RM-Thin-Desktop-banner-strip--1--1707395643.gif" alt=""></div>
+         <div align="center"> <span style="font-weight: bold;font-size: 20PX;margin-top: 10px;margin-bottom: 10px;display: inline-block;font-family: arial;" >TRENDING CATEGORIES </span></div>
+            <div class="mens">
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-OS-T-Shirts-1706511994.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350-Classic-Fit-T-Shirts-1707280970.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/unnamed--5--1706513552.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Joggers-men-1706512292.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Jeans-1704181405.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350-Co-ords-Men-1707280970.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/3rd-Jan-2024-Oversized-T--shirts-1704270296-1706511259.webp" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350--2--1706509179.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Casual-Pants-1706509180.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Joggers-1706509180.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/3rd-Jan-2024-Cargos-1704270812-1706511406.webp" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/3rd-Jan-2024-Dresses-1704270296-1706511533.webp" alt=""></div>
+            </div>
+            <div class="celebrate"><img width="1500" src="https://images.bewakoof.com/uploads/grid/app/thin-banner-desktop---journey--1--1712137095.png" alt=""></div>  
+            <div align="center"><span style="font-size: 20px;font-weight: bold;font-family: cochin;">Bewakoof Originals</span></div>
+            <div class="latest">
+                <div><img width="400" src="https://images.bewakoof.com/uploads/grid/app/American-PIMA-PC-Size-Banner-480x457-1707137667.jpg" alt=""></div>
+                <div><img width="400"  src="https://images.bewakoof.com/uploads/grid/app/HD-PC-Size-Banner-480x457-1707137667.jpg" alt=""></div>
+                <div><img width="400"  src="https://images.bewakoof.com/uploads/grid/app/American-PIMA-PC-Size-Banner-480x457-1707137667.jpg" alt=""></div>
+                <div><img  width="300"height="380" src="https://images.bewakoof.com/uploads/grid/app/1000070037-1707137668.jpg" alt=""></div>
+            
+            </div>
+            <div class="hot-deals">
+                <div><img width="750" src="https://images.bewakoof.com/uploads/grid/app/DESKTOP---MID-SIZE---B3-1199-common-1713185883.png" alt=""></div>
+                <div><img width="750"src="https://images.bewakoof.com/uploads/grid/app/Midsize-Desktop-Banner-Homepage-Common--5--1712942267.jpg" alt=""></div>
+                <div><img width="750" src="https://images.bewakoof.com/uploads/grid/app/Polo-Tshirts-Men-Desktop-Midsize-banner-1713330484.jpg" alt=""></div>
+                <div><img width="750" src="https://images.bewakoof.com/uploads/grid/app/Desktop-midsize-OS-tees-common-ezgif-com-optimize--3--1712940023.gif" alt=""></div>
+            </div>
+            <div align="center"><span style="font-size: 25px;display:inline-block;margin-top:10px;font-weight: bold;font-family: 'Courier New', Courier,;">Categories To Bag</span> </div>
+            <div class="bags">
+                
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Shirts-men--1706511997.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Cargos-men-1706511996.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/Pajamas-trending-category-icons-240x350-1706514429.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350-Co-ords-1707280972.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/Pajamas-trending-category-icons-240x350-women-1706514429.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-Jeans-1706509182.jpg" alt=""></div>
+            </div>
+            <div class="slides">
+             <div><img width="500"src="https://images.bewakoof.com/uploads/grid/app/NEW-1x1-common-cargo60off-ezgif-com-optimize--2--1712940469.gif" alt=""></div>
+             <div><img width="500" src="https://images.bewakoof.com/uploads/grid/app/Feb-1x1-vests299--2--1711782893.jpg" alt=""></div>
+             <div><img width="500" src="https://images.bewakoof.com/uploads/grid/app/HC-BANNERS---1X1---dresses--2--1711782779.jpg" alt=""></div>
+            </div>
+            <div align="center"><span style="font-size: 20px;font-weight: bold;margin-top: 10px;margin-bottom: 10px;display: inline-block;">TOP ACCESSORIES</span></div>
+            <div class="accessories">
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350-Mobile-covers-1705054649.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350-Sliders-1705043484.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350-Backpacks-1705043482.jpg" alt=""></div>
+                <div><img src="https://images.bewakoof.com/uploads/grid/app/trending-category-icons-240x350-Caps-1705043483.jpg" alt=""></div></div>
+                <div align="center"><span style="font-size: 25px;margin-bottom: 10px;display: inline-block;">BESTSELLERS</span></div>
+                <div class="bestsellers">
+                    <div><img width="290" src="https://images.bewakoof.com/t320/men-s-black-warriors-graphic-printed-oversized-t-shirt-519149-1708612781-1.jpg" alt=""></div>
+                    <div><img width="290" src="https://images.bewakoof.com/t320/women-s-black-straight-cargo-pants-620005-1708328865-1.jpg" alt=""></div>
+                    <div><img width="290"src="https://images.bewakoof.com/t320/women-aop-oversize-t-shirt-4-580364-1683887449-1.jpg" alt=""></div>
+                    <div><img width="290" src="https://images.bewakoof.com/t320/men-s-white-vengeance-typography-oversized-t-shirt-519142-1701342787-1.jpg" alt=""></div>
+                    <div><img width="290" src="https://images.bewakoof.com/t320/snoopy-moods-small-backpack-579925-1680613252-1.jpg" alt="input"></div>
+                </div>
+                <div align="center"><span style="font-size: 25px;margin-bottom: 10px;display: inline-block;margin-top: 10px;">OUR BEST PICKS</span></div>
+                <div class="picks">
+                    <div><img width="750" src="https://images.bewakoof.com/uploads/grid/app/720x420-Midsize-bannner-Combos--1--1704012294.jpg" alt=""></div>
+                    <div><img width="750"src="https://images.bewakoof.com/uploads/grid/app/Official-Merch-store-Desktop-banner-1700470826-1701771559.webp" alt=""></div>
+                    <div><img width="750"src="https://images.bewakoof.com/uploads/grid/app/Customise-Desktop-midsize-banner-1704439012.jpg" alt=""></div>
+                    <div><img width="750" src="https://images.bewakoof.com/uploads/grid/app/Sizes-6xl-Plus-Size-Desktop-midsize-Banner-1706690349.jpg" alt=""></div>
+                </div>
+                <div style="margin-top: 15px;margin-bottom: 15px;"><img width="1500" src="https://images.bewakoof.com/uploads/grid/app/Desktop-Strip-3-1672040129.jpg" alt=""></div>
+                <div style="margin-bottom: 15px;"><img width="1500"src="https://images.bewakoof.com/uploads/grid/app/Desktop-Strip-3-1669022420.jpg" alt=""></div>
+        </main>
+    </section>
+    <footer>
+        <div class="footer-title">Bewakoof<sup><span class="bi bi-r-circle"></span></sup></div>
+        <div class="sub-title">
+            <div>
+                <div class="footer-topic">CUSTOMER SERVICE</div>
+                <span class="footer-span">
+                <span>Contact Us</span>
+                <span>Track Order</span>
+                <span>Return Order</span>
+                <span>Cancel Order</span></span>
+            </div>
+            <div>
+                <div class="footer-topic">COMPANY</div>
+               <span class="footer-span">
+                 <span>About Us</span>
+                <span>We're Hiring</span>
+                <span>Terms & Conditions</span>
+                <span>Privacy Policy</span>
+                <span>Blog</span></span>
+            </div>
+            <div>
+                <div class="footer-topic">CONNECT WITH US</div>
+                <span class="footer-span"><span class="bi bi-facebook">4.7M People Like this</span>
+                <span class="bi bi-instagram">1M Followers</span>
+                </span>
+            </div>
+            <div>
+                <div class="footer-topic">KEEP UP TO DATE</div>
+                <div class="subscribe">
+                    <span class="email">Enter Email id</span>
+                    <span class="btn-subscribe">SUBSCRIBE </span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-details">
+            <div>
+            <div class="f-details">MEN'S CLOTHING</div>
+            <span class="f-sub-details">
+            <span>Top Wear</span>
+            <span>Men's New Arrivals</span>
+            <span>Men's T-Shirts</span>
+            <span>Men's Hoodies & Sweatshirts</span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+
+        </div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum error iste molestias quia, nam ducimus consequuntur iusto quidem commodi, tempore sequi a, animi nihil earum incidunt voluptate cum eligendi voluptas!
+        Voluptatem ipsa voluptatibus officiis vitae repudiandae dolorum est voluptates. Suscipit esse ad, delectus vero odio corporis exercitationem eveniet blanditiis magnam, cumque, adipisci nesciunt animi saepe et sapiente quos asperiores deleniti.
+        Maxime aut doloribus reprehenderit at deserunt velit temporibus modi laboriosam pariatur, voluptate placeat dolorem nulla amet, harum exercitationem! Aspernatur enim inventore iste totam! Aliquam est modi molestiae, harum corrupti fugiat.
+        Laudantium a ex suscipit dolorum corporis, error culpa cumque in consequatur excepturi labore veniam itaque. Saepe dicta natus aliquid optio! Laboriosam, voluptates quia quis voluptas assumenda qui enim expedita corporis.
+        Odit, quas ad id consequuntur tempora tempore! Explicabo totam velit minus est molestias aspernatur vel sed maiores labore nostrum magni deserunt, dolorem quia suscipit quo eos. Rem corporis hic blanditiis.
+        Nisi maiores iure voluptates soluta eligendi. Reiciendis explicabo, iusto quo quas laboriosam inventore magnam velit cumque culpa illum, perspiciatis possimus nulla? Cupiditate saepe iure nisi suscipit pariatur cum porro autem.
+        Rem, repellat amet! Quaerat possimus laboriosam quae cupiditate officia voluptatibus voluptatem aliquam accusantium minus praesentium accusamus quo culpa architecto optio expedita iusto, nam sint eveniet ipsam debitis dolorem voluptas? At.
+        Ipsam quae reiciendis modi ratione nobis tempora libero repellat magni facilis, illum aliquid saepe minima ipsum velit nostrum quidem unde molestiae cum a error? Eaque sapiente voluptatibus repellat magnam dignissimos?
+        Officia, soluta nemo delectus repellendus, possimus asperiores voluptates nam eum fuga vero odio impedit consequuntur! Earum fuga est suscipit quae quam, dolores, eaque dolorem nobis perferendis impedit similique! Qui, quaerat?
+        Maxime, veritatis perspiciatis. At tenetur voluptatibus id nihil placeat non debitis. Voluptates, ut similique accusantium alias recusandae veritatis assumenda dolorem enim provident nam aliquam aperiam atque suscipit dicta corrupti mollitia?
+        Soluta ad suscipit eum esse alias similique ea facere dolorem ducimus praesentium, maxime debitis dolorum, eveniet sit ratione obcaecati aut ullam? Odio obcaecati sed similique in, unde molestias deserunt ducimus?
+        Repellat libero similique aliquid, harum at doloremque vel sequi voluptate atque nobis adipisci magni corporis fuga perspiciatis velit officia ab pariatur esse iusto voluptatem omnis quidem a alias. Inventore, commodi!
+        Sunt cumque eos, tempora assumenda quas explicabo iure adipisci at excepturi fuga perferendis, neque quos recusandae id commodi libero, in quaerat quia! Blanditiis, inventore in? Nostrum at necessitatibus saepe eius.
+        Praesentium eaque error deleniti sint sunt earum ullam quidem voluptate inventore neque eveniet, molestias eligendi minima temporibus nisi ipsum minus molestiae beatae porro quibusdam laborum consequuntur. Eaque atque quos aliquam?
+        Quisquam non praesentium assumenda ipsa veritatis quis suscipit, ipsam nisi modi repudiandae incidunt, quam omnis expedita numquam debitis delectus tempore unde quas nihil sequi optio, voluptate ex consectetur. Ipsum, minima?
+        Illum saepe ratione debitis voluptate rerum delectus officiis obcaecati mollitia necessitatibus illo explicabo veniam repellendus dicta autem nisi, pariatur nam nobis doloremque ullam dolor et placeat error quasi perferendis. Mollitia.
+        Iste consequatur vitae, temporibus ullam laudantium, pariatur mollitia incidunt assumenda commodi reprehenderit qui. Minus hic, est aliquid exercitationem possimus debitis alias id placeat, fugiat, eum a? Consequuntur modi sunt deserunt?</div>
+    </footer>
+</body>
+</html>

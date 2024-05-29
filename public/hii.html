@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        @media screen and (min-width:600px),(orientation:landscape) {
+           main{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+           }
+           img{
+            height: 350px;
+            width: 350px;
+            border-radius: 350px;
+            margin-left: 300px;
+        }
+        }
+        @media screen and (max-width:599px), (orientation:portrait) {
+            }
+            main{
+                display: flex;
+                flex-direction: column;
+            }
+            img{
+                margin: 10px;
+                grid-row: 3;
+                
+            }
+            .intro{
+                margin-top: ;
+                grid-row: 3;
+                 
+            }
+        
+    </style>
+</head>
+<body>
+    <header class="container-fluid">
+        <div class=" navbar navbar-expand-lg navbar-dark bg-dark  ">
+             <div class="container-fluid">
+                <button data-bs-target="#menu" data-bs-toggle="collapse" class="navbar-toggler"><span class="navbar-toggler-icon "></span></button>
+                <div class="navbar-brand fw-bold">Chandra Prakash</div>
+                <div class="navbar-collapse collapse" id="menu">
+                    <ul class="navbar-nav me-auto ">
+                        <li class="nav-item "><a class="nav-link">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+             </div>
+        </div>
+    </header>
+    <main>
+        <div >
+          <img src="../public/my pics/me/mu-3.jpg" alt="">
+        </div>
+        <div>
+            <div class=" fw-bold" style="font-size: 50px;font-family: cursive;">HELLO</div>
+            <div class="fw-bold mt-5" style="font-size: 20px;">A Bit About Me</div>
+            <p class="mt-2 w-75">I am a UI FULL Stack Developer. I like to create Quality desgin and cool interfaces.</p>
+            <p class="w-75">If you are looking for a developer to add to your Team,I would love to hear form you.</p>
+            <div >
+                <span class="pe-1 fw-bold r1"><a href="#" style="text-decoration: none;color: black;">Resume</a> </span>
+                <span class="ps-3 r2 fw-bold" ><a href="#" style="text-decoration: none;color: black;">Projects</a></span>
+                <span class="ps-3 r3 fw-bold"><a href="#" style="text-decoration: none;color: black;">Contact</a></span>
+            </div>
+    
+        </div>
+
+    </main>
+</body>
+</html>
