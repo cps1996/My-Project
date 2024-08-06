@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+       function Bodyload(){
+
+           fetch("./t20json.json")
+
+           .then(function(response){
+             return response.json();
+           })
+           .then(function(t20table){
+            t20table.map(function(country){
+                var tr = document.createElement("tr");
+                var tdCountry = document.createElement("td");
+                var tdMatches = document.createElement("td");
+                var tdWon = document.createElement("td");
+                var tdLost = document.createElement("td");
+                var tdPoints = document.createElement("td");
+                var tdNrr = document.createElement("td");
+
+                tdCountry.innerHTML = `<img src = ${country.Flag} ><span>${country.Country}</span>`
+                tdMatches.innerHTML = `${country.Matches}`;
+                tdWon.innerHTML = `${country.Won}`;
+                tdLost.innerHTML = `${country.Lost}`;
+                tdPoints.innerHTML = `${country.Pts}`;
+                tdNrr.innerHTML = `${country.Nrr}`;
+
+
+
+
+                    tr.appendChild(tdCountry);
+                    tr.appendChild(tdMatches);
+                    tr.appendChild(tdWon);
+                    tr.appendChild(tdLost);
+                    tr.appendChild(tdPoints);
+                    tr.appendChild(tdNrr);
+                document.querySelector("tbody").appendChild(tr);
+            })
+           })
+
+
+       }
+
+    </script>
+</head>
+<body onload="Bodyload()">
+    <header class="m-2 d-flex justify-content-between bg-info p-2">
+      <div  class=" text-white  fw-bolder fs-3 " style="font-family:sans-serif ;">
+       T20 World Cup
+      </div>
+      <div>
+        <img src="../public/images/ind.png" alt="" width="50%">
+      </div>
+      <div><img src="../public/images/afg.png" alt="" width="50%"></div>
+      <div> <img src="../public/images/aus.png" alt="" width="50%"></div>
+      <div> <img src="../public/images/ban.png" alt="" width="50%"></div>
+      <div class=" text-white  fw-bolder fs-3 "  >
+          Points Table
+      </div>
+    </header>
+    <section>
+        <table class="table border-1 table-striped mt-4 w-50" align="center">
+            <thead>
+                <tr>
+                    <th>
+                        COUNTRY
+                    </th>
+                    <th>MATCHES</th>
+                    <th>WON</th>
+                    <th>LOST</th>
+                    <th>PTS</th>
+                    <th>NRR</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

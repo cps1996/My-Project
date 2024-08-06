@@ -1,0 +1,32 @@
+<script>
+    // DATE FUNCTION
+    // through this method the date and time automatically load on page
+   var ref = new Date();
+
+    document.write(`<h2>Hello Today is</h2> <b>${ref}</b> <br>`);
+</script>
+<script>
+    // by this technique we can set the date dynamically
+    var now = new Date();
+      now.setMonth(6);
+      now.setDate(16);
+       now.toLocaleDateString();
+
+       document.write(now+"<br>");
+
+</script>
+<script>
+    // here we can desgin date year month
+
+  //  var today = new Date();
+        var Weekdays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        var months = ["Jan","Feb","Mar","Apr","May","June","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+        today.setDate(16);
+        today.setMonth(6);
+
+        document.write(`<h1>${Weekdays[today.getDay()]},${months[today.getMonth()]},${today.getDate()},${today.getFullYear()}</h1>`);
+</script>
+<script>
+    
+</script>

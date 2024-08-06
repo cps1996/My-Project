@@ -1,0 +1,115 @@
+<script>
+    for(var i=1; i<=9; i++){
+        document.write(i + "<br>");
+    }
+</script>
+<script>
+    var values = [10,20,30,40,50];
+
+    document.write(values + "<br>");
+
+    for(var i=0; i<values.length; i++)
+    {
+        values[i] = values[i] + 1;
+    }
+    document.write(values + "<br>");
+</script>
+<script>
+    var value = [{Name:"Tv",Price:45000},{Name:"Mobile",Price:20000},{Name:"WashingMachine",Price:30000}];
+    for(var i=0; i<value.length; i++)
+    {
+        document.write(value[i].Price + "<br>");
+    } 
+
+</script>
+<script>
+    // finding total price
+    var Product = [{Name:"Footwear",Brand:"Nike",Price:2500},{Name:"Fashion",Brand:"Blackberry",Price:3500},{Name:"Electronics",Brand:"LG TV",Price:35000}]
+    var total = 0;
+    for(var i=0; i<Product.length; i++)
+    {  
+        total = total + Product[i].Price;
+    }
+    document.write(total);   // it must be written outside
+</script>
+<script>
+    // find how many times a repeated
+    var Note = "Welcome to JavaScript";
+    var count= 0;
+
+    for(var i =0; i<Note.length; i++)
+    {
+         if(Note[i]==="a")  // if the value matches with a
+         {
+            count++;    // then it will printed how many times it occured ++ means reads all value
+         } 
+    }
+    document.write(`"a" occured ${count} times`);
+</script>
+<script>
+    // get the count of vowels
+    var Note = "Welcome to javascript";
+    var count=0;
+    for(var i=0; i<Note.length; i++)
+    {
+        if(Note[i]==="a" || Note[i]==="e" || Note[i]==="i" || Note[i]==="o" || Note[i]==="u")
+        {
+            count++;
+        }
+    }
+    document.write(count);
+</script>
+<script>
+    var Sentence = "Hii My Name Is Khan and I Am Not A Terrorist";
+   var result= Sentence.replace('Name','Dome');
+    console.log(result+"<br>");
+    
+    for(var i = 0; i<Sentence.length;i++)
+   // {
+      //   Sentence.map(function(element){
+           // element.replace('khan','man');
+     //    })
+   // }
+    //document.write(element);
+
+</script>
+
+<script>
+    
+   //var input = [ ...prompt("Enter any Word")];
+     //var word= input.toString();
+    //var reverse = input.reverse();
+    var msg = "This is a palindrom";
+    var msg1 = "this is not a palindrome";
+     
+   // if(word == reverse)
+    {
+   //     document.write(msg);
+    }
+   // else
+    {
+    //    document.write(msg1);
+    }
+</script>
+<script>
+  //  var input = [...prompt()];
+
+   // inputreverse = input.reverse();
+   //  var msg = "this is palindrom";
+     var msg1 = "this is not a palindrom";
+    for(var i=0;i<=input.length;i++){
+
+        input = input[i];
+         inputreverse = input[i];
+
+        if(input == inputreverse){
+        
+        document.write("This is palendrom");
+        }else{
+            document.write("This not a pallendrom");
+        }
+        
+    }
+    
+       
+</script>

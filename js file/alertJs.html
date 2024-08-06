@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<style>
+</style>
+<script>
+   function deleteclick()
+   {
+    result=confirm(" All Files are deleted");
+    if(result==true)
+    {
+        alert("deleted succesfully");
+    }
+    else
+    {
+        alert("you cancelled");
+    }
+   }
+   function submit()
+   {
+     result=confirm("Files Deleted Succesfully");
+     if(result==true)
+     {
+        document.write("<h1>Deleted Succesfully</h1><br><a href='alertJs.html'>back</a>");
+     }
+     else
+     {
+        alert("Cancelled");
+     }
+   }
+   function save() 
+   {
+    document.getElementById("msg").innerHTML="Accordion Deleted";
+   }
+
+   function iclick()
+   {
+    foldername = prompt("Folder name required");
+    if(foldername==null)
+    {
+        document.write("Cancelled");
+    }
+    else if(foldername=="")
+    {
+        document.write("can,t  be submit empty");
+    }
+    else 
+    {
+        document.querySelector("p").innerHTML="foldername;" + foldername;
+    }
+   }
+
+ </script>
+</head>
+<body>
+    <div>
+        <button class="btn btn-danger" onclick="deleteclick()">delete</button>
+    </div>
+    <div class="m-5">
+        <button class="btn btn-warning" onclick="submit()">DEletd</button>
+    </div>
+    <div class="ms-5">
+        <button onclick="save()" class="btn btn-success">Submit</button>
+        <div class="accordion" id="msg">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#ans">Hello</button>
+                </div>
+                <div class="accordion-collapse collapse" id="ans" data-bs-parent="#msg">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, iusto a illo incidunt earum ratione facere aliquid reiciendis, quibusdam
+                         ex praesentium vel sapiente totam esse, tempora enim voluptas sed repellat.
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <button onclick="iclick()">CREATE</button>
+    </div>
+    <p></p>
+</body>
+</html>

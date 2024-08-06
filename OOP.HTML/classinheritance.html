@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Hdfc_version_1                      // this is first version of an app 
+        {
+            Personalbanking = "Personal banking app for Customers <br>";
+            print(){
+                document.write(this.Personalbanking);
+            }
+        } 
+        class Hdfc_version_2  extends Hdfc_version_1            // we want to add new feature without modifying previous so we update it.
+        {                                  // we use aggregator method "object to object relation"
+            NRI ="Banking Facility for NRI customer<br>";  
+            print(){                           // in version 2 we must have add the previous version we use code reusablity and extensiblity
+                let obj =new Hdfc_version_1(); // we create new object for version 1
+                super.print();
+                document.write(this.NRI);  // this is the version 2.
+            }
+        }
+        class Hdfc_version_3   extends Hdfc_version_2     
+        {
+            CC = "Credit cart facility for Customers<br>";
+            print()
+            {
+                let obj = new Hdfc_version_2();
+                super.print();  
+                document.write(this.CC);
+            }
+        }
+        function Install(){
+             var ver =document.querySelector("select").value;
+             switch(ver){
+                case "ver1":            
+                    document.write("<h2>Version-1 Installed</h2>");
+                    let obj1=new Hdfc_version_1();      //we create 1st obj for version1
+                    obj1.print();
+                    break;
+                case "ver2":
+                document.write("<h2>Version-2 Installed</h2>");
+                    let obj2 =new Hdfc_version_2();
+                    obj2.print();
+                    break; 
+                   case "ver3":
+                   document.write("<h2>Version-3 Installed</h2>");
+                    let obj3=new Hdfc_version_3();
+                    obj3.print();
+                    break;
+                    default:
+                    document.write("Please select the versions");
+                    break;
+             }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Install Hdfc Bank app</legend>
+        <dl>
+            <dt>
+                Select Version
+            </dt>
+            <dd>
+                <select>
+                    <option>Choose version</option>
+                    <option value="ver1">Version-1 2022</option>
+                    <option value="ver2">Version-2 2023</option>
+                    <option value="ver3">Version-3 2024</option>
+                </select>
+                <button onclick="Install()">INSTALL</button>
+            </dd>
+        </dl>
+    </fieldset>
+</body>
+</html>

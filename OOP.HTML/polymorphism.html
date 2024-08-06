@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Car
+        {
+            Name;
+            Fuel;
+            Price;
+            Segment;
+            SeatingCapacity;
+        
+            print(){
+            
+                document.querySelector("p").innerHTML=(`Name=${this.Name}<br>Fuel type = ${this.Fuel}<br>Price = ${this.Price}<br>Segment=${this.Segment}<br>Seating Capacity=${this.SeatingCapacity} `)
+            }
+        }
+        class Mercedes extends Car
+         {
+            Name = "Mercedes-Benz Maybach GLS";
+            Fuel="Petrol";
+            Price = "3.35cr";
+            Segment= "SUV";
+            SeatingCapacity =5;
+            print(){
+                super.print();
+            
+            }
+        }
+        class Toyota extends Car
+         {
+            Name = "Toyota Land Cruiser 300";
+            Fuel="Diesel";
+            Price = "2.35cr";
+            Segment= "SUV";
+            SeatingCapacity =5;
+            print(){
+                super.print();
+            }
+        }
+        class BMW extends Car
+         {
+            Name = "BMW iX";
+            Fuel="Electric";
+            Price = "1.40cr";
+            Segment= "SUV";
+            SeatingCapacity =5;
+            print(){
+                super.print();
+            }
+        }
+        class Rolls_Royce extends Car
+         {
+            Name = "Rolls-Royce Spectre";
+            Fuel="Electric";
+            Price = "7.40cr";
+            Segment= "Sedan";
+            SeatingCapacity =5;
+            
+            print(){
+                super.print();
+            }
+        }
+        
+        function selectclick(){
+            
+        var fuel = document.querySelector("select").value;
+        var image = document.getElementById("poster");
+        switch(fuel){
+            case "Petrol":
+            image.src = "../public/images/MER.png";
+            break;
+            case "Diesel":
+             image.src = "../public/images/TOYOTA.png";
+             break;
+             case "Electric": 
+             image.src = "../public/images/ROLLS.png";
+             break; 
+             case "Electric": 
+             image.src="../public/images/BMW.png"
+             break;    
+        }
+        let cars = new Array(new Mercedes(),new Toyota(),new BMW(),new Rolls_Royce());
+        for(var car of cars){
+          if( car.Fuel === fuel ){
+            car.print();
+          }
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+    <select>
+        <option>Choose Fuel Type</option>
+        <option value="Petrol">Petrol</option>
+        <option value="Diesel">Diesel</option>
+        <option value="Electric">Electric</option>
+    </select>
+    <button onclick="selectclick()">Select</button>
+    <p></p>
+    <span></span>
+    <div>
+        <img id="poster" width="400" height="300">
+    </div>
+</body>
+</html>

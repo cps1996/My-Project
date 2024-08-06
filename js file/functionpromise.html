@@ -1,0 +1,25 @@
+<script>
+    // its works on the priciple async and await
+    var Fetchdata= new Promise(function(resolve,reject){   // resolve and reject are two parameters
+           var url = prompt("ENTER URL");
+           if(url=="www.google.com"){
+            resolve("Data fetched succesfully");    // here resolve takes a value "data fetched succesfully"
+           }else{
+            reject("invalid url")                // here reject takes data invalid url
+           }
+    });
+    Fetchdata            // methods 
+    .then(function(response){       /// this will collect response   or condition is true
+        document.write(response);
+    })
+    .catch(function(reason){       // if there is a problem it will report error   or  conditoin is false
+        document.write(reason);
+    })
+    .finally(function(){             // it responds always
+        document.write("Porgram End");
+    })
+
+    // fetch(). catch(). finally();
+
+     
+</script>

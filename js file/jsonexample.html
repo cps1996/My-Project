@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=".."
+    <script>
+        function bodyload()
+        {
+            var product = {};
+            var http = new XMLHttpRequest();
+            http.open("get","../data/mobiles.json",true);
+            http.send();
+            http.onreadystatechange = function(){
+                if(http.readyState==4)
+            {
+                product = JSON.parse(http.responseText);
+                document.get
+
+            }
+        }
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div class="conatainer">
+        <div>
+
+        </div>
+        <div>
+            
+        </div>
+
+    </div>
+    
+</body>
+</html>

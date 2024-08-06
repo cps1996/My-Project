@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shirt</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function bodyload(){
+            fetch("../json/shirt.json")
+            .then(function(response){
+                return response.json()
+            })
+            .then (images=>{
+                images.map(image=>{
+                    var img = document.createElement("img");
+                    img.src = image.img_src;
+                    img.width = "60";
+                    img.className = "d-block my-4 mx-3 rounded rounded-5";
+                    img.addEventListener("mouseover",(e)=>{
+                        document.getElementById("shirts").src = e.target.src;
+                    })
+                    document.querySelector("nav").appendChild(img);
+                })
+            })
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <header class="bg-black text-white">
+        <div class="p-2">
+            <h1>Shopper.</h1>
+        </div>
+    </header>
+    <div class="row mt-3">
+        <nav class="col-2 my-3">
+
+        </nav>
+        <main class="col-10">
+            <img width="300" height="400" id="shirts" src="../public/images/whiteshirt.jpg">
+        </main>
+
+    </div>
+</body>
+</html>

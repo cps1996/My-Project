@@ -1,0 +1,78 @@
+<script>
+    var values = [["A","B","C"],["Kolkata","Mumbai","Hyderabad"]];
+    var [alpha,beta]= values; //destructior technique//
+       document.write(beta[1] +"<br>");
+
+</script>
+<script>
+    var Alpha =["a","b","c"];
+    var Beta = ["d","e","f",["Hyderabad","Kochi","Kerela"]];
+    var result = [...Alpha,...Beta];
+
+    document.write(result + "<br>");
+</script>
+<script>
+
+    //methods of accesing array elements//
+
+
+    var category = [1,2,3,"bihar","india"];
+    document.write(category.toString()+ "<br>"); // it writes all the elements and seperate them with coma
+
+    document.write(category.join("----"  + "<br>")); // it seperate the element by own seperator manually
+
+    document.write(category.slice(3,4 )+"<br>"); //starting from 3 and upto 4 
+
+    // find 
+    var value = [20000,30000,40000,50000,60000];
+   //if we want value more than 40000
+    var ans =  value.find(function(value){
+        return value > 40000;
+    })
+   document.write(ans +"<br>");
+    // find gives the value of first occurence here is 50000 > 40000 so it gives 50000.
+
+    //filter
+    var filter = value.filter(function(value){
+        return value >40000;
+    })
+    document.write(filter + "<br>");
+
+    // filter gives all the values which are greater than 40000.
+
+    // Map   it reads every value and print it
+
+    value.map(function(value){
+        document.write(`<li>${value}</li>`); 
+        
+        // we can print it in any style;
+        // fastest way of reading elements of array.It return only value
+    })
+   
+
+   // forEach it return all the values and index
+   value.forEach(function(value,index){
+        document.write(`<li>[${index}],${value}</li>`);
+   })
+</script>
+<script>
+    //statement for accessing array elements;
+    
+    //for.().in  ;    it reads and return all properties of array[index]
+    var car = ["mercedes","bmw","porshe","toyota"];
+      
+    for(var property in car)
+    {
+        document.write(property + "<br>");
+    }
+
+    // for..of  = it reads and return all element of array [value]
+    for(var value of car)
+    {
+        document.write(`<li>${value}</li>`)
+
+        // iterator is a desgin pattern to access all elements from a collection
+        //in sequential order.
+    }
+
+</script>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="..//node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+      function Bookclick()
+      {
+        document.getElementById("lblname").innerHTML = document.getElementById("txt").value;
+        document.getElementById("Date").innerHTML = document.getElementById("checkdate").value;
+        document.getElementById("stay").innerHTML = document.getElementById("days").value;
+        document.getElementById("lblperson").innerHTML = document.getElementById("Person").value;
+       document.getElementById("amount").innerHTML = document.getElementById("advamount").value;
+         var adv = parseInt(document.getElementById("advamount").value);
+         
+          var person = parseInt(document.getElementById("Person").value)-2;
+         var room = "";
+         var amenities = "";
+         var days =  parseInt(document.getElementById("days").value);
+         var roomcost= 0;
+         var amenitiescost= 0;
+         var total = 0;
+
+         var roomimg =document.getElementById("poster");
+
+         var deluxe = document.getElementById("dRoom");
+         var suite = document.getElementById("SRoom");
+
+         if(deluxe.checked)
+         {
+          room = deluxe.value;
+          roomcost = parseInt(2000) * days  ;
+          roomimg.src = "../public/images/room1.jpg"; 
+         }
+         if(suite.checked)
+         {
+          room = suite.value;
+          roomcost = parseInt(4000) * days  ;
+          roomimg.src = "../public/images/room2.jpg"
+         }
+          var ac = document.getElementById("Ac");
+          var locker = document.getElementById("locker");
+          if(ac.checked)
+          {
+            amenities += ac.value + "<br>";
+              amenitiescost = parseInt(1000);
+            roomcost += amenitiescost;
+          }
+          if(locker.checked)
+          {
+            amenities += locker.value + "<br>";
+            amenitiescost = parseInt(1500);
+            roomcost += amenitiescost;
+        
+          }
+           total = roomcost + person*1000 - adv  ;
+
+           document.getElementById("lblroom").innerHTML = room;
+           document.getElementById("Amn").innerHTML = amenities;
+           document.getElementById("lbltotal").innerHTML = total;
+
+      }
+    </script>
+</head>
+<body>
+    <div class="card border border-3">
+        <div class="card-header">
+          <div class="bg-danger text-white p-2 rounded rounded-3">
+            <h1 >Please fill your Form </h1>
+          </div>          
+        </div>
+        <div class="card-body ">
+          <h2 class="ps-3">Fill Customer Details</h2>
+            <div class="row p-3">
+            <div class="col p-3">
+                <div class="fw-semibold fs-4 mb-2">
+                    Customer Name
+                      <input type="text" id="txt" class="form-control">
+                </div>
+                <div class="fw-semibold fs-4 mb-2">
+                 Check in Date 
+                 <input type="date" class="form-control" id="checkdate"> 
+                </div>
+            </div>
+            <div class="col p-3">
+             <div class="fw-semibold fs-4 mb-2">
+                Number of Person
+                <input type="text" class="form-control" id="Person">
+             </div>
+             <div class="fw-semibold fs-4 mb-2">
+                Number of days
+                <input type="number" class="form-control" id="days">
+             </div>
+            </div>
+            </div>
+            <div>
+             <h2 class="ps-3">Select Your Room</h2>
+            </div>
+            <div class="row">
+              <div class="col p-4">
+               <img src="../public/images/room1.jpg" alt=""class="rounded rounded-3"  width="60%">
+              <div class="fw-semibold fs-5 p-2">
+                <input type="radio" class="form-check-input " name="room" id="dRoom" value="Deluxe Room">
+                Deluxe Room Rs 2000/-
+              </div> 
+              
+              </div>
+              <div class="col p-4">
+                 <img src="../public/images/room2.jpg" alt="" width="60%" class="rounded rounded-3">
+                 <div class="fw-semibold fs-5 p-2">
+                  <input type="radio" class="form-check-input " name="room" id="SRoom" value="Suite Room">
+                  Suite Room Rs 4000/-
+                </div> 
+              </div>
+            </div>
+            <div>
+              <h2 class="p-3">Select Amenities</h2>
+            </div>
+            <div class="row p-3">
+              <div class="col">
+                 <div class="fs-4 fw-semibold">
+                <input class="form-check-input" type="radio" id="Ac" name="ac" value="Ac">
+                AC room
+                 </div>
+              </div>
+              <div class="col">
+                <div class="fs-4 fw-semibold">
+                  <input class="form-check-input" type="radio" id="locker" value="Locker" name="ac">
+                 Locker
+                   </div>
+              </div>
+            </div>
+            <div>
+                <h2 class="p-3">Advance Payment</h2>
+                <input type="text" id="advamount" class="form-control w-25" required>
+            </div>
+            <div align="center">
+              <button class="btn btn-danger m-5 w-25 fs-4 fw-semibold" data-bs-toggle="modal" data-bs-target="#bookingsummary" onclick="Bookclick()"> Book</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="modal fade" id="bookingsummary">
+      <div class="modal-dialog">
+       <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+         <h2>Booking summary</h2>
+         <button data-bs-dismiss="modal" class="btn btn-close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col">
+                <dl>
+                  <dt>Customer Name:</dt>
+                  <dd id="lblname"></dd>
+                  <dt>Check In Date:</dt>
+                  <dd id="Date"></dd>
+                  <dt>No.Of days Stay:</dt>
+                  <dd id="stay"></dd>
+                  <dt>Person:</dt>
+                  <dd id="lblperson"></dd>
+                  <dt>Room  Selected:</dt>
+                  <dd id="lblroom"></dd>
+                  <dt>Amenities:</dt>
+                  <dd id="Amn"></dd>
+                  <dt>Payment in Advance:</dt>
+                  <dd id="amount"></dd>
+                  <dt>Final payment</dt>
+                  <dd id="lbltotal"></dd>
+                </dl>
+            </div>
+    
+            <div class="col">
+                <img id="poster" width="100%">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+         <button class="btn btn-success text-white fw-semibold" data-bs-dismiss="modal" >Confirm</button>
+        </div>
+       </div>
+     </div>
+    </div>
+</body>
+</html>

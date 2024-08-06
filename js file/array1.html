@@ -1,0 +1,26 @@
+<script>
+    //array is refers to an arrangement of value,which can be accessed in random order.
+    // in array we can stores different types of values.
+   // How to configure array; By using a reference name by using var ,let,const
+    //it requires initialization and assingment of memory.
+    // var categories; // invalid
+    // it can be initialized or assingend by two type;
+    //Meta character  ;     "[]"  and constructor ;  "()"
+    //var Categories = [];  // initialization   Meta method
+    // var categories = new Array();       constructor method
+</script>
+<script>
+    var Categories =["Elephant",25,"Kiwi",459,"KOLKATA"]; // meta character method
+    document.write(Categories[2]);
+</script>
+<script>
+   
+   var categories = new Array();  // it is constructor method 
+   categories[0]=50;
+   categories[1]= "Moon";
+   categories[2]="Sun";
+   for(var property in categories)
+   {
+    document.write(`${property}:${categories[property]}<br>`);
+   }
+</script>

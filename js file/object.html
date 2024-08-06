@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var car = {
+            Name:"BMW S-class",
+            Model:"S-40",
+            Price: 25000000,
+            Color:"Navy blue",
+            Rating:{Rating:4.3},
+            Quantity : 2,
+            Total : function(){
+                return this.Quantity * this.Price;
+            },
+            Print : function(){
+                document.write(`Car = ${this.Name}<br>Model = ${this.Model}<br>Price = ${this.Price.toLocaleString()}<br>Color = ${this.Color}
+                <br>Rating= ${this.Rating.Rating} <br> Total= ${this.Total().toLocaleString('en-in',{style: 'currency',currency:'INR'})}`)
+            }
+        }
+            car.Quantity = parseInt(prompt("Enter Quantity"));
+            car.Print();
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

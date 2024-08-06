@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Openimage(){     //mouse event
+            window.open("../public/images/men fashion.jpg","Fashion" ,"width=500 height=500");
+            
+        }
+        document.oncontextmenu = function(){
+            alert("right click not allowed");
+            return false;
+        }
+        function copy(){
+            document.getElementById("lbl").innerHTML = "Number Copied";
+        }
+    </script>
+</head>
+<body>
+    <img src="../public/images/men fashion.jpg" width="150" height="150" ondblclick="Openimage()"><!--mouse event-->
+    <h3>Double click to preview image</h3>
+    <form onsubmit="alert('form submitted')" onreset="alert('form reset')"><!--form event-->
+        Account number
+        <div>
+            <input type="text" oncopy="copy()"><span id="lbl"></span><!--Clipboard Event-->
+        </div>
+        <div>
+            Verify account
+            <input type="text" onpaste="return false">  <!--Clipboard event -->
+        </div>
+        <button type="submit" > submit</button>
+        <button type="reset">reset</button>
+        
+    </form>
+</body>
+</html>

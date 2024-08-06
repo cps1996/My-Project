@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 30px;
+            background-image:linear-gradient(rgb(193, 177, 177),rgb(88, 88, 26));
+        }
+        .outerbox{
+            width: 50px;
+            height:50px;
+            border-top-right-radius: 130px;
+            border-top-left-radius: 110px  ;
+            border-bottom-left-radius: 130px;
+            border: 18px solid blue;
+            animation-name: spin;
+            border-top-color: white;
+            animation-duration:8s;
+            animation-iteration-count: infinite;
+            border-bottom-right-radius: 130px;
+            position: relative;
+            margin-left: 550px;
+            animation-timing-function: linear;
+        }
+        .innerbox{
+            width:50px;
+            height: 50px;
+            border-radius: 150px;
+            border: 15px dotted blue;
+            position: absolute;
+            top: -20px;
+            right: -15px;
+            animation-name: rotate;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+             animation-direction: reverse;
+            
+        }
+       
+    </style>
+    <script>
+        function calculateclick()
+        {
+            var msg = document.getElementById("msg");
+            var M = parseInt(document.getElementById("Inkg").value);
+            var H = parseFloat(document.getElementById("Inheight").value)/100;
+
+            var BMI = parseFloat(M/Math.pow(H,2));
+            msg.innerHTML = "YOUR BMI IS" + "&nbsp;" + BMI;
+
+            if(BMI==20)
+            {
+                msg.innerHTML ="Your BMI" + BMI + "You are Healthy";
+            }
+            else if(BMI==30)
+            {
+                msg.innerHTML = "Your BMI" + BMI + "You are Overweight";
+            }
+            else(BMI==35)
+            {
+                msg.innerHTML ="Your BMI" + BMI + "You are Obese" ;
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <div class="outerbox" style="display: none;">
+       <div class="innerbox">
+
+       </div>
+    </div>
+    <div class="fw-bold fs-2 text-white" >BMI CALCULATOR</div>
+    <div class="mt-5 row p-5">
+     <div class="col">
+        <span class="fw-semibold text-black ">Enter your Age</span> <input type="text" class="form-control" id="Inage">
+     </div>
+     <div class="col">
+    <span class="fw-semibold text-black">Height(in cm)</span>      <input type="text" class="form-control" id="Inheight">
+     </div>
+     <div class="col">
+        <span class="fw-semibold text-black">Enter your weight(in kg)</span><input type="text" class="form-control" id="Inkg">
+     </div>
+     <div>
+        <button class="btn btn-secondary mt-5" onclick="calculateclick()">Calculate Your BMI</button>
+     </div>
+    </div>
+    <div class="mt-5 p-3 row message" >
+       <div class="col text-black ps-5" align="left">
+        <dt class="text-black mb-2 " >Healthy BMI range ;</dt>
+        <dd>18.5 kg/m<sup>2</sup>- 25 kg/ m<sup>2</sup> (Normal)</dd>
+        <dt class="text-black mb-2">BMI introduction</dt>
+        <dd>BMI is a measurement of a 
+            person's leanness or corpulence based on the
+            ir height and weight, and is intended to quant
+            ify tissue mass. It is widely used as a general ind
+            icator of whether a person has a healthy body weight for their 
+            height. Specifically, the value obtained from the calculation of BMI is used to categorize 
+            whether a person is underweight, normal weight, overweight, or obese depending on what range
+             the value falls between. These ranges of BMI vary based on factors such as region and age, 
+             and are sometimes further divided into subcategories such as severely underweight or very severely obese. Being overweight or underweight can have significant health effects, so while BMI is an imperfect measure of healthy body weight, it is a useful indicator of whether any additional testing or action is required. Refer to the table below to see the different categories based on BMI that are used by the calculator.
+        </dd>
+       </div>
+       <div class="col text-black fs-3 fw-bold text-center " id="msg">
+
+       </div>  
+    </div>
+</body>
+</html>

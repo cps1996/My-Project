@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+     <style>
+         .game{
+            background-image: linear-gradient(aqua,white);
+            position: relative;
+         }
+         .badge{
+            position: absolute;
+            right:150px;
+            padding: 10px;
+            background-color: brown;
+            animation-name: move;
+            animation-duration: 6s;
+            animation-iteration-count: 5;
+            animation-timing-function: linear;
+
+         }
+         @keyframes move {
+            from{
+            
+                top:200px;
+                opacity: 0;
+            }
+            40%{
+                right: 350px;
+                background-color: blanchedalmond;
+            }
+            80%{
+                right: 0px;
+                background-color:black;
+            }
+            to {
+               top:10px;
+               
+            }
+         }
+     </style>
+    <script>
+        function Checkclick()
+          
+        {
+            var a = parseInt(document.getElementById("text").value);
+            var msg = document.getElementById("para");
+            switch(true)
+          {
+            case(a>=15 && a<=20):
+            msg.innerHTML =`Moving close But high`.fontcolor('yellow').fontsize('12px');
+            break;
+            case(a>=11 && a<=14):
+            msg.innerHTML= "too close but high".fontcolor('purple').fontsize('10px');
+            break;
+            case (a<=9 && a>=5):
+            msg.innerHTML="Moving close But low".fontcolor('yellow').fontsize('10px');
+            break;
+            case (a>=21 && a<=30):
+            msg.innerHTML ="Going far from value".fontcolor('red').fontsize('10px');
+            break;
+            case(a>=1 && a<=5):
+             msg.innerHTML = "too low from value".fontcolor('red').fontsize('10');
+             break;  
+             case (a==10):
+             msg.innerHTML ="You win You ARE A genius".fontcolor('green').fontsize('12px');
+             return; 
+             default: 
+             msg.innerHTML ="Guess and play" ;
+             return;       
+        }
+        }
+    </script>
+</head>
+<body>
+    <div class="w-75 m-5 p-4 game rounded rounded-5 ">
+        <h2>Guess the number between 1 to 30</h2>
+        <div class="badge">Check your guessing</div>
+        <input type="text" id="text" class="form-control w-50"  >
+         <p id="para"></p>
+         <button class="btn btn-dark fw-bold m-5 w-25" onclick="Checkclick()">Guess</button>
+    </div>
+</body>
+</html>

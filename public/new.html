@@ -3,85 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flipkart Shopping</title>
+    <title>PORTFOLIO</title>
     <link rel="shortcut icon" href="./images/favicon.ico/flipkart.ico">
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <style>
-        header,nav,aside,main,footer{
-            border: 1px solid black;
-            padding: 10px;
-            font-size: 20px;
-            margin: 5px;
-        }
-        main{
-            height: 400px;
-        }
-        @media screen and (orientation:landscape) {
-            body{
-            display: grid;
-            grid-template-columns: 2fr 8fr 2fr;
-        }
-        header{
-            grid-row: 1;
-            grid-column: 1/4;
-            display: flex;
-            justify-content: space-between;
-        }
-        nav{
-            grid-row: 2;
-            grid-column: 3;
-        }
-        main{
-            grid-row:2;
-            grid-column:2;
-        }
-        aside{
-            grid-row: 2;
-            grid-column: 1;
-        }
-        footer{
-            grid-row: 3;
-            grid-column: 1/4;
-        }      
-        }
-        @media screen and (orientation:portrait){
-            header{
-                grid-row: 1;
-            }
-            nav{
-                grid-row: 2;
-            }
-            main{
-                grid-row: 3;
-            }
-            aside{
-                grid-row:4;
-            }
-            footer{
-                grid-row: 5;
-            }
-        }
     </style>
+    <script>
+        function submitclick()
+    {
+        document.getElementById("reg").innerHTML = document.getElementById("regno").value;
+        var name = document.getElementById("uname").value;
+        document.getElementById("name").innerHTML = name.toUpperCase();
+    }
+    function pichange()
+    {
+        var radius = document.getElementById("prange").value;
+        document.getElementById("poster").style.borderRadius = `${radius}px`;
+    }
+    function rchange()
+    {
+        var circle = document.getElementById("menrange").value;
+        document.getElementById("men").style.borderRadius = `${circle}px`;
+    }
+      function fontchange()
+      {
+        var font = document.getElementById("fontc").value;
+        document.getElementById("hii").style.color = document.getElementById("color").value;
+        document.getElementById("hii").style.fontSize = `${font}px`;
+        var color = document.getElementById("color").value;
+        
+      }  
+      function clickf()
+      {
+        document.getElementById("hii").style.color = document.getElementById("color").value;
+        document.getElementById("hii").style.fontWeight= "bold";
+        
+      }
+    
+       
+    </script>
 </head>
 <body>
-    <header>
-    <div>dsasf</div>
-    <div>adsad</div>
-    <div>edewdw</div>
-    </header>
-    <nav>
-        Nav
-    </nav>
-    <main>
-        main
-    </main>
-    <aside>
-        Aside
-    </aside>
-    <footer>
-        footer
-    </footer>
+  <div class="registration m-5 text-center ">
+ <div>REgistration no :<input type="number" class="form-control" pattern="/d" id="regno"></div> 
+ <div>Username<input type="text" class="form-control" id="uname"></div>
+ <div>
+Age<input type="number" class="form-control" id="iage">
+ </div> 
+ <button class="btn btn-primary my-5" onclick="submitclick()">Submit</button>
+  </div>
+  <div class="msg" id="msg">
+   <dt>Registration no :</dt>
+   <dd id="reg"></dd>
+   <dt>Username :</dt>
+   <dd id="name"></dd>
+   <dt>Age :</dt>
+   <dd id="agee"></dd>
+  </div>
+  <div class="m-5">
+    <div>
+        <img src="../public/images/w sweat.jpg" alt="" width="200px" height="200px" id="poster">
+        <input type="range" min="1" max="200" onchange="pichange()" id="prange" class="ms-5">
+    </div>
+  </div>
+  <div class="m-5">
+    <div class="row">
+   <div class="col">
+    <img src="./images/men fashion.jpg" alt="" width="250px" height="250px" id="men">
+   </div>
+   <div class="col">
+   <input type="range" min="1" max="250" id="menrange" onchange="rchange()">
+   </div>
+    </div>
+  </div>
+  <div>
+    <div id="hii" align="center">HELLO!</div>
+    <input type="range" min="1" max="35" id="fontc" onchange="fontchange()" >
+  </div>
+  <select class="form-select my-5" id="color" onclick="clickf()">
+    <option value="green"> Green</option>
+    <option value="blue">Blue</option>
+    <option value="yellow">Yellow</option>
+  </select>
 </body>
 </html>

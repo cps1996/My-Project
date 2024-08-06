@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="..//node_modules/bootstrap-icons/font/bootstrap-icons.css">
+   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+   <script>
+    function f1()
+    {
+        var Username = document.getElementById("User").value;
+         var lbluser = document.getElementById("lbluser");
+        if(Username.charCodeAt(0)>=65 && Username.charCodeAt(0)<=90)
+        {
+            lbluser.innerHTML =""
+        }
+        else{
+            lbluser.innerHTML = "Name must be Caapital".fontcolor('red'); 
+        }
+    } 
+    function Verifyemail()
+    {
+       var email =document.getElementById("email").value;
+         var lbl = document.getElementById("lblemail");
+
+         var atpos = email.indexOf("@");
+         var dotpos = email.lastIndexOf(".");
+
+         if((email.indexOf("@")<5)|| (dotpos-atpos)>3)
+         {
+            lbl.innerHTML = "invalid Email".fontcolor('red');
+         }
+         else
+         {
+            lbl.innerHTML = "";
+         }
+    }
+    function Verifyname()
+    {
+        var user = document.getElementById("txt").value;
+        var card = document.getElementById("ctxt");
+
+        if(user==0)
+        {
+            card.disbaled = true ;
+        }
+        else
+        {
+            card.disabled = false;
+        }
+        var btn = document.getElementById("btn");
+
+        if(card==0)
+        {
+            btn.disabled = true;
+        }
+        else
+        {
+            btn.disabled = false;
+    
+        }
+    }
+    function Changetheme()
+    {
+         var check = document.getElementById("themecheck");
+         var form = document.getElementById("form");
+         var btn =document.getElementById("btnbtn");
+
+         if(check.checked)
+         {
+            form.className = "bg-dark text-white p-5"
+            btn.className = "btn btn-warning "
+         }
+         else
+         {
+            form.className = "p-5";
+            btn.className ="btn btn-primary";
+         }
+    }
+    function Verifyt()
+    {
+       var usr =document.getElementById("utxt").value;
+       var labl =document.getElementById("nlbl");
+
+       if(usr.lenght==0)
+       {
+        labl.innerHTML = "invalid user".fontcolor('red');
+
+       }
+       else
+       {
+        labl.innerHTML = "";
+       }
+    }
+    function clickon()
+    {
+        var a = parseInt(prompt("Guess the right number between 1 to 20"));
+         
+        if( a === 10)
+        {
+            alert("Your Guessing is right ");
+        }
+    else if(a > 10)
+    {
+        alert("higher than assinged value");
+    }
+    else{
+        alert("lower than value");
+    }
+    }
+    function Checkclick()
+    {
+        var a = parseInt(document.getElementById("sideA").value);
+        var b = parseInt(document.getElementById("sideB").value);
+        var c = parseInt(document.getElementById("sideC").value);
+        var img = document.getElementById("img");
+
+        var lblmsg = document.getElementById("lblvalue");
+
+        if(a===b && a===c)
+        {
+            lblmsg.innerHTML = "Your Traingle is Equilateral";
+            poster.src = "../public/images/equilateral.png"
+        }
+        else if (a!=b && b!=c  && a!=c)
+        {
+           lblmsg.innerHTML = "Your Traingle is scalen";
+           poster.src = "../public/images/scalene.png";
+        }
+        else{
+            lblmsg.innerHTML = "Your Traingle is Isoceles";
+            poster.src = "../public/images/isoceles.png";
+        }
+     }
+   function calclick()
+       {
+    
+          document.getElementById("peerson").innerHTML = document.getElementById("perso").value ;
+
+       }
+   </script>
+</head>
+<body>
+    
+    <div class="m-5 p-5 border border-2 bg-warning">
+        <h1 align="center">Know your Traingle</h1>
+        <div class="fs-4 fw-semibold">Traingle have 3 sides:</div>
+        <div class="fw-bold fs-4">According to the Side values Traingles are of 3 types<br>
+             <ol>
+                <li>Equilateral traingle<p class="fs-5 fw-semibold">:- If all sides are Equal.</p></li>
+                <li>Isoceles Traingle
+                    <p  class="fs-5 fw-semibold">:- If any two sides are Equal.</p>
+                </li>
+                <li>Scalen Traingle
+                    <p class="fs-5 fw-semibold">:-If all sides are Unequal.</p>
+                </li>
+             </ol></div>
+        <p class="fs-5">By the value of three sides we can find what type of our traingle is</p>
+         <p class="fs-5">We have three sides a ,b , c</p>
+          <p class="fs-4">Lets find out</p>
+          <div class="row">
+            <div class="col">
+                <dl>
+                    <dt>Side a =</dt>
+                    <dd><input type="text" class="form-control w-25" id="sideA"></dd>
+                    <dt>Side b =</dt>
+                    <dd> <input type="text" class="form-control w-25" id="sideB"> </dd>
+                    <dt>Side c</dt>
+                    <dd><input type="text" class="form-control w-25" id="sideC"></dd>
+                </dl>
+                <button class="btn btn-dark" onclick="Checkclick()">Check</button>
+            </div>
+            <div class="col">
+             <p id="lblvalue" class="fs-3 fw-semibold"></p>
+             <div>
+                <img id="poster" width="350px">
+             </div>
+            </div>
+          </div>
+    </div>
+    <div align="right">
+        <button onclick="clickon()" class="btn btn-primary">Click</button>  
+      </div>
+  
+    <div class="m-5">
+        Username
+        <input class="form-control" id="utxt" type="text" onblur="Verifyt()" >
+        <label id="nlbl"></label>
+    </div>
+    <div class="m-5">
+        Username
+        <input type="text" class="form-control w-25" id="User">
+        <label id="lbluser" ></label>
+        <button class="m-3 btn btn-primary" onclick="f1()">check</button> 
+    </div>
+    <div class="m-5">
+        Enter your email
+        <input class="form-control w-50" type="text" id="email" onblur="Verifyemail()">
+        <label id="lblemail"></label>
+        <div>
+            <dl>
+                <dt>Email id</dt>
+                <dd id="lemail"></dd>
+            </dl>
+        </div>
+
+    </div>
+    <div class="m-5 w-25" >
+        <dl>
+            <dt>Username</dt>
+            <dd><input class="form-control" type="text" onblur="Verifyname()" id="txt"></dd>
+            <dt>Card number</dt>
+            <dd><input class="form-control" type="text" id="ctxt" disabled></dd>
+            <dt>Pay</dt>
+            <dd><button class="btn btn-primary" id="btn" onclick="Payclick()" disabled>Pay </button></dd>
+        </dl>
+    </div>
+
+
+      <div class="m-5 w-25 border border-2">
+       <form id="form" class="p-5">
+        <div class="form-switch">
+        <input type="checkbox" id="themecheck" class="form-check-input" onchange="Changetheme()">
+        </div>
+         <div>
+            <h3>User login</h3>
+         </div>  
+         Username
+         <input type="text" class="form-control" id="text">
+          Password
+          <input type="text" class="form-control" id="pswrd">
+          <div class="mt-2">
+            <button class="btn btn-primary" id="btnbtn">Login</button>
+          </div>
+       </form>
+      </div>
+
+
+      <div>
+        Person
+        <input type="text" id="perso" >
+        <p id="peerson "></p>
+        <button class="btn btn-warning" onclick="calclick()">Calculate</button>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

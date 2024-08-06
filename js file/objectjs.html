@@ -1,0 +1,21 @@
+<script>
+    var car = 
+    {
+        "Name" : "Audi",     //"keys":value,
+        "Model":"Q6",
+        "Color":"Red",
+        "Price":6000000,
+        "Qty" : 2,
+        "Total": function(){
+           return this.Price * this.Qty ;           //within object the keys access by using this.name
+        },
+        
+        }
+        car.Qty = parseInt(prompt("Enter the quantity")); // to add quantity manually
+
+     //outside object keys access by using car.name,car.model .....
+
+    document.write(`<b>Car Name</b> = ${car.Name}<br><b>Car MOdel</b> = ${car.Model}<br>
+    <b>Car Color</b> =<b> ${car.Color.fontcolor('red')}</b><br> <b>Car Price </b> = ${car.Price.toLocaleString()}
+    <br><b>Total</b> = ${car.Total()}`)    
+</script>

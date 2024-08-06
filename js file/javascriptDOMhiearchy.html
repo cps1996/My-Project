@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript DOM heirarchy</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="..//node_modules/bootstrap-icons/font/bootstrap-icons.css">
+   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+   <script>
+    function bodyload()
+    {
+        window.document.images[0].src="../public/images/a1.jpg";
+        window.document.forms[0].elements[0].value="Username";
+        window.document.forms[0].elements[1].value="email";
+        window.document.forms[0].elements[2].value="Submit";
+        window.document.forms[0].elements[3].value="password";
+        window.document.forms[0].elements[4].value="Print";
+    }
+
+   </script>
+</head>
+<body onload="bodyload()" class="p-5">
+    <div>
+        <img height="350px" width="350px">
+    </div>
+    <div>
+        <form>
+            <h1>
+                Register
+            </h1>
+            <div>
+            Username:<br>
+            <input type="text"><br>
+            <input type="email">
+            <input type="button">
+            </div>
+            <div>
+                password:<br>
+                <input type="text">
+                <input type="button">
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

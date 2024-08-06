@@ -1,0 +1,11 @@
+<script>
+    function* iterator(){
+        yield "My name is Chandra Prakash",
+        yield "I am 28 years old",
+        yield   50*20
+    }
+    var  list = iterator();
+    console.log(list.next().value);
+    console.log(list.next().value);
+    console.log(list.next().value);
+</script>

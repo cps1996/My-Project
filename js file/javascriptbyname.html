@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSby reference name</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+<script>
+          function bodyload()
+          {
+            poster.src="../public/images/a1.jpg";
+            frm.yourname.value="david";
+            frm.btnregister.value="submit";
+          }
+</script>
+<style>
+</style>
+</head>
+<body onload="bodyload()">
+      <div class="m-5">
+        <img name="poster" height="100px" width="100px" >
+        <form name="frm">
+            <input type="text" name="yourname" > <input type="button" name="btnregister">
+
+        </form>
+      </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        function msg1(){
+            document.getElementById("time").innerHTML = `<h1>Hii My Beautiful Jumbo</h1>`;
+        }
+
+        function msg3(){
+            document.getElementById("time").innerHTML = `<h1>How are you..</h1>`;
+        }
+         var m1,m2,m3;                 // here we have to assign a empty var ehre our timing function sets
+         function bodyload(){
+            m1 = setTimeout(msg1,2000);
+            m3 = setTimeout(msg3,5000);
+            setInterval(clock,1000);
+         }
+          function clock(){
+            var clock = new Date();
+            var hrs = clock.getHours();
+            if(hrs>=0 && hrs<=12)
+            {
+                document.querySelector("p").innerHTML = "Good morning";
+            }else if(hrs>=13 && hrs<=16)
+            {
+                document.querySelector("p").innerHTML = "Good Afternoon";
+
+            }else if(hrs >=17 && hrs<= 23)
+            {
+                document.querySelector("p").innerHTML = "GOOd night";
+            }
+             
+            document.querySelector("span").innerHTML = clock.toLocaleTimeString();
+          }
+
+    </script>
+</head>
+<body onload="bodyload()">
+    <div align="center" style="font-family:cursive" class="fw-semibold my-5">
+     <p class="fs-2"></p>
+    </div>
+    <div align="center" class="my-5">
+        <span class="fw-bold fs-3 rounded rounded-3 p-2 bg-warning" ></span>
+        <p id="time"></p>
+    </div>
+</body>
+</html>

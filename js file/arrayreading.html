@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array hotel</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/js/bootstrap.bundle.js">
+    <style>
+
+    </style>
+    <script>
+        function uploadclick()
+        {
+            var category = ["Delhi","Mumbai","Hyderabad","Kolkata" ];
+        var pic = document.createElement("img");
+         pic.src = "../public/images/a2.jpg";
+         pic.width = "200";
+         pic.height = "200";
+         document.querySelector("ul").innerHTML = ""; // to avoid repetation of adding we keep it empty//
+         category.push("Bokaro"); //add new items at last//
+
+         category.unshift("Gaya"); // add new items ate first//
+
+         category.splice(1,2); //it delete item 1st  "delhi" and index no.2 which is "mumbai"//
+
+         category.map(function(category){
+           
+           var li = document.createElement("li");
+           li.innerHTML = `<a href="#">${category}</a>`;
+
+           document.querySelector("ul").appendChild(li);
+
+           
+         })
+        
+        }
+
+         
+    </script>
+</head>
+
+<body>
+    <div class="m-5" id="contain" >
+      
+    </div>
+    <button class="btn btn-warning"  onclick="uploadclick()">Upload photo</button>
+      <div>
+        <ul>
+
+        </ul>
+      </div>
+</body>
+</html>

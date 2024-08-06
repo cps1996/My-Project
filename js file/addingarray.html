@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/js/bootstrap.bundle.js">]
+</head>
+<script>
+  // var categories =["Electronics","Television"];
+
+    categories.unshift("kids Fashion"); // it will add element to top
+    categories.push("Men fashion");    // it will add element in bottom
+    categories.splice(2,1,"Jewellery"); // it will remove the element and next by index no.
+                                                                              
+    categories.map(function(category){
+        document.write(`<li>${category}</li>`.fontsize('20px'));
+    })
+    var clas = ["A","D","B","C"];
+     
+       clas.sort();
+    
+        clas.map(function(letter){
+            document.write(`<li>${letter}`.fontsize('20px'));
+        })
+
+
+</script>
+<script>
+    //removing elements from array
+       function addclick(){
+      var collection = ["Electronics","Footwear","Kids fashion","Mens fashion"];
+      document.querySelector("ul").innerHTML = "";
+
+      collection.sort(); // it sort the element in increasing order
+
+          collection.pop(); // it deletes the last element
+
+          collection.map(function(value){
+            var li1 = document.createElement("li");
+
+            li1.innerHTML = `<a href="#">${value}</a>`.fontsize('20px');
+            document.querySelector("ul").appendChild(li1);
+
+          })
+      
+       }
+
+
+</script>
+<body>
+    <div class="container w-50">
+        Add movie
+   <input type="text" class="form-control">
+    </div>
+</body>
+</html>

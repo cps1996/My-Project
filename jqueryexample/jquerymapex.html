@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+   $(function(){
+    var items = ["Calculator","Watch","Mobiles","Earbuds"];
+    items.map(item=>{
+      $(`<li>${item}</li>`).appendTo("ol").css('color','red')
+      $(`<option>${item}</option>`).appendTo("select");
+    })
+    $("#btnclick").click(()=>{
+            $("p").html(`Hello ${$("#user").val()}`)
+         })
+   });
+        
+    </script>
+</head>
+<body>
+    <ol>
+
+    </ol>
+    <select>
+
+    </select>
+    <input type="text" value="uname" id="user">
+    <button id="btnclick">insert</button>
+    <p></p>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order food online</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        header{
+        display: flex;
+        padding: 10px;
+        border-bottom: 1px  grey;
+        box-shadow: 0px 10px rgb(241, 239, 239);
+        }
+        .badge{
+            display: inline-block;
+            width: 20px;
+            color: orangered;
+            position: absolute;
+        }
+        .offer{
+            position: relative;
+        }
+        
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .menu{
+            width: 1200px;
+            margin-left: 150px;
+            margin-top: 50px;
+        }
+        .menu-title{
+            padding: 15px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: arial;
+            height: 20px;
+        }
+        .items{
+           border-bottom: 1px solid lightgray;
+        }
+        .restaurants{
+            margin-left: 150px;
+            padding: 10px;
+            border-bottom: 1px solid lightgray;
+            height: 450px;
+            margin-bottom: 10px;
+            position: absolute;
+
+        }
+        .chains{
+            margin-top: 20px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: arial;
+        }
+        .card{
+            width: 300px;
+            height: 300px;
+        }
+        .card-header img{
+            border-radius: 15px;
+            height: 200px;
+            width: 300px;
+        }
+        .bi-star-fill{
+            border-radius: 20px;
+            font-size: 13px;
+            height: 20px;
+            width: 20px;
+            background-color: green;
+            text-align: center;
+             color: white;
+            display: inline-block;            
+        } 
+        .r-cards{
+            display: flex;
+            padding: 5px;
+            
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span><img src="./images/Swiggy-logo-.png" alt="" width="9%"></span>
+            <span><u>Other</u><span class="bi-chevron-down"></span>
+
+        </div>
+        <div>
+            <nav>
+            <div class="bi-suitcase-lg me-4"><span class="ps-1">Swiggy Corporate</span></div>
+            <div class="bi-search me-3"><span class="ps-1">Search</span></div>
+            <div class="bi-patch-check me-5"><span class="offer ps-1">Offers<span class="badge">New</span></span></div>
+            <div class="bi-record-circle me-3"><span class="ps-1">Help</span></div>
+            <div class="bi-person ms-2"><span class="ps-1">Sign In</span></div>
+            <div class="bi-bag ms-3"><span class="ps-1">Cart</span></div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="menu">
+            <div class="menu-title">
+                What's on your mind?
+            </div>
+            <div class="items mt-4 p-3 d-flex">
+             <div class="p-1">
+                    <img src="./images/Biryani_2.avif" alt="" width="100%">
+                </div>
+              <div class="p-1">
+                <img src="./images/Burger.avif" alt="" width="90%">
+              </div>
+              <div class="p-1">
+                <img src="./images/Pizza.avif" alt="" width="90%">
+              </div>
+              <div class="p-1">
+                <img src="./images/Ice_Creams.avif" alt="" width="90%">
+              </div>
+              <div class="p-1">
+                <img src="./images/Kebabs.avif" alt="" width="90%">
+              </div>
+              <div class="p-1">
+                <img src="./images/Pasta.avif" alt="" width="90%">
+              </div>
+              <div class="p-1">
+                <img src="./images/Noodles.avif" alt="" width="90%">
+              </div>
+            </div>
+        </div>
+        <div class="restaurants">
+            <div class="chains">
+               Top restaurant chains in Hyderabad
+            </div>
+          <div class="r-cards ">
+            <div class="card  border-0 ">
+                <div class="card-header border-0  bg-white">
+                    <img src="./images/s-1.avif" alt="" width="100%">
+                </div>
+                <div class="card-body border-0">
+                   <div class="fw-bold">UBQ by Brbeque Nation</div>
+                   <div>
+                   <span class="bi-star-fill"></span>
+                   <span class="fw-bold">3.8.</span>
+                   <span class="fw-bold">30-35 mins</span>
+                   </div>
+                   <div>
+                    North Indian,Barbecue,Biryani...<br>Attapur
+                   </div>
+                </div>
+
+            </div>
+            <div class="card border-0">
+                <div class="card-header border-0  bg-white">
+                    <img src="./images/s-2.avif" alt="" width="100%">
+                </div>
+                <div class="card-body border-0">
+                    <div class="fw-bold">Pizza Hut</div>
+                    <div>
+                    <span class="bi-star-fill"></span>
+                    <span class="fw-bold">4.</span>
+                    <span class="fw-bold">25-30 mins</span>
+                    </div>
+                    <div>
+                     Pizzas<br>Attapur
+                    </div>
+                </div>
+            </div>
+            <div class="card border-0">
+                <div class="card-header border-0  bg-white">
+                    <img src="./images/s-3.avif" alt="" width="100%">
+                </div>
+                <div class="card-body border-0">
+                    <div class="fw-bold">   Wow! Momo</div>
+                    <div>
+                    <span class="bi-star-fill"></span>
+                    <span class="fw-bold">4.3.</span>
+                    <span class="fw-bold">35-40 mins</span>
+                    </div>
+                    <div>
+                     Tibetan,Healthy Food,Asian...<br>Himayath Nagar
+                    </div>
+                </div>
+            </div>
+            <div class="card border-0">
+                <div class="card-header border-0  bg-white">
+                    <img src="./images/s-4.avif" alt="" width="100%">
+                </div>
+                <div class="card-body border-0">
+                    <div class="fw-bold">Barbeque Nation</div>
+                    <div>
+                    <span class="bi-star-fill"></span>
+                    <span class="fw-bold">3.7.</span>
+                    <span class="fw-bold">35-40 mins</span>
+                    </div>
+                    <div>
+                     North Indian,Barbeque,Biryani<br>Attapur
+                    </div>
+                </div>
+
+            </div>
+          </div>
+        </div>
+    </main>
+    
+    
+</body>
+</html>

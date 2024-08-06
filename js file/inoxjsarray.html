@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>   
+    <script>
+        var Movies = ["Chandu Champion","Anamika"];
+         function loadmovies()
+         {    
+               document.getElementById("listmovie").innerHTML = "";
+               Movies.map(function(movie){
+                   var option =document.createElement("option");
+                   option.text=movie;
+                   option.value = movie ;
+                   document.getElementById("listmovie").appendChild(option);
+                   
+               })
+               document.getElementById("lblcount").innerHTML = `Total no. of movies = ${Movies.length}`;
+               
+          }
+          function Addclick()
+          {
+            var moviename = document.getElementById("txtmovie").value;
+             if(Movies.indexOf(moviename)== -1)
+             {
+                Movies.push(moviename);
+                alert(`${moviename}\n Added Succesfully..`);
+                document.getElementById("txtmovie").value= "";
+                loadmovies();
+             }else{
+                alert(`${moviename}Exists`);
+             }            
+          }
+          function Sortasc()
+          {
+            Movies.sort();
+            loadmovies();
+          }
+          function Sortdsc()
+          {
+            Movies.sort();
+            Movies.reverse();
+            loadmovies();
+          }
+          function Themechange()
+          { 
+             var themebox = document.getElementById("Checkbox");
+             var form = document.querySelector("form");
+             if(themebox.checked)
+             {
+                form.className ="bg-dark  text-white p-3" ;
+             }else{
+                form.className= "";
+             }
+          }
+          function Toggleclick()
+          {
+            var btn = document.getElementById("btn");
+            var btnclass = document.querySelector("#btn").className;
+             btn.innerHTML = (btn.innerHTML == "Sign in")?"sign out":"sign in" ;
+             btn.className = (btn.className == "btn btn-primary")?"btn btn-danger":"btn btn-primary";
+          } 
+      
+    </script>
+</head>
+<body onload="loadmovies()">
+       <div class="m-5 w-25 border border-3 p-2">
+        <form id="form p-3">
+            <div class="form-switch">
+           <input type="checkbox" class="form-check-input"  id="Checkbox"  onchange="Themechange()" >
+            </div>
+      <h3>Admin Dashboard</h3>
+      <div class="my-2 fw-semibold">
+        Movies Name
+      </div>
+      <div class="input-group">
+        <input type="text" placeholder="Enter movie name" class="form-control" id="txtmovie">
+        <button class="btn btn-primary bi bi-film fw-semibold" onclick="Addclick()"> Add</button>
+      </div>
+      <div class="my-3">
+        <label class="form-label fw-semibold">Movies list</label>
+        <button class="btn btn-warning bi-sort-alpha-up" onclick="Sortasc()"></button>
+        <button class="btn btn-dark text-white fw-semibold bi bi-sort-alpha-down" onclick="Sortdsc()"></button>
+      </div>
+
+      <select class="form-select" size="4" id="listmovie">
+
+      </select>
+      <label class="form-label text-info fw-semibold my-2 " id="lblcount">Movies count :</label>
+      <div>
+        <button class="btn btn-danger bi bi-trash-fill" onclick="Removeclick()">Remove Movie</button>
+        <button class="btn btn-danger bi bi-trash ">Clear All</button>
+      </div>
+      </div>
+    </form>
+       </div>
+       <main>
+        <div>
+            <button class="btn btn-primary" id="btn" onclick="Toggleclick()">Sign in</button>
+        </div>
+
+
+
+       </main> 
+</body>
+</html>

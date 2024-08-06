@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <script>
+        function Verify(){
+          
+
+
+            var card = document.getElementById("card").value;
+            var msg =document.getElementById("lblmsg");
+           
+            if(card.startsWith("5555") && (card.endsWith(3214)&&(card.length === 12 ))){
+                msg.innerHTML = "Valid card".fontcolor('green');
+                cvv.disabled = false;
+            }else{
+                msg.innerHTML = "card no. invalid ".fontcolor('red');
+                cvv.disabled = true;
+            }
+           
+        }
+        function Verifycv(){
+            var cvv = document.getElementById("cvv").value;
+            if(cvv.length == "3"){
+               document.getElementById("lblcv").innerHTML = "CVV Verified".fontcolor('green');
+            }else{
+                document.getElementById("lblcv").innerHTML = "Invalid Cv".fontcolor('red');
+            }
+        }
+        function Payclick(){
+        var flag=      confirm("Click to proceed");
+            if(flag ==true){
+                alert("payment success");
+            }else{
+                alert("Transaction cancelled")
+            }
+        }
+        
+    </script>
+    <script>
+       var categories = ["Movie",300,"Maharaja",4.5,["Delhi","Bihar"],5000,400,800 ,"../public/images/a1.jpg"]
+        var find= categories.filter(function(items){
+             return items > 300;    
+        });
+        document.write(find + "<br>");
+
+         var image = document.createElement("img");
+         image.src = "../public/images/a1.jpg";
+        
+
+         document.querySelector("img").appendChild(image);
+
+
+
+        document.write(`Type = ${categories[0]}<br>Price = ${categories[1]}<br>Name=${categories[2]}<br>Rating = ${categories[3]}<br>State=${categories[4][0]}`)
+    </script>
+</head>
+<body onload="bodyload()"> 
+    <div>
+        <h2>Card Details</h2>
+        card number
+        <input type="text" id="card" onkeyup="Verify()">
+        <label id="lblmsg"></label><br>
+        Enter CVV
+        <input style="margin-top: 10px;" type="text" size="5" disabled  onkeyup="Verifycv()" id="cvv" >
+        <label id="lblcv"></label>
+        <img width="300" height="300">
+    </div>
+    <div>
+        <button style="margin-top: 15px;" onclick="Payclick()">Pay</button>
+        <button>Cancel</button>
+    </div>
+</body>
+</html>

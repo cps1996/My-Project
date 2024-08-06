@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function insertclick(obj,e){
+              document.write(`
+              button.id = ${obj.id};
+              button.name = ${obj.name};
+              button.value=${obj.value};
+              button.classname= ${obj.classname};
+              button.property = ${e.which}`
+              )
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <button onclick="insertclick(this,event)" value="submit" name="sonu" id="yes">click here</button>
+    </div>
+</body>
+</html>

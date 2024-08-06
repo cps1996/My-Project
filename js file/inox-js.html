@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inox</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+      function Bookclick()
+      {
+         document.getElementById("Booking").style.display = "block";
+        document.getElementById("lblmovie").innerHTML = document.getElementById("movie").value;
+        document.getElementById("lbldate").innerHTML = document.getElementById("Date").value;
+        document.getElementById("lblcinema").innerHTML = document.getElementById("cinema").value;
+        document.getElementById("lbltime").innerHTML = document.getElementById("timing").value; 
+         
+        var movie = document.getElementById("movie").value;
+        var img = document.getElementById("poster");
+         function  verifymovie()
+         {
+          var movie = document.getElementById("movie").value;
+          switch(movie==true)
+          {
+            case(movie=="Maharaja"):
+            document.getElementById("Date").value.disabled = false;
+            break;
+            default:
+              document.getElementById("Date").value.disabled = true;
+          }
+
+         }       
+      }
+    </script>
+    <style>
+      header{
+        display:flex;
+        justify-content: space-around;
+        padding: 10px;
+        background-color: black;
+      }
+      header span{
+        margin-left: 20px;
+      }
+      .title{
+        font-family: 'Times New Roman';
+        transition: 3s; 
+        color: rgb(185, 89, 89);
+        
+      }
+      .title:hover{
+        color: rgb(30, 212, 219);
+        transition: 3s;
+        text-shadow: 25px 10px 15px  rgba(190, 245, 247, 0.6); 
+      }
+      @media screen and (max-width:600px) {
+        .booking {
+          display: block;
+        }
+        .booking div{
+          margin: 10px;
+          padding: 10px;
+        }
+        .contain{
+         width: 100%;
+         display: block;
+        }
+      }
+    </style>
+</head>
+<body class="container-fluid bg-black ">
+  <header>
+    <div class="title fw-bold fs-2">
+     MoviesArena.
+    </div>
+    <div class="fw-semibold text-white">
+      <span>Home</span>
+      <span>Show timings</span>
+      <span>Cinema</span>
+      <span>Offers</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="booking row p-3 bg-black mt-4 m-2  rounded rounded-5">
+      <div class="col fw-semibold text-white">Quick Book</div>
+      <div class="col">
+       <select id="movie" class="form-select" onchange="verifymovie()">
+        <option>Select Movie</option>
+        <option>Chandu Champion</option>
+        <option>Maharaja</option>
+       </select>
+      </div>
+      <div class="col">
+        <select id="Date" class="form-select" disabled>
+          <option>Select Date</option>
+          <option>20/6/2024</option>
+          <option>18/06/2024</option>
+         </select>
+      </div>
+      <div class="col">
+        <select id="cinema" class="form-select">
+          <option>Select Cinema</option>
+          <option>PVR Musarambagh -Hyderabad</option>
+          <option>INOX Maheshwari Parmeshwari Mall,Kachiguda Hyderabad</option>
+         </select>
+      </div>
+      <div class="col">
+        <select id="timing" class="form-select">
+          <option>Select Timing</option>
+          <option>10:10AM . Hindi</option>
+          <option>01:20PM . Hindi</option>
+         </select>
+      </div>
+     <div class="col">
+     <button class="btn btn-primary fw-bold" onclick="Bookclick()" >BOOK</button>
+     </div>
+    </div>
+
+
+    
+  </main>
+  <div style="display: none;color: white;"  id="Booking" class="mt-5 contain">
+   
+<div class="row m-5 p-3 w-50 border border-1 rounded rounded-2">
+  <h3>Booking Summary</h3>
+  <div class="col mt-3">
+    <dl>
+      <dt>Movie Name:</dt>
+      <dd id="lblmovie"></dd>
+      <dt>Date:</dt>
+      <dd id="lbldate"></dd>
+      <dt>Cinema:</dt>
+      <dd id="lblcinema"></dd>
+      <dt>Timing:</dt>
+      <dd id="lbltime"></dd>
+    </dl>
+  </div>
+  <div class="col">
+    <img id="poster" width="100%" >
+  </div>
+
+</div>
+  </div>
+</body>
+</html>

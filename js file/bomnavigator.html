@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        function Getdetails(){
+            document.getElementById("host").innerHTML = location.host;
+            document.getElementById("path").innerHTML = location.pathname;
+            document.getElementById("pro").innerHTML = location.protocol;
+            document.getElementById("port").innerHTML = location.port;
+             var field = document.getElementById("field");
+            field.className=(field.className=="bg-black text-white")?"bg-white text-danger p-4":"bg-black text-white";
+        }
+    </script>
+</head>
+<body>
+    <fieldset id="field" class="bg-black text-white">
+        <legend><button onclick="Getdetails()">Get Details</Details></button></legend>
+        <dl>
+            <dt>Server Name</dt>
+            <dd id="host"></dd>
+            <dt>Filepath</dt>
+            <dd id="path"></dd>
+            <dt>Protocol</dt>
+            <dd id="pro"></dd>
+            <dt>Port</dt>
+            <dd id="port"></dd>
+
+        </dl>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,69 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Playstation2
+        {
+            version = "PS-2 Dreams of many <br>".fontcolor('voilet');
+           print(){
+            document.write(this.version);
+           }
+        }
+        class Playstation3 extends Playstation2
+        {
+            version1 = "Experience new thrill with Ps-3".fontcolor('blue');
+            
+            print(){
+                let obj = new Playstation2();
+                super.print();
+                document.write(this.version1);
+            }
+        }
+         function selectclick(){
+            let ver =  document.querySelector("select").value;
+            switch(ver){
+                case "v1":
+               document.write(`<h2>Congrats for Ps-2 </h2>`) ;
+               let obj1 = new Playstation2();
+               obj1.print();
+               break;
+               case "v2": 
+               document.write(`<h2>Thrill Upgraded To Ps-3</h2>`)
+               let obj2 = new Playstation3();
+               obj2.print();
+               break;
+               default:
+                document.write("Select any version");
+                break;   
+            }
+         }
+
+
+       class Student
+        {
+            Name="Chandra Prakash";
+            Roll = 3;
+            STD = 10;
+            School ="B.I.S.S.S 11/D";
+            City="Bokaro Steel city";
+        }
+        let child = new Student();         // to access the class we have to create a variable. "new" is used to create a new memory allocator.
+        document.write(`Name = ${child.Name}<br>Roll no. = ${child.Roll}<br>Class = ${child.STD}<br>School =${child.School}<br>City = ${child.City}`) 
+    </script>
+</head>
+<body>
+    <div>
+  <select>
+    <option style="color:aliceblue">Select the version</option>
+    <option value="v1">PS-1 1st gen</option>
+    <option value="v2">Ps-2 2nd gen</option>
+    <option value="v3">Ps-3 3rd gen</option>
+  </select>
+  <button onclick="selectclick()">Select</button>
+    </div>
+</body>
+</html>

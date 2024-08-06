@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        function Bodyload(){
+            fetch("./json.json")    // first fetch the data from the location
+
+            .then(function(response){   //callback function it gives response it write the data in json form
+              
+                return response.json(); //
+            })
+            .then (function(mobile){  // this then collect the product coming from the above json
+                 document.getElementById("imgproduct").src = mobile.image; 
+                 document.getElementById("lbltitle").innerHTML = mobile.title;
+                 document.getElementById("lblrate").innerHTML = mobile.rating.rate;
+                 document.getElementById("lblrating").innerHTML = `${mobile.rating.ratings.toLocaleString()} ratings & ${mobile.rating.reviews.toLocaleString()} reviews`;
+                 document.getElementById("price").innerHTML =`${mobile.price.toLocaleString('en-in',{style:'currency',currency:"INR"})}`;
+
+                 mobile.offers.map(function(offer){
+                    var li = document.createElement("li");
+                    li.className = "bi bi-tag-fill my-2 text-success" ;
+                    li.innerHTML = offer;
+
+                    document.getElementById("lstoffers").appendChild(li);
+                 })
+            })
+
+        }
+
+    </script>
+</head>
+<body onload="Bodyload()" class="container-fluid">
+    <main class="row mt-4">
+        <div class="col-3">
+            <img id="imgproduct" width="100%">
+        </div>
+        <div class="col-9">
+            <div id ="lbltitle" class="fw-bold h3">
+
+            </div>
+            <div>
+                <span class="badge bg-success p-2" ><span class="bi bi-star-fill" id="lblrate"></span> </span>
+                <span id="lblrating" class="text-secondary fw-bold"></span></span>
+            </div>
+            <div class="mt-4 h3" id="price">
+            
+            </div>
+             <div class="fw-semibold">
+              Available offers
+             </div>
+             <div  class="mt-2">
+                <ul class="list-unstyled"  id="lstoffers">
+
+                </ul>
+
+             </div>
+        </div>
+
+    </main>
+    
+</body>
+</html>

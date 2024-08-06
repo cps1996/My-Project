@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="..//node_modules/bootstrap-icons/font/bootstrap-icons.css">
+   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        function bodyload() {
+            fetch("https://newsapi.org/v2/everything?q=tesla&from=2024-07-02&sortBy=publishedAt&apiKey=689d444263f54f738f0100c42ef12b17")
+                .then(response => {
+                    return response.json();  // Fixed typo here
+                })
+                .then(data => {  // Changed 'articles' to 'data'
+                    data.articles.forEach(function(article) {        // Changed 'source' to 'article' and used 'data.articles'
+                      var div = document.createElement("div");
+                      div.style.margin =`10px`;
+                      div.className = `card p-2 border-1 text-ove`;
+                      div.style.width = "350px";
+                      div.style.height="550px";
+                      
+                      div.innerHTML =`<div class="card-header bg-primary text-white fw-semibold">${article.author}</div>
+                       <div class="card-body"><img src="${article.urlToImage} class="card-img-top mb-2 " width="100%"></div> 
+                       <div class="card-body"><a href="${article.url}" style="text-decoration:none;color:black;font-weight:bold;">${article.description}</a></div>    `
+                         document.querySelector("main").appendChild(div);
+                });
+            
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);  // Added error handling
+                });
+        }
+    </script>
+</head>
+<body onload="bodyload()"> 
+    <header class="bg-dark text-white p-3 d-flex justify-content-between" >
+      <div class="fw-bold fs-3">
+        Recent news
+      </div>
+      <div class="me-4">
+        
+        <span class="bi bi-newspaper"></span>
+      </div>
+    </header> <!-- Added parentheses to call the function -->
+
+    <main class="d-flex flex-wrap m-2 p-2 " style="color: aliceblue;">
+     
+    </main>
+</body>
+</html>

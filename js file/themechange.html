@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+      .text-style{
+        font-family: arial;
+        font-size: 25px;
+        font-weight: bold;
+        color: rgb(50, 45, 38);
+      }
+    </style>
+    <script>
+      function Themechange()
+      {
+        var themebox =document.getElementById("themechange");
+        var form = document.querySelector("form");
+        var btn = document.getElementById("btn");
+         if(themebox.checked)
+         {
+          form.className ="border border-2  bg-dark text-white w-50 p-3 m-3" ;
+          btn.className =" btn btn-warning mt-3";
+         } 
+         else{
+          form.className ="border border-2  w-50 p-3 m-3";
+           btn.className = "btn btn-primary mt-3";
+         }
+        
+      }
+      function Userverify()
+      {
+        var user = document.getElementById("txt").value;
+        var lbl = document.getElementById("lbluser");
+
+        if(user.length=="0")
+        {
+          lbl.innerHTML = "username required".fontcolor('red');
+        }
+        else
+        {
+          lbl.innerHTML ="";
+        }
+      }
+      function verifycard()
+      {
+        var card = document.getElementById("card").value;
+        var lblmsg =document.getElementById("crdlbl");
+        if(card.charAt(0)=="5")
+        {
+          lblmsg.innerhtml = "";
+        }
+        else
+        {
+          lblmsg.innerHTML ="Invalid card".fontcolor('red');
+        }
+      }
+      function changeclick()
+      {
+        var btn = document.getElementById("click");
+        var btnclass = document.getElementById("click").className;
+
+        btn.innerHTML =(btn.innerHTML=="Sign in")?"Sign out":"Sign in";
+        btn.className = (btn.className=="btn btn-danger")?"btn btn-primary":"btn btn-danger";
+
+      }
+   </script>
+</head>
+<body class="container-fluid">
+  <div >
+    <form  class="border  border-2 rounded rounded-3 m-3 w-50 p-3">
+    <div class="form-switch pb-2" align="center">
+       <input type="checkbox" id="themechange" onchange="Themechange()" class="form-check-input">Dark
+    </div>
+    <h2 align="center" class="pb-2">User Login</h2>
+ <div align="left" >
+ Username
+ <input type="text" class="form-control w-50 " id="txt"  onblur="Userverify()">
+ <label id="lbluser"></label>
+ </div>
+ <div align="left" class="pt-2" >
+ Password
+ <input class="form-control w-50" id="pwd">
+ </div>
+ <button class="mt-3 btn btn-primary" onclick="Loginclick()" id="btn">Login</button>
+  </div>
+</form>
+<div align="center" class="border border-2 w-25 p-3">
+  <h2>Card Number</h2>
+   <input type="text" class="form-control w-50" id="card" onblur="verifycard()">
+   <label id="crdlbl"></label>
+   <button class="btn btn-primary mt-2" id="" >Pay</button>
+</div>
+<div>
+  <button class="btn btn-primary m-5 " onclick="changeclick()" id="click">Sign in</button>
+</div>
+</body>
+</html>

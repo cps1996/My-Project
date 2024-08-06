@@ -1,0 +1,33 @@
+[
+    {
+        "title":"Mahindra XUV 3XO",
+        "pic":"../public/images/xuv.png",
+        "price": "9.10 - 19.22 Lakh",
+        "fuel":"Petrol & Diesel",
+        "Mileage":"18.06 to 21.2 Kmpl",
+        "Engine": "1197cc & 1497cc",
+        "Seater":"5 Seater",
+        "Description":"Mahindra xuv 3xo"
+    },
+    {
+       
+        "title":"Fronx Sigma 1.2L MT",
+        "pic":"../public/images/fronx.png",
+        "price": "9.05 Lakh",
+        "fuel":"Petrol & Cng",
+        "Mileage":" 21.79 Kmpl",
+        "Engine": "1197cc ",
+        "Seater":"5 Seater" ,
+        "Description":"Fronx Sigma 1.2l MT"
+    },
+    {
+        "title":"Toyota Urban Cruiser Taisor",
+        "pic":"../public/images/urban.png",
+        "price": "9.31-16.03 Lakh",
+        "fuel":"Petrol & Cng",
+        "Mileage":" 21.79 Kmpl",
+        "Engine": "1197cc ",
+        "Seater":"5 Seater" ,
+        "Description":"Urban Cruiser"
+    }
+]

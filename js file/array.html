@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var categories = [ "All","Electronics","Footwear","Kids fashion"];
+        var pic = ["../public/images/a1.jpg","../public/images/a2.jpg","../public/images/a3.jpg"]
+        function Loadclick()
+        {
+             categories.map(function(category){   //to read every element inside the category
+                var li = document.createElement("li");
+
+                li.innerHTML = category;
+                 
+                document.querySelector("ol").appendChild(li);
+                var option =document.createElement("option");
+                option.text = category;
+                option.value = category;
+
+                document.querySelector("select").appendChild(option);
+
+                var anchor =document.createElement("a");
+
+                anchor.href =`${category}.html`;
+                anchor.innerHTML = category;
+            
+                 
+               document.querySelector("nav").appendChild(anchor);
+             })
+
+             pic.map(function(pics){
+                var link = document.createElement("a");
+
+                link.href = pics;
+                link.innerHTML = `<img style="border-radius:100px" src=${pics} width="100" height="100">`;
+                link.target = "_blank";
+
+                    document.querySelector("main").appendChild(link);
+             })
+
+
+
+
+
+
+
+
+
+
+            document.querySelector("div").innerHTML="";
+           var table = document.createElement("table");
+           var thead = document.createElement("thead");
+           var th = document.createElement("th");
+           var th2 = document.createElement("th");
+           var td = document.createElement("td");
+           var td2 = document.createElement("td");
+           var tr1 = document.createElement("tr");
+           var tr2 =document.createElement("tr");
+           var tbody = document.createElement("tbody");
+
+           table.appendChild(thead);
+           thead.appendChild(tr1);
+           tr1.appendChild(th);
+           tr1.appendChild(th2);
+           table.appendChild(tbody);
+           tbody.appendChild(tr2);
+           tr2.appendChild(td);
+           tr2.appendChild(td2);
+           table.border = "2";
+           th.innerHTML = "Name";
+           th2.innerHTML = "Rupees"
+           td.innerHTML = "samsung Tv";
+           td2.innerHTML = "Rs20000";
+
+           document.querySelector("div").appendChild(table);
+          
+           
+  
+        
+
+        }
+    </script>
+</head>
+<body>
+    <button class="m-5 btn btn-warning" onclick="Loadclick()">Load Table</button>
+    <div class="m-5">
+
+    </div>
+    
+
+    <ol>
+
+    </ol>
+
+    <select>
+
+    </select>
+    <nav>
+
+    </nav>
+    <main>
+
+    </main>
+</body>
+</html>

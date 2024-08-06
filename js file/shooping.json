@@ -1,0 +1,39 @@
+[
+    {
+        "Brand" : "Blackberry",
+        "Type" : "Mens Shirt",
+        "Material" : "Cotton",
+        "Color" : "Marron",
+        "Size" : 42,
+        "Price" : 3500,
+        "Image" : "../public/images/marron.png"
+    },
+    {
+        "Brand" : "Roadster",
+        "Type" : "Mens Jeans",
+        "Material" : "Denim",
+        "Color" : "Blue",
+        "Size" : 34,
+        "Price" : 1500,
+        "Image" : "../public/images/jeans.png"
+    },
+    { 
+        "Brand" : "Libas",
+        "Type" : "Womens Kurti",
+        "Material" : "100% Viscos Rayon",
+        "Color" : "Pink",
+        "Size" : "M",
+        "Price" : 796,
+        "Image" : "../public/images/libas.png"
+    },
+    {
+        "Brand" : "Adidas",
+        "Type" : "Mens Walking shoes",
+        "Material" : "Textile upper/rubber outsole",
+        "Color" : "Cblack",
+        "Size" : 10,
+        "Price" : 3919,
+        "Image" : "../public/images/adshoes.png"
+
+    }
+]

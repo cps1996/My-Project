@@ -1,0 +1,39 @@
+<script>
+    function print(name,price,)
+    {
+          
+    
+        document.write(`Name=${name} <br> Price=${price}`);
+    
+    }
+    print('LGtv',45000+"<br>");
+</script>
+<script>
+ //   var x = parseInt(prompt("Enter a number"));
+   // var y = parseInt(prompt("Enter 2nd number"));
+    var z= x*y;
+    document.write(z);
+</script>
+<script>
+    // Function Parameter 
+    //formal parameter .The parameter which is defined in declaration is called formal parameter
+
+    function Print(Numbers){    // this is formal parameter
+        for(var i = 1 ; i<=Numbers ; i++)
+        {
+          document.write(i +"<br>");
+        }
+    }
+    Print(10);   // This is actual parameter.where we give value to formal parameter.And is used while calling the function.
+    Print(6); //we change the actual paramaeter value;
+</script>
+<script>
+    //Parameter can be anything it is primitive ,non-primitive,Function also;
+    //EX;
+    function Product(collection){
+        collection.map(function(item){   //so here the collection parameter is working as a array and function ;
+            return document.write(`${item} <br>`)
+        })
+    }
+    Product([Name="TV",Type="Electronics",Cost=450000])
+</script>

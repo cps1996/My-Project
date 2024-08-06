@@ -1,0 +1,21 @@
+.register {
+  border: 2px solid blue;
+  padding: 10px;
+  align-items: center;
+}
+.register h1 {
+  color: blueviolet;
+  font-family: cursive;
+  text-decoration: underline;
+}
+.register p {
+  color: brown;
+  font-size: 15px;
+  font-family: 20px;
+}
+.register bi-cart {
+  color: cadetblue;
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=home.css.map */

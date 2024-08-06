@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRB fee refund</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+      function submit()
+      {
+        var x=parseInt(document.getElementById("txt").value);
+        var y= parseInt(document.getElementById("ytxt").value);
+        var z= (x * y);
+           document.getElementById("sum").innerHTML= z ;
+      }
+      function AmountChange(){
+            document.getElementById("txtAmount").value = document.getElementById("rangeAmount").value;
+        }
+        function YearChange(){
+            document.getElementById("txtYears").value = document.getElementById("rangeYear").value;
+        }
+        function RateChange(){
+            document.getElementById("txtRate").value = document.getElementById("rangeRate").value;
+        }
+        function CalculateClick(){
+             var lblMsg = document.getElementById("lblMsg");
+
+             var P = parseInt(document.getElementById("txtAmount").value);
+             var N = parseInt(document.getElementById("txtYears").value) * 12;
+             var R = parseFloat(document.getElementById("txtRate").value)*12
+             /100;
+
+             var EMI = (P * R * Math.pow((1+R),N)) / (Math.pow((1+R),N)-1);
+
+             lblMsg.innerHTML = "Your Monthly Installment Amount is <b>" + EMI.toLocaleString("en-in",{style:"currency", currency:"INR"}) + " </b>for Next " + N + " months";
+
+        }
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="row p-5">
+        <div class="col">
+           X = <input type="text" class="form-control" id="txt">
+        </div>
+        <div class="col">
+            Y = <input type="text" class="form-control" id="ytxt">
+        </div>
+        <div id="sum">
+
+        </div>
+     
+    </div>
+<div class="text-center">
+<button class="btn btn-success mt-5" onclick="submit()" >Submit</button>
+</div>
+<div>
+    <div class="bg-light text-dark p-4 m-2">
+        <h3 class="text-center">Personal Loan EMI Calculator</h3>
+        <div class="row p-3 my-4">
+            <div class="col">
+                Amount you need <input type="text" id="txtAmount" size="15">
+            </div>
+            <div class="col">
+                for <input type="text" size="4" id="txtYears"> years
+            </div>
+            <div class="col">
+                Interest rate <input type="text" size="4" id="txtRate"> %
+            </div>
+        </div>
+        <div class="row p-3 mt-4">
+            <div class="col">
+                <input type="range" onchange="AmountChange()" min="100000" id="rangeAmount" value="200000" max="1000000">
+            </div>
+            <div class="col">
+                <input type="range" onchange="YearChange()" min="1" id="rangeYear" max="5" value="1">
+            </div>
+            <div class="col">
+                <input type="range" onchange="RateChange()" min="10.45" id="rangeRate" step="0.01" value="10.45" max="18.45">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-between">
+                <span>&#8377; 100000</span>
+                <span>&#8377; 1000000</span>
+            </div>
+            <div class="col d-flex justify-content-between">
+                <span>1</span>
+                <span>5</span>
+            </div>
+            <div class="col d-flex justify-content-between">
+                <span>10.45%</span>
+                <span>18.45%</span>
+            </div>
+        </div>
+        <div class="row p-3 my-4">
+            <div class="col text-end">
+                <button class="btn btn-primary" onclick="CalculateClick()">Calculate</button>
+            </div>
+        </div>
+        <div class="row p3 my-4">
+            <div id="lblMsg" class="text-center"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+      function Bodyload(){
+         fetch("./shooping.json")
+
+         .then(function(response){
+            return response.json();
+         })
+         .then(function(items){
+            items.map(function(product){
+                var div =document.createElement("div");
+                div.className = "card m-3 p-2 border border-0";
+                div.style.width = "300px";
+            div.innerHTML =`   
+              <div class= "card-header border border-0">
+                <h3><img width="100%" src= ${product.Image}></h3>
+                </div>
+                <div class="card-body">
+                  <dl>
+                    <dt>Brand</dt>
+                    <dd>${product.Brand}</dd>
+                    <dt>Type</dt>
+                    <dd>${product.Type}</dd>
+                    <dt>Material</dt>
+                    <dd>${product.Material}</dd>
+                    <dt>Color</dt>
+                    <dd>${product.Color}</dd>
+                    <dt>Size</dt>
+                    <dd>${product.Size}</dd>
+                    <dt>Price</dt>
+                    <dd>${product.Price}</dd>
+                     <dt>Buy</dt>
+                     <dd><button class="mt-2 btn btn-warning">Add to Cart</button></dd>
+                    </dl>
+            ` ;
+            document.querySelector("main").appendChild(div);
+            })
+         })
+
+
+
+
+
+
+
+      }
+
+    </script>
+</head>
+<body onload="Bodyload()">
+    <header class="m-2 p-2 bg-warning d-flex justify-content-around">
+        <div class="fw-bold fs-3">
+         Shopper. 
+        </div>
+        <div class="fs-5 fw-semibold">
+         <span class="me-3">Mens Wear</span>
+         <span class="me-3">Womens Wear</span>
+         <span class="me-3">Kids Wear</span>
+         <span class="me-3">Footwear</span>
+        </div>
+    </header>
+    <main class="d-flex p-2">
+
+        
+                </div>
+      
+    </main>
+</body>
+</html>

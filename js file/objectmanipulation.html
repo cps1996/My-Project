@@ -1,0 +1,20 @@
+<script>
+    var Store = {
+        Name : "Shirts",
+        Brand : "Blackberry",
+        Color : "White",
+        Size :42,
+        Price : 2500,
+        Qty : 2,
+        Total : function(){
+            return this.Qty * this.Price 
+        },
+
+    }
+    var Qty = parseInt(prompt("Enter Quantity"));
+    document.write(`${Store.Total()}<br>`);
+
+    Object.keys(Store).map(function(value){
+       document.write(`<h1> ${Store[value]}</h1>`)
+    })
+</script>

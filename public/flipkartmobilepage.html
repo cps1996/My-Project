@@ -5,71 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iphone</title>
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <style>
-.mobile{
-    display: grid;
-    grid-template-columns: 2fr 4fr 3fr 3fr;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 350px;
-    grid-gap: 20px;
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/js/bootstrap.bundle.js">
+    <script>
+      function display()
+      {
+        document.getElementById("myimage").src="../public/images/ONbulb.jpg";
+        
+      }
+      function displa()
+      {
+        document.getElementById("myimage").src="../public/images/bulboff.jpeg";
+      }
+      function change()
+      {
+        document.getElementById("head").style.color="blue";
+      }
+      function find()
+      {
+        document.getElementById("textname").innerHTML=("city").value;
+        
+      }
 
-}
-.rating{
-    background-color: rgb(44, 188, 44);
-    color: white;
-    padding: 3px;
-    border-radius: 5px;
-    margin-left: 20px;
-    font-size: px;
-    margin-top: 10px;
-}
-li{
-    font-size: 20px;
-    margin-top: 10px;
-}
-.list{
-    margin-top: 30px;
-}
-.image{
-    margin-left: 110px;
-    
-}
-
-    </style>
+    </script>
 </head>
 <body>
-<div class="mobile">
-    <div><img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/l/v/8/-original-imaghx9qudmydgc4.jpeg?q=70" alt=""></div>
+  <div class="d-flex m-5 ">
     <div>
-       <div style="font-size: 25px;font-weight: bold;margin-left: 10px;margin-top: 10px;">Apple iPhone 14 Plus (Starlight, 128 GB)</div> <br>
-       <span class="rating">4.6<span class="bi bi-star-fill"></span></span>
-    <span style="color: gray;font-weight: bold;font-size: 20px;">64,414 Ratings & 3,832 Reviews</span>
-    <div >
-        <ul class="list">
-            <li>128 GB ROM</li>
-            <li>17.02 cm (6.7 inch) Super Retina XDR Display</li>
-            <li>12MP + 12MP ,12MP Front Camera</li>
-            <li>A15 Bionic Chip,6 Core Processor Processor</li>
-            <li>1 Year Warranty for Phone and 6 Months Warranty for in-Box Accessories</li>
-        </ul>
-    </div>
+      <button class="btn btn-success" onclick="display()">ON THE BULB</button>
     </div>
     <div>
-        <div class="image"><img width="100" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt=""></div>
-        <div style="font-size: 30px;font-weight: bold;font-family: arial;margin-top: px;">&#8377;69,999</div>
-        <span style="color: gray;font-size: 25px;" ><strike>&#8377;79,990</strike></span><span style="color: green;font-size: 20px;font-weight: bold;">&nbsp;&nbsp;16% off</span>
-        <div style="margin-top: 10px;">Free delivery</div>
-        <div style="color: green;font-weight: bold;font-family: arial;margin-top: 10px;">Daily Saver</div>
-        <div style="font-size: 20px;margin-top: 10px;">Upto <b>&#8377;50,000</b> Off on Exchange</div>
+      <img id="myimage" src="../public/images/bulboff.jpeg" alt="" class="ms-5" width="200px" height="200px">
     </div>
-</div>
-<div>
-<div class="range">
-
-</div>
-
-</div>
-    <
+    <div>
+      <button class="btn btn-danger ms-5" onclick="displa()">OFF the bulb</button>
+    </div>
+  </div>
+  <div>
+    <h1 id="head" class="m-5">HII HOW ARE YOU</h1>
+    <button class="btn btn-success m-5" onclick="change()">change it!</button>
+  </div>
+  <div>
+    <p onclick="window.print()">Lorem ips
+      um dolor sit amet consectetur adipisicing elit. Officia placeat libero nisi nam laborum quasi expedita numquam error quibusdam vitae, unde ullam cumque odit excepturi nemo laudantium quo adipisci? Ut.</p>
+  </div>
+  <div>
+    <input type="text" class="form-control w-25" id="textname">
+    <select class="form-select bg-black text-white" id="city">
+      <option>select city</option>
+      <option>BOKARO</option>
+      <option>Ranchi</option>
+    </select>
+    <button class="btn btn-sucess" onclick="find()">submit</button>
+  </div>
 </body>
 </html>

@@ -1,0 +1,22 @@
+<script>
+    class details{
+        Name="Samsung TV";
+        Rating = {
+            "Hyd":{"customer":{rate:4.2},
+             "vendor":{rate:4.1}
+            },
+            "Del":{"customer":{rate:4.2},
+            "vendor":{rate:4.4}
+        }
+        };
+        get productname(){
+            return this.Name;
+        }
+        set productname(newName){
+            this.Name = newName;
+        }
+    }
+    let obj = new details;
+    obj.productname = prompt("enter new product for customer");
+    document.write(`New product name = ${obj.productname} <br>Rating = ${obj.Rating.Hyd.vendor.rate}`);
+</script>

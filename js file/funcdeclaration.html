@@ -1,0 +1,50 @@
+<script>
+    //parts of function
+    // function Print(param) this is called declaration.
+    //{}  this part of function is called as definition.We assingn the work in declaration that what work will function do.
+    // Print(params) this part is called signature.To access or call a function we use signature.
+</script>
+<script>
+    function name()  // declaration
+    {
+        document.write("Chandra prakash ");   // definition
+    }
+    name();  // signature
+    // this type is called function declaration
+    // declaration will give always same result
+</script>
+<script>
+    // another type is expression
+    //expression wll give diffrent result when we change the functionality
+    let greet = function welcome(){
+        document.write("Welcome to js");
+    }
+    greet = function (){                  // here we the change the function to welcome to css
+        document.write("welcome to css");
+    }
+    greet();
+</script>
+<script>
+    // expression Example
+    var password = prompt("Enter password");
+    var result;
+
+    if(password ==="admin"){
+        result = function(){
+            document.write("Login succesful".fontcolor('green'));
+        }
+    }else{
+        result = function(){
+            document.write("invalid password".fontcolor('red'));
+        }
+    }
+    result();
+</script>
+<script>
+    //ANONNYMOUS FUNCTION
+    // A function without name is called annonymous function;IIFE(Immediately invoked functon expression) accessing process
+    //How to invoke the function lets see in below example;
+    (function (){
+        document.write("annonymous function");    // to nvoke any annony. function we put the function in  bracket (function(){}) then to call we use();
+    })();
+</script>

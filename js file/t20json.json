@@ -1,0 +1,42 @@
+[
+    {
+        "Country":"India",
+        "Matches":4,
+        "Won" : 4 ,
+        "Lost" : 0 , 
+        "Pts" : 6,
+        "Nrr" : "+2.425",
+        "Flag" : "../public/images/ind.png"
+    },
+    {
+       
+        "Country":"Afghanistan",
+        "Matches":3,
+        "Won" : 2 ,
+        "Lost" : 1 , 
+        "Pts" : 4,
+        "Nrr" : "+2.025",
+        "Flag" : "../public/images/afg.png" 
+    },
+    {
+        
+        "Country":"Australia",
+        "Matches":3,
+        "Won" : 1 ,
+        "Lost" : 2 , 
+        "Pts" : 2,
+        "Nrr" : "+1.025",
+        "Flag" : "../public/images/aus.png" 
+    },
+    {
+        
+        "Country":"Bangladesh",
+        "Matches":3,
+        "Won" : 0,
+        "Lost" : 3 , 
+        "Pts" : 0,
+        "Nrr" : "-0.025",
+        "Flag" : "../public/images/ban.png" 
+    }
+
+]

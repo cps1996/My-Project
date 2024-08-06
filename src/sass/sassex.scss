@@ -1,0 +1,17 @@
+.container{
+    background-color: cadetblue;
+    .header{
+        background-color: aliceblue;
+        display: flex;
+        padding: 10px;
+        color:aliceblue;
+    }
+    .title{
+        font-size: 30px;
+        font-weight: bold;
+        color:rebeccapurple;
+    }
+    .span{
+        font-size: 15px;
+    }
+}

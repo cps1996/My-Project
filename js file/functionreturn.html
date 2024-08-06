@@ -1,0 +1,53 @@
+<script>
+    function addition(a,b)
+    {
+        return a+b; // it keeps the memory alive in function,it can be any type
+    }
+    function print()
+    {
+        document.write(`addition = ${addition(50,20)} <br>`) //here we use the function name as a parameter
+    }
+    print();
+</script>
+<script>
+    //array return
+    function getdata(collection){
+        return collection;
+    }
+    getdata(["Electronics","Footwear","Fashion"]).map(function(item){
+        document.write(item + "<br>")
+    })
+</script>
+<script>
+    // function can return function also
+    function getresponse()     // here it is first response
+    {
+        return function(){          // inside we return new function 
+            document.write("welcome to javascript"); 
+        }
+    }
+    getresponse()();     // to call that function we must call it twice first for 1st and seconf for second function; 
+</script>
+<script>
+    //conditional rendering
+    // it is the process of executing and returnng various values basedd on given situation.
+    function Calculator(operator,a,b)
+    {
+        if(operator == "+")
+        {
+            return a+b;
+        }else if (operator == "-")
+        {
+            return a-b;
+        }else if(operator == "/")
+        {
+            return a/b;
+        }else if(operator == "*")
+        {
+              return a*b;            
+        }else{
+            document.write("please provide +,-,/,* operator");
+        }
+    }
+    document.write(Calculator(prompt('Enter operator'),parseInt(prompt('enter A')),parseInt(prompt('Enter b'))));
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        function Verifyuser()
+        {
+            var userid = document.getElementById("UserId").value;
+            var msg = document.getElementById("lblmsg");
+            fetch("../json/userdata.json") //first we fetch data from api
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(users){
+                for(var user of users) // here we read key of json file
+                {
+                    if(user.userid === userid )
+                    {
+                        msg.innerHTML="User-id taken Try another".fontcolor('red');
+                        break;
+                    }else{
+                        msg.innerHTML = "Valid User-id".fontcolor('green');
+                    }
+                }
+            })
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container w-50 border-2">
+    <h1>Registeration</h1>
+    <div>
+        Username
+        <input type="text" class="form-control w-50" id="UserId" onkeyup="Verifyuser()">
+        <label class="form-check-label" id="lblmsg"></label>
+    </div>
+    </div>
+</body>
+</html>

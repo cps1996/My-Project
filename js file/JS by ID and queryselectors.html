@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function bodyload()
+       {
+           document.querySelector("#poster").src="../public/images/a1.jpg";
+           document.querySelector(".name").value="username";
+           document.getElementById("btnregister").value="submit";
+       }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div style="margin: 100px;">
+      <img id="poster" width="200px" height="200px">
+      <form>
+        <input type="text" id="txt" class="name">
+        <input type="button" id="btnregister">
+      </form>
+    </div>
+</body>
+</html>

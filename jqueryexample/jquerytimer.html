@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+    $(function(){
+         $.ajax({
+            method:"get",
+            url:"../json/carwale.json",
+            success:(data)=>{
+               data.map(detail=>{
+                $(`<option>${detail.title}</option>`).appendTo("select");
+                $("main").html(`<img src="${detail.pic}" width="500" height="500">`);
+               })
+            }
+         })
+        $("#list").click((e)=>{
+            $("main").html(``)
+        })
+        
+    </script>
+</head>
+<body>
+    <select class="form-select" id="list">
+
+    </select>
+    <main>
+
+    </main>
+</body>
+</html>

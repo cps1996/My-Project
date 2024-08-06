@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    class shopping
+    {
+        constructor(Dname){
+            document.write(`${Dname} Added <br>`);
+        }
+        Add(){
+            document.write(`item added to cart`);
+        }
+        Delete(){
+            document.write(`Item Removed`)
+        }
+    }
+    function insertclick(){
+        var obj = new shopping(document.querySelector("select").value);   // we can isert value through the "new" object method
+        obj.Add();    
+    }
+    function deleteclick(){
+        var obj = new shopping(document.querySelector("select").value);
+        obj.Delete();
+    }
+</script>
+<body>
+    <select>
+        <option>Select Dresses</option>
+        <option>    Shirt</option>
+        <option>Trousers</option>
+        <option>Shoes</option>
+        <option>Belt</option>
+    </select>
+    <button onclick="insertclick()">Insert</button>
+    <button onclick="deleteclick()">Delete</button>
+</body>
+</html>

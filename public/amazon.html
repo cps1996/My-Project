@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>   
+     <style>
         footer{
             display: grid;
             grid-template-columns: 3fr 3fr 3fr 3fr;
@@ -26,6 +29,11 @@
         font-size: 15px;
     }
     </style>
+    <script type="module">
+       import{PrintTitle,login}from"../library/registration.js";
+       document.getElementById("form").innerHTML = login();
+       document.getElementById("box").innerHTML = PrintTitle();
+    </script>
 </head>
 <body>
     <header></header>
@@ -67,6 +75,11 @@
             <span>Help</span>
         </div>
     </footer>
-    
+    <div class="my-5 p-3 " align="center" id="box">
+      
+    </div>
+    <div id="form" class="bg-black text-white">
+
+    </div>
 </body>
 </html>

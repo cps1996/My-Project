@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emi Calculator</title>
+     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="..//node_modules/bootstrap-icons/font/bootstrap-icons.css">
+   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+      function amnt()
+      {
+        document.getElementById("inamnt").value = document.getElementById("amount").value;
+      }
+      function yrs()
+      {
+        document.getElementById("inyr").value = document.getElementById("years").value;
+      }
+      function Irate()
+      {
+        document.getElementById("rat").value = document.getElementById("rate").value;
+      }
+
+      function Calculateclick()
+      {
+        var msg = document.getElementById("msg");
+
+        var P =parseInt( document.getElementById("inamnt").value);
+        var R =parseFloat( document.getElementById("rat").value)/100 ;
+        var N =parseInt( document.getElementById("inyr").value)*12;
+        var intrest =( P * (R * 1.09))/N;  
+        var EMI = ((P/N) + intrest);
+        msg.innerHTML = "Your Monthly Installment Amount is <b>" +  EMI.toLocaleString("en-in",{style:"currency",currency:"INR"}) + "</b> For Next" +   N  + "months";
+
+      }
+    </script>
+    <style>
+      
+      
+    </style>
+</head>
+<body>
+  <div>
+    <h1 align="center" class="mt-2 text-danger"> Personal Emi Calculator</h1>
+    <div class="row  p-5">
+     <div class="col fs-5 fw-semibold">
+      Amount you want<input type="text" class="form-control"  placeholder="Enter amount" id="inamnt">
+      </div>
+      <div class="col fw-semibold fs-5">
+       For years<input type="text" class="form-control" id="inyr" placeholder="years">
+      </div>
+      <div class="col fw-semibold fs-5">
+        Rate%<input type="text" class="form-control" id="rat" placeholder="rate">
+      </div>
+     </div>
+    </div>
+
+    <div class="row ps-5">
+      <div class="col fs-5 fw-semibold">
+        10,000 <input type="range" min="10000" value="0" max="5000000" step="1000" id="amount" onchange="amnt()"> 5000000
+      </div>
+       <div class="col fw-semibold fs-5">
+        1 <input type="range" min="1" max="10" value="0" step="1" id="years" onchange="yrs()"> 10
+       </div>
+       <div class="col fw-semibold fs-5">
+        5% <input type="range" step="0.01" min="5" max="15" value="0" id="rate" onchange="Irate()"> 15%
+       </div>
+    </div>
+    <div align="end">
+      <button class="btn btn-warning mt-5 me-5 w-25 fw-bold text-danger" onclick="Calculateclick()">Calculate</button>
+    </div>
+  </div>
+  <div id="msg" class="bg-black text-white fs-5 fw-semibold p-5 mt-5 text-center">
+
+  </div>
+</body>
+</html>

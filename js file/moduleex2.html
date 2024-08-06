@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>   
+    <script type="module">
+        import{PrintTitle,login} from"../library/registration.js";
+        document.getElementById("form").innerHTML = login();
+        document.querySelector("p").innerHTML = PrintTitle();
+
+    </script>
+</head>
+<body>
+    <p align="center" class="my-5" ></p>
+<div class="bg-dark text-white p-3" align="center" id="form" >
+
+</div>    
+</body>
+
+</html>

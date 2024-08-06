@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY portfolio</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            $("#bounce").droppable();
+        })
+    </script>
+    <style>
+    
+        .shades{
+            background-color: rgba(0,0,0,0.6);
+            height: 130vh;
+        }
+        header{
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        header span{
+            padding: 10px;
+        }
+        main{
+            text-align: center;
+            animation-name: flash;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+            animation-timing-function:cubic-bezier(1.0, 0.88, 0.32, 1.275);
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            transition: 1s;
+        }
+        a:hover{
+            color: orange;
+            transition: 1s;
+            border-bottom: 2px solid orange;
+            font-size: 25px;
+        }
+        .intro{
+            margin-top: 150px;
+            color: white;
+            font-size: 70px;
+            font-weight: bold;
+            font-family: arial;
+            transition: 1s;
+            width:800px;
+            align-items: center;
+            display: inline-block;
+           animation-name: zoom; 
+           animation-duration: 2s;              
+        }
+      /*  @keyframes zoom{
+            from{
+                width: 0px;
+            }
+            to{
+                width: 800px;
+            }
+        }
+        .intro:hover{
+            border-bottom: 3px solid orange;
+            transition: 1s;
+            color:orange;
+        }
+        .title{
+            transition: 2s;
+        }
+        .title:hover{
+            color: orange;
+            border-bottom: 2px solid orange;
+            transition: 2s;
+        }
+        footer{
+            height: 200px;
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr 4fr;
+        }
+      /*  @keyframes flash{
+            from{
+             width: 0px;
+             text-align: left;
+            }
+            
+            to{
+              width: 1200px;
+        
+
+            }
+        }
+        @media screen and (max-width:450px)
+        {
+            body{
+                width: 450px;
+                background-size: 450px 1000px;
+            
+            }
+            header{
+                display: flex;
+                flex-direction: column;
+            }
+            .shades{
+                width: 450px;
+            }
+            .intro{
+                width: 400px;
+            }
+            footer{
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+                width: 450px;
+
+            }
+        } */
+    </style>
+</head>
+<body background="./my pics/me/t-11.jpg">
+    <div class="shades">
+    <header class="bg-black text-white container-fluid">
+        <div class="fw-bold fs-3 title">
+          My Portfolio
+        </div>
+        <div>
+          <span class="fw-semibold" ><a  href="#">HOME</a></span>
+          <span  class="fw-semibold"><a  href="#">ABOUT</a></span>
+          <span  class="fw-semibold" ><a href="../public/resume.html">RESUME</a></span>
+          <span  class="fw-semibold" ><a href="../src/projects1.html">PROJECTS</a></span>
+          <span  class="fw-semibold" ><a  href="#contact">CONTACT</a></span>
+        </div>
+    </header>
+    <main class="container-fluid" id="bounce">
+       <div class="intro"> I am Chandra Prakash</div>
+       <div class="fs-3 fw-semibold text-white">Hello...</div>
+       <div class="fs-5 text-warning">I am a <u class="text-white fw-bold">UI Full Stack Developer</u>. I like to create Quality desgin and cool interfaces.</div>
+       <div class="fs-5 text-warning">If you are looking for a developer to add to your Team,I would love to hear form you.</div>
+    </main>
+    </div>
+    <footer class="bg-black mt-0 p-5">
+        <div>
+        <span class="text-white fw-semibold d-block">MOBILE:</span>
+        <span class="text-white">XXXXXXXXX</span></div>
+        <div>
+            <span class="fw-bold text-white d-block">Mail ;</span>
+            <span class="fw-semibold text-white">Chandra52prakash.in@gmail.com</span>
+        </div>
+        <div id="contact">
+            <span class="fw-bold text-white d-block">Follow Me ;</span>
+            <span class="bi-facebook text-white"></span>
+            <span class="bi-instagram text-white p-1"></span>
+            <span class="text-white bi-linkedin p-1"></span>
+            <span class="bi-github text-white"></span>
+        </div>
+        <div>
+
+        </div>
+    </footer>
+</body>
+</html>

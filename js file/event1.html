@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Play(obj){          // here we use obj to use "this" event.
+          var p = document.querySelector("p");
+          switch(obj.name){                        // we need to mention the obj.name to mention each button .
+            case "prev":
+               p.innerHTML = "Previous track";
+               break;
+            case "play":
+               p.innerHTML="Playing";
+               break;
+            case "pause": 
+             p.innerHTML = "Paused";
+             break;
+             case "next": 
+             p.innerHTML = "Next track";
+             break;      
+          }
+
+        }
+    </script>
+</head>
+<body>
+    <button name="prev" onclick="Play(this)">Previous</button>
+    <button name="play" onclick="Play(this)">Play</button>
+    <button name="pause" onclick="Play(this)">Pause</button>
+    <button name="next" onclick="Play(this)">Next</button>
+    <p></p>
+</body>
+</html>

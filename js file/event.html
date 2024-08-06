@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Insert(obj,e){ // in event it is known as subscriber .  Inside it we give two parameters 1st for element,2nd for event
+         document.write(`
+         Button id = ${obj.id}<br>
+         button class = ${obj.className}<br>
+         button value = ${obj.value}                 
+         `)  // here obj refers to "this" and "obj" is formal param and "this" is actual param all the element details will  be accesed by using obj.
+        }
+    </script>
+</head>
+<body>
+    <button onclick="Insert(this,event)" class=" btn btn-check"id="btninsert" value="insert">Insert</button> <!-- tHIS IS called sender.So when sender sent the notification to subscriber functioin excecute-->
+  <!--Here "this" is used to current element means Button.Means classname ,property etc.So the information about element is sent to function
+      And the element related details will collect in obj parameter-->
+ <!--Event is used to sent the event related details.And the event is onclick-->
+ 
+ 
+ 
+ 
+ 
+    <!--onclick = it is a event
+    onclick = "Insert()"  : Event handler
+      Every event can send data to function using arguments which is known as payload.
+      two types of arguments;
+       1 default args
+       Default argument are of 2 type
+       1. this
+       2.  event
+         -->  
+</body>
+</html>

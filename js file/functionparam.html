@@ -1,0 +1,21 @@
+<script>
+    function printproducts(collection){
+         collection.map(function(value){
+            document.write(value + "<br>");
+         })
+    }
+    var products = ["TV","Fridge","Radio"];
+    var price = [25000,30000,5000];
+    printproducts(products);
+    printproducts(price);
+</script>
+<script>
+    function details(name,price){
+        if(price){
+            document.write(`Name=${name}<br>Price=${price}`)
+        }else{
+        document.write(`Name=${name}`);
+    }
+}
+    details("shoes",5000)
+</script>

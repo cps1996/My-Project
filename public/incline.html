@@ -5,133 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INCLINE</title>
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
-     <style>
-        header{
-            display: flex;
-            justify-content:space-around ;
-            margin-top: 30px;
-            color:white;
-            padding: 30px;
-            border: 1px solid rgb(131, 127, 127);
-            margin-left: 30px;
-            margin-right: 30px;
-        }
-        header span{
-            margin-left: 15px;
-        
-        }
-        body{
-            background-size: cover;
-            background-repeat: no-repeat;
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+     <script>
+        function Bookclick()
+        {
+            document.getElementById("lblname").innerHTML = document.getElementById("Cname").value;
+            document.getElementById("lblperson").innerHTML = document.getElementById("Person").value;
+            document.getElementById("lbldays").innerHTML = document.getElementById("Days").value;
+            document.getElementById("advpay").innerHTML = document.getElementById("adv").value;
+             var roomcost =0;
+              var amenitycost = 0 ;
+              var total = 0;
+              var advance =parseInt(document.getElementById("adv").value);
 
+               var days = parseInt(document.getElementById("Days"));
+               var person = parseInt(document.getElementById("Person")-2);
+            var room = "";
+            var amenities = "";
+            var deluxeroom = document.getElementById("Droom");
+            var suiteroom =document.getElementById("suite");
+            var ac = document.getElementById("ac");
+            var locker =document.getElementById("lock");
+            if(deluxeroom.checked)
+            {
+                room = deluxeroom.value;
+                roomcost = parseInt(4000);
+            }
+            if(suiteroom.checked)
+            {
+                room = suite.value;
+                roomcost = parseint(4000);
+            }
+            if(ac.checked)
+            {
+                amenities += ac.value +  "<br>";
+                amenitycost = parseInt(1000);
+                roomcost += amenitycost;
+            }
+            if(locker.checked)
+            {
+                amenities = locker.value + "<br>";
+                amenitycost = parseInt(1500);
+                roomcost += amenitycost;
+            }
+            total = roomcost + person*1000 - advance;
+            document.getElementById("total").innerHTML = total ;
         }
-        .shades{
-            background-color: rgb(52, 35, 35,0.5);
-            height: 100vh;
-            margin-top:-30px ;
-            margin-left: -10px;
-            margin-right:-5px;
-            padding-top: 30px;
-
-        }
-        .brand-title{
-            font-size: 25px;
-            font-weight: bold;
-        }
-        .brand-title:hover{
-            opacity: 0.8;
-        }
-        .btn-purchase{
-            border: 1px solid yellow;
-            padding: 20px;
-            color: white;
-            display: inline-block;
-            margin-left: 650px;
-            margin-top: 50px;
-            font-weight: bold;    
-        }
-        .btn-purchase{
-            rotate: 360deg;
-        }
-        
-        section{
-            height:100vh;
-        }
-        footer{
-            background-color: rgb(51, 46, 46);
-            padding: px;
-            margin-bottom: 20px;
-            color: white;
-            padding: 20px;
-            height: 250px;
-            display: grid;
-            grid-template-columns: 6fr 6fr;
-        }
-        .footer-title{
-            margin-top:50px ;
-            margin-left: 80px;
-            display:block;
-            font-size: 25px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .footer-topic{
-            display: inline;
-            margin-left: 80px;
-        }
-        .services{
-            display: inline-block;
-            margin-left: 60px;
-            font-size: 20px;
-            margin-top: 50px;
-        
-        }
-        nav:hover{
-            opacity: 0.8;
-        }
-     </style>
+     </script>
 </head>
-<body background="./images/two-smiling-business-men-using-tablet-walking.jpg">
-     <div class="shades">
-    <header>
-        <div>
-            <span class="brand-title">incline.</span>
-            <span class="bi bi-twitter"></span>
-            <span class="bi bi-instagram"></span>
-            <span class="bi bi-backpack3-fill"></span>
+<body>
+<div class="m-5 w-50 ">
+    Customer name
+    <input type="text" id="Cname" class="form-control w-50">
+    NO. of days
+    <input type="text" id="Days" class="form-control w-50">
+    No of person
+    <input type="text" id="Person" class="form-control w-50">
+    <div>
+        Deluxe Room 2000
+        <input type="radio" id="Droom" name="droom" value="deluxe">
+        Suite room
+        <input type="radio" id="suite" name="Droom" value="suite">
+    </div> 
+    <div>
+    Ac
+    <input type="radio" id="ac" name="amn" value="ac">
+    Locker
+    <input type="radio" id="lock" name="amn" value="locker">
+    </div>
+    <div>
+        Payment in Advance
+        <input type="text" id="adv" class="form-control w-50">
+    </div>
+    <button class="mt-4" onclick="Bookclick()" >Book</button>
+</div>
 
-        </div>
-        <div>
-            <nav style="margin-left:30px">
-                <span>WELCOME<span class="bi bi-chevron-down"></span></summary>
-                    
-                <span>LANDINGS<span class="bi bi-chevron-down"></span>
-                <span>PAGES<span class="bi bi-chevron-down"></span>
-                <span>COMPONENTS<span class="bi bi-chevron-down"></span>
-                <span>DOCUMENTATION<span class="bi bi-chevron-down"></span>
-            </nav></div>
-                <span style="margin-right: 20px;">PURCHASE NOW</span>
-    </header>
-    <section>
-        <div align="center" style="margin-top: 200px;color:rgb(178, 182, 185)">BY SIMPLEQODE</div>
-        <div align="center"style="font-size:40px;color:white;font-family:arial;margin-top:15px;">Landing pages for any ocassion</div>
-        <div align="center" style="color: rgb(132, 127, 127);margin-top: 50px;font-size: 20px;">Incline is set of landing and support pages aimed at helping companies promote<br> new products and business launches.</div>
-        <div>
-            <input type="button" class="btn-purchase"align="center">PURCHASE NOW</span>
-        </div>
+<div class="m-5" >
+    <dl>
+        <dt>Customer name</dt>
+        <dd id="lblname"></dd>
+        <dt>Person</dt>
+        <dd id="lblperson"></dd>
+        <dt>Days</dt>
+        <dd id="lbldays"></dd>
+        <dt>Room selected</dt>
+        <dd id="lblroom"></dd>
+        <dt>Amenities</dt>
+        <dd id="lblamn"></dd>
+        <dt>Advance Payment</dt>
+        <dd id="advpay"></dd>
+        <dt>Final Bill</dt>
+        <dd id="total"></dd>
+    </dl>
 
-    </section>
-    <footer>
-        <div>
-        <span class="footer-title">incline.</span>
-         <span class="footer-topic">Copyright 2024 Simpleqode.All rights reserved.</span>
-        </div>
-          <div>
-            <div class="services">Terms and conditions</div>
-            <div class="services">Privacy policy</div>
-            <div class="services">Contact us</div>  
-        </div>
-
-    </footer>
+</div>
 </body>
 </html>

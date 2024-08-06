@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        //first we will have to load the categories because directly on bodyload
+        // it will mess up all
+        function loadcategories(){
+       // advantage of this:connect with api and load the categories to dropdown and later we will use it anywhere
+            fetch("https://fakestoreapi.com/products/categories")
+            .then(function(response){
+                return response.json();    // it will return all the response in json
+
+            })
+                .then(function(categories){    
+                    categories.unshift("All");  // this will put the all on top
+                 categories.map(function(category){   // we use map function to read all the categories
+                    var option = document.createElement("option");
+                    
+                     option.text = category.toUpperCase();
+                     option.value = category;
+                     document.getElementById("listcategories").appendChild(option);  //this will not load directly we have to assign this on bodyload to load categories
+                 })    
+            })       
+
+        }
+        function loadproducts(url){                      // we use this to load all the products
+                fetch(url) // we have to fecth the data of all the products from api
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(products){   
+                    document.querySelector("main").innerHTML = "";   // it will not repeat the product only loads the selected       
+                    products.map(function(product){
+                        var div = document.createElement("div");  // we will create any thing to display the product in our page
+                        div.className = "card p-2  border-0 m-2 ms-3 ";
+                        div.style.width = "250px";
+                        div.style.backgroundColor ="burlywood";
+                        div.innerHTML= `
+                        <img src=${product.image} class="card-img-top mb-2 " height="140px">
+                        <div class="card-header rounded-1 fw-semibold" >
+                        ${product.title}
+                        </div>
+                        <div class="card-body rounded-1" style="Background-color:bisque">
+                         <dl>
+                            <dt>Price</dt>
+                            <dd>$${product.price}</dd>
+                            <dt>Rating</dt>
+                            <dd>${product.rating.rate}</dd>
+                            </dl>
+                            
+                        </div>
+                        <div class="card-footer">
+                            <button onclick="Addclick(${product.id})" class="btn bg-warning fw-semibold w-100">Add To Cart</button>  
+                            </div>
+                        `;   // we assign Addclick() to load the product in cart  and inside the function we add the value ${product}.So it will send the detail to function
+                        document.querySelector("main").appendChild(div); // now this will load  when we excecute this in bodyload
+                    })
+                })
+            }
+
+        function bodyload(){
+           loadcategories();  // here we have to call  the  loadcategories() to execute function
+
+           loadproducts("https://fakestoreapi.com/products");  // here we call loadproducts() to execute 
+
+            getcartcount();  // here we write it to display the cardcount when bodyloads
+
+
+        }
+        function categorychange()  // we use this function to make user select the category and only that category will display
+        {
+            var categoryname = document.getElementById("listcategories").value;
+               if(categoryname == "All") //if categoryname == to all then 
+               {
+                loadproducts("https://fakestoreapi.com/products"); // it will show all the products
+               }else{
+                 loadproducts(`https://fakestoreapi.com/products/category/${categoryname}`); // otherwise it will show the selected value
+               }
+        }
+        // to add the details of added products we must create a variable empty array
+           var  cartitems=[];
+        // and to update the no. of items we must create a number and name 
+           var cartcount=0;
+
+              // to get a cart count details we have to make a seperate function  below
+              function getcartcount(){
+                document.getElementById("cardcount").innerHTML = cartitems.length; // by this we can display the no. of items added to the badge & .length = no. of items
+              }
+
+
+           function Addclick(id){   // this function created to add the product which we selected from the add to cart button
+              // console.log(product);    // it is used to check wether the function is working or not
+              fetch(`https://fakestoreapi.com/products/${id}`)   // we fetch id to add details of the product id
+              .then(function(response){
+                return     response.json();
+              })
+              .then(function(product){     // this is used to collect data
+                    alert(`${product.title} Added to cart`)    // it will show in popup when we will add the product to cart
+                     cartitems.push(product);     // we use this to add the items in empty array named cartitems and push is used to add the value and return
+                    getcartcount();        // we add this to update the no. of counts in badge
+              })
+           }
+           function cartdetails(){
+               cartitems.map(function(item){
+                  var tr = document.createElement("tr");
+                  var tdname = document.createElement("td");
+                  var tdprice = document.createElement("td");
+                  var tdpreview = document.createElement("td");
+                  
+                  tdname.innerHTML = item.title;
+                  tdprice.innerHTML = item.price;
+                  tdpreview.innerHTML = `<img src=${item.image} height="50px" width="50px">`;
+
+
+                  tr.appendChild(tdname);
+                  tr.appendChild(tdprice);
+                  tr.appendChild(tdpreview);
+
+                  document.querySelector("tbody").appendChild(tr);
+               })
+           }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <header class="d-flex justify-content-around p-2 bg-body-secondary">
+        <div class="title fw-bold fs-3">
+          Shopper.com
+        </div>
+        <div class="fw-semibold fs-4">
+        <span class="ps-3"><a style="text-decoration: none;color:black;" href="javascript:loadproducts('https://fakestoreapi.com/products')">Home</a></span>
+        <span class="ps-3"><a style="text-decoration: none;color:black;" href="javascript:loadproducts('https://fakestoreapi.com/products/category/men's clothing')">Clothing</a></span>
+        <span class="ps-3"><a style="text-decoration: none;color:black;" href="javascript:loadproducts('https://fakestoreapi.com/products/category/jewelery')">Jewellery</a></span>
+        <span class="ps-3">Footwear</span>
+        <span class="ps-3"><a style="text-decoration: none;color:black;" href="javascript:loadproducts('https://fakestoreapi.com/products/category/electronics')">Electronics</a></span>
+        </div>
+        <button class="btn btn-warning bi bi-cart position-relative" data-bs-target="#cart"  data-bs-toggle="modal" onclick="cartdetails()"> 
+        <span class="badge position-absolute bg-danger text-black rounded rounded-5" id="cardcount"></span></button>
+    </header>
+    <div class="modal "  id="cart">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                   <h2>Your Cart items</h2>
+                   <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <table class="table-hover">
+                     <thead>
+                        <tr>
+                            <th>
+                                Category name
+                            </th>
+                            <th>
+                                Price
+                            </th>
+                            <th>
+                                Preview
+                            </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        
+                     </tbody>
+                  </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <nav>
+        <label class="form-check-label fw-bold"> Select Category</label>
+      <select class="form-select w-100 my-3" id="listcategories" onchange="categorychange()"> <!---->
+
+      </select>
+     </nav> 
+    <section>
+    
+<main class="d-flex flex-wrap " style="background-color:whitesmoke ;">
+    
+    </main>
+</section>
+</body>
+
+</html>

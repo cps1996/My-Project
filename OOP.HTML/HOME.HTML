@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <!--To link any module we have to write our script type to module--->
+    <script type="module">
+   import login, {printTitle} from "../library/modules/customerModule.js";  // using default in login then we write outside and before {}
+   document.getElementById("lbltitle").innerHTML = printTitle().toUpperCase();
+   document.getElementById("container").innerHTML = login().toUpperCase(); // here direct next function will not come unless we can define it in import
+    </script>
+</head>
+<body>
+    <h2 id="lbltitle"></h2>
+    <div id="container"></div>
+</body>
+</html>
